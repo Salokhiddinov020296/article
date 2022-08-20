@@ -1,0 +1,138 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block title1 %}Maqola yuborish{% endblock %}
+{% block content %}
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header mt-0">
+                            <h4><span class="badge bg-success" style="white-space: normal;">"Modern Science and Research" {% translate "xalqaro ilmiy jurnaliga maqola yuborish" %}</span>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-3 mb-3" style="max-width: 20rem;">
+                                    <img src="{% static 'images/books.png' %}" class="img-thumbnail">
+                                </div>
+                                <div class="col-lg-9 mb-9">
+
+                                    <p class="card-text text-words">
+                                        {% translate "Ilmiy maqola yuborish uchun" %}:
+                                        <i class="bi bi-telegram text-info"></i> <a href="https://t.me/modernscience_research"
+                                                                                    target="_blank"><b>@modernscience_research</b></a><br>
+                                        <i class="bi bi-envelope-fill text-danger"></i> <a
+                                            href="mailto:localhostuz@gmail.com"
+                                            target="_blank"><b>golibboymurodov6@gmail.com</b></a><br>
+                                        {% translate "Ilmiy maqolalar" %}
+                                        <b>{% translate "o‘zbek, rus, ingliz, nemis, qoraqalpoq, qozoq, tojik</b> tillarida va IMRAD talabi asosida qabul qilinadi." %}
+                                            <br>
+                                            {% translate "Maqola muallifiga BEPUL" %}
+                                            <b>{% translate "sertifikat" %}</b>, {% translate "qabul qilinganlik haqida" %}
+                                            <b>{% translate "Diplom" %}</b>
+                                            {% translate "va" %}
+                                            <b>{% translate "mualliflik guvohnomasi" %}</b> {% translate "elektron (pdf) holatda beriladi." %}<br>
+                                            {% translate "Yuborilgan maqolalar 3 kun ichida, jurnalning yakuniy to'plami esa har oyning 15 sanasida" %}
+                                            <a href="http://www.scientists.uz"
+                                               target="_blank"><b>www.modernscience.uz</b></a>
+                                            {% translate "saytida va" %} <a href="https://t.me/science_research"
+                                                                            target="_blank"><b>https://t.me/modernscience_research</b></a>
+                                            {% translate "telegram kanalida e'lon qilinadi" %}<br>
+                                            <a href="files/axborot_xati.pdf" target="_blank"><span
+                                                    class="badge bg-secondary"><i
+                                                    class="bi bi-arrow-down-circle"></i> {% translate "Axborot xatini ko'chirib olish" %}</span></a>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 mb-12">
+                                    <h3 style="text-align:center"><span class="badge"
+                                                                        style="white-space: normal;background-color: rgba(44, 62, 80);">"Modern Science and Research" {% translate "xalqaro ilmiy jurnali Axborot xati" %}</span>
+                                    </h3><br>
+                                    <p class="text-words"><b>&nbsp;&nbsp;&nbsp;&nbsp;"{% translate "Ilm-fan va ilmiy faoliyat to’g’risida" %}"</b>
+                                        {% translate "O‘zbekiston Respublikasi Qonuni, O‘zbekiston Respublikasi Prezidentining 2020 yil 29-oktabrdagi PF-6097-sonli farmonida ko‘zda tutilgan vazifalar, jumladan" %},
+                                        <b>“{% translate "Ilm-fanni 2030-yilgacha rivojlantirish konsepsiyasi" %}”
+                                        </b> {% translate "ijrosini  ta’minlash maqsadida tashkil etilgan" %}
+                                        <b>“Modern Science and Research”</b> {% translate "xalqaro ilmiy jurnali uchun maqolalar qabulini e’lon qiladi. Ushbu jurnal nufuzli bazalarda indekslanib, elektron va bosma holatda nashr etib boriladi." %} <br>
+                                        “Modern Science and Research” {% translate "xalqaro ilmiy jurnali quyidagi yo’nalishlar bo’yicha maqolalar qabul qiladi" %}:
+                                    </p>
+                                    <ul style="text-align: left; padding-left: 20px;">
+                                        <li><b>“Modern Science and Research” {% translate "xalqaro ilmiy jurnali" %}:</b></li>
+                                        <li><i class="bi bi-dot"></i> 01.00.00 {% translate "FIZIKA-MATEMATIKA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 02.00.00 {% translate "KIMYO fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 05.00.00 {% translate "TEXNIKA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 08.00.00 {% translate "IQTISODIYOT fanlari" %}</li>
+                                        <br>
+                                        <li><i class="bi bi-dot"></i> 09.00.00 {% translate "FALSAFA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 10.00.00 {% translate "FILOLOGIYA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 13.00.00 {% translate "PEDAGOGIKA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 19.00.00 {% translate "PSIXOLOGIYA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 22.00.00 {% translate "SOTSIOLOGIYA fanlari" %}</li>
+                                        <br>
+                                        <li><i class="bi bi-dot"></i> 04.00.00 {% translate "GEOLOGIYA va MINERALOGIYA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 07.00.00 {% translate "TARIX fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i>11.00.00 {% translate "GEOGRAFIYA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 12.00.00 {% translate "YURIDIK fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 17.00.00 {% translate "SAN'ATSHUNOSLIK fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 18.00.00 {% translate "ARXITEKTURA fanlari" %}</li>
+                                        <br>
+                                        <li><i class="bi bi-dot"></i> 03.00.00 {% translate "BIOLOGIYA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 06.00.00 {% translate "QISHLOQ XO'JALIGI fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 14.00.00 {% translate "TIBBIYOT fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 15.00.00 {% translate "FARMATSEVTIKA fanlari" %}</li>
+                                        <li><i class="bi bi-dot"></i> 16.00.00 {% translate "VETERINARIYA fanlari" %}</li>
+                                    </ul>
+                                    <br>
+                                    <p class="text-words"> {% translate "Maqolalarni qabul qilish muddati" %}: <b>{% translate "har oyning 10-sanasiga qadar" %}</b><br>
+                                        {% translate "Jurnalning rasmiy tillari" %}: <b>{% translate "o‘zbek, qozoq, rus, ingliz" %}</b><br>
+                                        {% translate "Jurnalning nashr etilish sanasi" %}: <b>{% translate "Har oyning 15-kunida" %} </b><br>
+                                        {% translate "Jurnal rasmiy sayti" %}: <a href="http://www.modernscience.uz" target="_blank"><b>http://modernscience.uz/</b></a><br>
+                                        {% translate "Jurnal telegram kanali" %}: <a href="https://t.me/science_innovations"
+                                                                   target="_blank"><b>https://t.me/science_research </b></a><br>
+
+                                        {% translate "Maqolalar elektron shaklda" %} (+998919823131) <b><a
+                                                href="https://t.me/modernscience_research"
+                                                target="_blank">@modernscience_research</a></b>
+                                        {% translate "telegram manzili orqali qabul qilinadi" %}. <br>
+                                        {% translate "Murojaat uchun telefon raqami" %} <b>+998919823131; </b> <br>
+                                        {% translate "Yuborilgan ilmiy maqolalar tahrir hay’ati tomonidan ko‘rib chiqiladi va tahrirdan o‘tmagan, talablar bo‘yicha yuborilmagan maqolalar nashr etilmaydi" %};
+                                        <br> {% translate "Jurnalga professor-o‘qituvchilar, doktorantlar, mustaqil izlanuvchilar, umumta’lim maktablari va akademik litseylar o’qituvchilari, magistrantlar, iqtidorli talabalar va boshqa ilm-fan vakillari maqolalar yuborishlari mumkin." %}
+                                        <br> {% translate "Jurnalga qabul qilingan maqolalar" %} <b>{% translate "1-3 kunda" %}</b> {% translate "jurnal rasmiy web sayti (http://scientists.uz/)ga joylanadi, hamda muallifga maqola havolasi taqdim etiladi. O’sha kunning o’zida muallifga" %}
+                                        <b>{% translate "BEPUL sertifikat" %}</b>,{% translate "qabul qilinganlik haqida" %} <b>{% translate "Diplom" %}</b> {% translate "va" %}
+                                        <b>{% translate "mualliflik guvohnomasi" %}</b> {% translate "taqdim etiladi" %}. <br>
+                                        {% translate "Har bir maqola" %} <b>{% translate "Google Scholar (iqtiboslik va h-indexni oshirish uchun), Zenodo (xalqaro bazada pdf shaklida chiqarish va DOI raqam olish uchun), OpenAire (Yevropa asosiy bazalaridan biri), Directory of Reserch Journals Indexing (OAK 16 baza), Index Copernicus (OAK 15-baza), Cyberleninka" %}
+                                        </b> {% translate "xalqaro bazalarida  indekslanadi. Har bir maqolaga" %} <b>{% translate "DOI raqami" %}</b> {% translate "beriladi" %}. <br>
+                                        {% translate "Jurnalning to‘plam shakli" %} <b>{% translate "har oyning 15-kuni" %}</b> <a
+                                                href="http://www.modernscience.uz"
+                                                target="_blank"><b>http://modernscience.uz/</b></a>
+                                        {% translate "veb saytiga va" %}
+                                        <a href="https://t.me/science_research" target="_blank"><b>https://t.me/modernscience_research</b></a>
+                                        {% translate "telegram kanaliga joylashtiriladi" %}.<br>
+                                        {% translate "Jurnalning bosma (qog’oz) nashri alohida buyurtma asosida beriladi" %}.<br>
+                                        {% translate "Taqdim etiladigan maqolalarga qo‘yiladigan talablar" %}: </p>
+                                    <ul style="text-align: left;padding-left: 20px;">
+                                        <li><i class="bi bi-dot"></i> {% translate "Maqola xalqaro talab darajasidagi IMRAD shaklida yozilgan bo‘lishi lozim" %};
+                                        </li>
+                                        <li><i class="bi bi-dot"></i> {% translate "Maqola nomi, annotatsiya va kalit so’zlar o’zbek, rus va ingliz tillarida taqdim qilinishi lozim. (Agar maqolangiz rus yoki ingliz tilida bo’lsa annotatsiya va kalit so’zlar ikki rus va ingliz tillarida bo’lishi yetarli)" %}
+                                        </li>
+                                        <li><i class="bi bi-dot"></i> {% translate "Maqolalar ilmiy jurnal yo‘nalishiga oid dolzarb mavzularda, ilmiy va tugallangan fikrlarga asoslangan, taklif va tavsiyalar bilan taqdim etilishi lozim" %};
+                                        </li>
+                                        <li><i class="bi bi-dot"></i> {% translate "Maqola matnlari A4 hajmda, yuqoridan va pastdan 2sm, chapdan 3 sm, o‘ngdan 1.5 sm xoshiyaga ega bo‘lishi kerak" %};
+                                        </li>
+                                        <li><i class="bi bi-dot"></i> {% translate "Maqola matni Word matn muharririda, Times New Roman shrifti, 12 o‘lchamida, 1,15 intervalda bo‘lishi va 3-12 bet hajmda bo‘lishi lozim" %};
+                                        </li>
+                                    </ul>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+<!-- ***** Header Area Start ***** -->
+{% load static i18n %}
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url 'main:home' %}" class="logo"
+                       style="font-size: 15px;">{% translate 'Modern Science & Research' %}
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        {#                        <li class="scroll-to-section"><a href="#top" class="active">Bosh sahifa</a></li>#}
+                        <li><a href="{% url 'post:meetings' %}">{% translate "Maqolalar" %}</a></li>
+                        <li><a href="{% url 'post:send_article' %}">{% translate "Maqola yuborish" %}</a></li>
+                        <li><a href="{% url 'author:author' %}">{% translate "Tahrir hay'ati" %}</a></li>
+                        <li><a href="{% url 'post:arxiv' %}">{% translate "Arxiv" %}</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">{% translate "Mukofotlar" %}</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'post:science' %}">{% translate "Ilm-fan targ'ibotchisi" %}</a></li>
+                                <li><a href="{% url 'post:innovation' %}">{% translate "Ilmiy-innovatsion tadqiqotlar yetakchisi" %}</a>
+                                </li>
+                                <li><a href="{% url 'post:gift' %}">{% translate "Sovg'alar" %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">{% translate "Biz haqimizda" %}</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'post:journal' %}">{% translate "Jurnal nizomi" %}</a></li>
+                                <li><a href="{% url 'post:contact' %}">{% translate "Bizga bog'lanish" %}</a></li>
+                                <li><a href="{% url 'post:vacancy' %}">{% translate "Vakansiyalar" %}</a></li>
+                                <li><a href="{% url 'post:science_base' %}">{% translate "Ilmiy bazalar" %}</a></li>
+                                <li><a href="{% url 'post:impact_factor' %}">{% translate "Impact Factor" %}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->

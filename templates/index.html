@@ -1,0 +1,125 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <section class="section main-banner" id="top" data-section="section1">
+        <video autoplay muted loop id="bg-video">
+            <source src="{% static 'images/course-video.mp4' %}" type="video/mp4"/>
+        </video>
+        <div class="video-overlay header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="caption" style="padding-top: 100px;">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-6">
+                                            <img src="{% static 'images/for_site_en.jpg' %}" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-lg-6 mb-6">
+                                            <h4 class="card-title"><span class="badge bg-success"
+                                                                         style="white-space: normal;">International scientific journal "Modern Science and Research"</span>
+                                            </h4>
+                                            <p class="card-text">
+                                                ISSN: <b>2181-3337</b>; &nbsp; OAV Guvohnoma <b>№1597</b>; &nbsp; Impact
+                                                factor (UIF-2022): <b>8.2</b><br>
+                                                Ushbu jurnalda O'zbekiston va chet davlatlar olimlari ilmiy maqolalari
+                                                chop etiladi.<br>
+                                                Ushbu jurnal OAK ro'yxatida mavjud xalqaro bazalarda indekslanib,
+                                                elektron va bosma holatda nashr etib boriladi.<br>
+                                                Jurnalning rasmiy tillari: <b>o‘zbek, rus, ingliz</b><br>
+                                                Jurnal telegram kanali: <i class="bi bi-telegram text-info"></i> <a
+                                                    href="https://t.me/science_research" target="_blank"><b>https://t.me/science_innovations</b></a><br>
+                                                Maqola muallifiga BEPUL qabul qilinganlik haqida <b>tabriknoma,
+                                                sertifikat,</b> indekslanganligi haqida <b>ma'lumotnoma</b> va <b>mualliflik
+                                                guvohnomasi</b> beriladi.<br>
+                                                Jurnal har oyda nashr qilinadi.<br>
+                                                Maqolalar yuborish uchun:
+                                                <i class="bi bi-telegram text-info"></i> <a
+                                                    href="https://t.me/science_inno"
+                                                    target="_blank"><b>@science_research</b></a><br>
+                                                <i class="bi bi-envelope-fill text-danger"></i> <a
+                                                    href="mailto:localhostuz@gmail.com" target="_blank"><b>golibboymurodov6@gmail.com</b></a><br>
+                                            </p>
+                                            <a href="articles.php" class="card-link"><span
+                                                    class="badge bg-danger"> Articles</span></a>
+                                            <a href="files/axborot_xati.pdf" target="_blank" class="card-link"><span
+                                                    class="badge bg-dark"> Information letter</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Main Banner Area End ***** -->
+    <section class="upcoming-meetings" id="meetings">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>
+                        <span class="badge bg-danger">
+                         Oxirgi qushilgan maqolalar:
+                        </span>
+                    </h3>
+                </div>
+            </div>
+            <hr class="bg-danger">
+            <br>
+            {% for row in object_list %}
+                <div class="card border-danger mb-3" style="border-radius: 5px">
+                    <a href="{% url "post:detail" row.pk %}" target="_blank" style="text-decoration: none;">
+                        <div class="card-header text-dark"
+                             style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(167,252,70,1) 100%);">
+                            <i class="bi bi-journal-check text-danger"></i></i> {{ row.article_name }}</div>
+                    </a>
+                    <div class="card-body"
+                         style="background: linear-gradient(45deg, rgba(63,251,115,1) 0%, rgba(255,255,255,1) 45%, rgba(116,117,114,0.9065826159565389) 100%); ">
+                        <h4 class="card-title">{{ row.writer }}</h4>
+                        <p class="card-text">{{ row.annotation }}</p><br>
+                        <span class="badge bg-dark"><i
+                                class="bi bi-calendar2-date"></i> {{ row.date|date:"d.m.Y" }}</span>
+                        <span class="badge bg-dark"> Volume {{ row.volume }} Issue {{ row.issue }}</span>
+                        <a href="view.php?id=1067" class="card-link" style="margin-left:1px;"><span
+                                class="badge bg-danger"><i
+                                class="bi bi-eye"></i> View more</span></a>
+                        <a href="http://scientists.uz/uploads/202205/B-2.pdf" target="_blank" class="card-link"
+                           style="margin-left:1px;"><span class="badge bg-success"><i
+                                class="bi bi-arrow-down-circle"></i> Download</span></a>
+                        <a href="https://doi.org/10.5281/zenodo.6988240" target="_blank" class="card-link"
+                           style="margin-left:1px;"><img src="{% static 'images/DOI_logo.png' %}"
+                                                         style="width:20px"></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center mt-4">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link text-primary" href="?page=1">&laquo; First</a></li>
+                    <li class="page-item"><a class="page-link"
+                                             href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                {% endif %}
+                {% for i in page_obj %}
+                    <li class="page-item"><a class="page-link text-primary"
+                                             href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link text-primary"
+                                             href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-primary"
+                                             href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </section>
+
+{% endblock %}

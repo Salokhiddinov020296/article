@@ -1,0 +1,1062 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-20 15:16+0500\n"
+"PO-Revision-Date: 2022-08-20 14:53+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: post/models.py:7
+msgid "yo'nalishi"
+msgstr ""
+
+#: post/models.py:18 post/models.py:45
+msgid "Qaysi tilda yozilgan"
+msgstr ""
+
+#: post/models.py:29 post/models.py:63
+msgid "Targ'ibotchi"
+msgstr ""
+
+#: post/models.py:43
+msgid "Yo'nalishi"
+msgstr ""
+
+#: post/models.py:46
+msgid "Sahifalar"
+msgstr ""
+
+#: post/models.py:47
+msgid "Maqola (pdf)"
+msgstr ""
+
+#: post/models.py:51
+msgid "Mualliflar"
+msgstr ""
+
+#: post/models.py:52
+msgid "Maqola nomi (Asosiy til) (uz)"
+msgstr ""
+
+#: post/models.py:53
+msgid "Maqola nomi (Asosiy til) (en)"
+msgstr ""
+
+#: post/models.py:54
+msgid "Maqola nomi (Asosiy til) (ru)"
+msgstr ""
+
+#: post/models.py:55
+msgid "Annotasiya (Asosiy til) (uz)"
+msgstr ""
+
+#: post/models.py:56
+msgid "Annotasiya (Asosiy til) (en)"
+msgstr ""
+
+#: post/models.py:57
+msgid "Annotasiya (Asosiy til) (ru)"
+msgstr ""
+
+#: post/models.py:58
+msgid "Kalit so'zlar (uz)"
+msgstr ""
+
+#: post/models.py:59
+msgid "Kalit so'zlar (en)"
+msgstr ""
+
+#: post/models.py:60
+msgid "Kalit so'zlar (ru)"
+msgstr ""
+
+#: post/models.py:61
+msgid "Adabiyotlar"
+msgstr ""
+
+#: post/models.py:64
+msgid "Mualliflik Guvohnomasi"
+msgstr ""
+
+#: post/models.py:65
+msgid "Tabriknoma"
+msgstr ""
+
+#: post/models.py:66
+msgid "Ma'lumotnoma"
+msgstr ""
+
+#: post/models.py:67
+msgid "Sertifikat"
+msgstr ""
+
+#: templates/layouts/navbar.html:10
+msgid "Modern Science & Research"
+msgstr ""
+
+#: templates/layouts/navbar.html:16
+msgid "Maqolalar"
+msgstr "Статьи"
+
+#: templates/layouts/navbar.html:17
+msgid "Maqola yuborish"
+msgstr "Отправить статью"
+
+#: templates/layouts/navbar.html:18
+msgid "Tahrir hay'ati"
+msgstr "Редакционная коллегия"
+
+#: templates/layouts/navbar.html:19
+msgid "Arxiv"
+msgstr "Архив"
+
+#: templates/layouts/navbar.html:21
+msgid "Mukofotlar"
+msgstr "Награды"
+
+#: templates/layouts/navbar.html:23
+msgid "Ilm-fan targ'ibotchisi"
+msgstr "Промоутер науки"
+
+#: templates/layouts/navbar.html:24
+msgid "Ilmiy-innovatsion tadqiqotlar yetakchisi"
+msgstr "Руководитель научных и инновационных исследований"
+
+#: templates/layouts/navbar.html:26
+msgid "Sovg'alar"
+msgstr "Подарки"
+
+#: templates/layouts/navbar.html:30
+msgid "Biz haqimizda"
+msgstr "O нас"
+
+#: templates/layouts/navbar.html:32
+msgid "Jurnal nizomi"
+msgstr "Устав журнала"
+
+#: templates/layouts/navbar.html:33
+msgid "Bizga bog'lanish"
+msgstr "Свяжитесь с нами"
+
+#: templates/layouts/navbar.html:34
+msgid "Vakansiyalar"
+msgstr "Свободные места"
+
+#: templates/layouts/navbar.html:35
+msgid "Ilmiy bazalar"
+msgstr "Научные основы"
+
+#: templates/layouts/navbar.html:36
+msgid "Impact Factor"
+msgstr "Фактор воздействия"
+
+#: templates/post/journal.html:13
+msgid "xalqaro ilmiy jurnali nizomi "
+msgstr ""
+
+#: templates/post/journal.html:18
+msgid "JURNALI NIZOMI"
+msgstr ""
+
+#: templates/post/journal.html:19
+msgid "Umumiy qoidalar"
+msgstr ""
+
+#: templates/post/journal.html:22
+msgid "Ommaviy axborot vositasining turi"
+msgstr ""
+
+#: templates/post/journal.html:22
+msgid "Ilmiy jurnal"
+msgstr ""
+
+#: templates/post/journal.html:24
+msgid "Ommaviy axborot vositasining nomi"
+msgstr ""
+
+#: templates/post/journal.html:28
+msgid "jurnalining tili"
+msgstr ""
+
+#: templates/post/journal.html:28
+msgid ""
+"jurnal&nbsp;davlat tilida yuritiladi, shu bilan birga unda rus va ingliz "
+"tilida maqolalar chop etiladi."
+msgstr ""
+
+#: templates/post/journal.html:30
+msgid "Ixtisoslashuvi"
+msgstr ""
+
+#: templates/post/journal.html:31
+msgid ""
+"Ilmiy jurnal О‘zbekistan Respublikasi va Xalqaro oliy ta’lim muassasalari "
+"professor-о‘qituvchilari va mustaqil ilmiy izlanuvchilar tomonidan olib "
+"borilayotgan ilmiy-tadqiqot&nbsp;ishlari natijalarini ilmiy maqola tarzida "
+"chop etadi. Shuningdek, jurnalga oliy&nbsp;ta’lim muassasalaridan tashqari "
+"viloyatimiz va respublikamizning boshqa ilmiy- tadqiqot&nbsp;institutlari, "
+"ishlab chiqarish tashkilotlari va korxonalarida faoliyat kо‘rsatib, ilmiy-"
+"tadqiqot ishlari olib borayotgan xodimlarning ham ilmiy maqolalari "
+"kiritiladi."
+msgstr ""
+
+#: templates/post/journal.html:34
+msgid "Tarqatish&nbsp;hududi"
+msgstr ""
+
+#: templates/post/journal.html:34
+msgid "Xalqaro, elektron (online) ko’rinishda"
+msgstr ""
+
+#: templates/post/journal.html:37
+msgid "Davriyligi va&nbsp;hajmi"
+msgstr ""
+
+#: templates/post/journal.html:37
+msgid "Jurnal har&nbsp;oyda elektron ko’rinishda chiqariladi"
+msgstr ""
+
+#: templates/post/journal.html:40
+msgid "Tahririyatning&nbsp;joylashgan joyi"
+msgstr ""
+
+#: templates/post/journal.html:40
+msgid ""
+"Toshkent shahri, Yangi hayot tumani, Humo mahallasi, 8-uy, 41-xonadon. "
+"Telefon"
+msgstr ""
+
+#: templates/post/journal.html:46
+msgid ""
+"jurnali&nbsp;tahririyati (kelgusida&nbsp;«Tahririyat» deb&nbsp;yuritiladi) "
+"О‘zbekiston Respublikasi Konstitusiyasiga, О‘zbekistan Respublikasining "
+"«Ommaviy axborot» vositalari tо‘g‘risida”gi Qonunga, shuningdek&nbsp;"
+"О‘zbekistan Respublikasi Prezidenti Farmonlari va hukumat qarorlari,"
+msgstr ""
+
+#: templates/post/journal.html:47
+msgid ""
+"О‘zbekiston Respublikasining&nbsp;boshqa qonun hujjatlari hamda mazkur Nizom "
+"(Ustav)ga asosan о‘z faoliyatini&nbsp;amalga oshiradi."
+msgstr ""
+
+#: templates/post/journal.html:50
+msgid "ilmiy jurnali har&nbsp;oyda"
+msgstr ""
+
+#: templates/post/journal.html:52
+msgid ""
+"sayti orqali elektron ko’rinishda chiqariladi va har&nbsp; bir&nbsp; "
+"maqola&nbsp; Google&nbsp; Scholar, Zenodo, ResearchBible (OAK 14-baza) "
+"xalqaro bazalarida &nbsp;&nbsp;indekslanadi&nbsp; va Cyberleninka.ru saytiga "
+"joylanadi. Har bir maqolaga"
+msgstr ""
+
+#: templates/post/journal.html:53
+msgid "raqami beriladi."
+msgstr ""
+
+#: templates/post/journal.html:57
+msgid "Jurnalga&nbsp; qabul&nbsp; qilingan&nbsp; maqolalar&nbsp; "
+msgstr ""
+
+#: templates/post/journal.html:57
+msgid "3&nbsp; ish&nbsp; kuni&nbsp; "
+msgstr ""
+
+#: templates/post/journal.html:58
+msgid "ichida&nbsp;jurnal&nbsp; web&nbsp; sayti"
+msgstr ""
+
+#: templates/post/journal.html:60
+msgid ""
+"ga joylanadi&nbsp; hamda&nbsp; muallifga&nbsp; maqola havolasi taqdim "
+"etiladi. O’sha kunning o’zida muallifga&nbsp; "
+msgstr ""
+
+#: templates/post/journal.html:61
+msgid "BEPUL"
+msgstr ""
+
+#: templates/post/journal.html:62 templates/post/send_article.html:32
+msgid "sertifikat"
+msgstr ""
+
+#: templates/post/journal.html:62
+msgid "qabul qilinganlik haqida "
+msgstr ""
+
+#: templates/post/journal.html:63 templates/post/send_article.html:33
+#: templates/post/send_article.html:104
+msgid "Diplom"
+msgstr ""
+
+#: templates/post/journal.html:63 templates/post/send_article.html:34
+#: templates/post/send_article.html:104
+msgid "va"
+msgstr ""
+
+#: templates/post/journal.html:64 templates/post/send_article.html:35
+#: templates/post/send_article.html:105
+msgid "mualliflik guvohnomasi"
+msgstr ""
+
+#: templates/post/journal.html:65
+msgid "taqdim&nbsp; etiladi.&nbsp; &nbsp;"
+msgstr ""
+
+#: templates/post/journal.html:68
+msgid "Tahririyat&nbsp;faoliyatining maqsad va vazifalari"
+msgstr ""
+
+#: templates/post/journal.html:71
+msgid ""
+"jurnali Respublikamizdagi va Xalqaro oily ta’lim muassasalari &nbsp;"
+"professor-о‘qituvchilari&nbsp;va mustaqil ilmiy izlanuvchilar tomonidan olib "
+"borilayotgan ilmiy-tadqiqot ishlari&nbsp;natijalarini ilmiy maqola tarzida "
+"chop etadi. Shuningdek jurnalga Xalqaro va Respublikamizning boshqa ilmiy "
+"dargohlari, ishlab chiqarish tashkilotlari&nbsp;va korxonalarida faoliyat "
+"ko’rsatib, ilmiy-tadqiqot ishlari olib borayotgan xodimlarning ham ilmiy "
+"maqolalari kiritiladi"
+msgstr ""
+
+#: templates/post/journal.html:75 templates/post/send_article.html:60
+msgid ""
+"xalqaro ilmiy jurnali quyidagi yo’nalishlar bo’yicha maqolalar qabul qiladi"
+msgstr ""
+
+#: templates/post/journal.html:78 templates/post/send_article.html:63
+msgid "xalqaro ilmiy jurnali"
+msgstr ""
+
+#: templates/post/journal.html:79 templates/post/send_article.html:64
+msgid "FIZIKA-MATEMATIKA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:80 templates/post/send_article.html:65
+msgid "KIMYO fanlari"
+msgstr ""
+
+#: templates/post/journal.html:81 templates/post/send_article.html:66
+msgid "TEXNIKA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:82 templates/post/send_article.html:67
+msgid "IQTISODIYOT fanlari"
+msgstr ""
+
+#: templates/post/journal.html:84 templates/post/send_article.html:69
+msgid "FALSAFA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:85 templates/post/send_article.html:70
+msgid "FILOLOGIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:86 templates/post/send_article.html:71
+msgid "PEDAGOGIKA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:87 templates/post/send_article.html:72
+msgid "PSIXOLOGIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:88 templates/post/send_article.html:73
+msgid "SOTSIOLOGIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:91 templates/post/send_article.html:75
+msgid "GEOLOGIYA va MINERALOGIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:92 templates/post/send_article.html:76
+msgid "TARIX fanlari"
+msgstr ""
+
+#: templates/post/journal.html:93 templates/post/send_article.html:77
+msgid "GEOGRAFIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:94 templates/post/send_article.html:78
+msgid "YURIDIK fanlari"
+msgstr ""
+
+#: templates/post/journal.html:95 templates/post/send_article.html:79
+msgid "SAN'ATSHUNOSLIK fanlari"
+msgstr ""
+
+#: templates/post/journal.html:96 templates/post/send_article.html:80
+msgid "ARXITEKTURA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:98 templates/post/send_article.html:82
+msgid "BIOLOGIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:99 templates/post/send_article.html:83
+msgid "QISHLOQ XO'JALIGI fanlari"
+msgstr ""
+
+#: templates/post/journal.html:100 templates/post/send_article.html:84
+msgid "TIBBIYOT fanlari"
+msgstr ""
+
+#: templates/post/journal.html:101 templates/post/send_article.html:85
+msgid "FARMATSEVTIKA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:102 templates/post/send_article.html:86
+msgid "VETERINARIYA fanlari"
+msgstr ""
+
+#: templates/post/journal.html:104 templates/post/send_article.html:89
+msgid "Maqolalarni qabul qilish muddati"
+msgstr ""
+
+#: templates/post/journal.html:105
+msgid "Har oyning 10-sanasiga qadar"
+msgstr ""
+
+#: templates/post/journal.html:106 templates/post/send_article.html:90
+msgid "Jurnalning rasmiy tillari"
+msgstr ""
+
+#: templates/post/journal.html:106
+msgid "o‘zbek, rus, ingliz"
+msgstr ""
+
+#: templates/post/journal.html:107 templates/post/send_article.html:91
+msgid "Jurnalning nashr etilish sanasi"
+msgstr ""
+
+#: templates/post/journal.html:107
+msgid "Har oyning 15-sanasi"
+msgstr ""
+
+#: templates/post/journal.html:109 templates/post/send_article.html:92
+msgid "Jurnal rasmiy sayti"
+msgstr ""
+
+#: templates/post/journal.html:111 templates/post/send_article.html:93
+msgid "Jurnal telegram kanali"
+msgstr ""
+
+#: templates/post/journal.html:115
+msgid "Muassisning huquq va majburiyatlari"
+msgstr ""
+
+#: templates/post/journal.html:117
+msgid ""
+"Muassis&nbsp;о‘z Nizomi (Ustavi) va qonun hujjatlarida belgilangan "
+"vakolatlari doirasida tahririyat&nbsp;ishlarini tashkil etadi va boshqaradi."
+msgstr ""
+
+#: templates/post/journal.html:119
+msgid ""
+"Jurnal&nbsp;tahririyatining Nizomini, Nizomga kiritiladigan о‘zgartirish va "
+"qо‘shimchalarni tasdiqlaydi, uning ro’yxatda qayd etilgan nomidan "
+"foydalanadi va tasarruf etadi."
+msgstr ""
+
+#: templates/post/journal.html:121
+msgid "Muassis bir paytning o’zida jurnal bosh muharriri hisoblanadi."
+msgstr ""
+
+#: templates/post/journal.html:123
+msgid "Jurnal tahrir hay’ati a’zolarini tayinlaydi va vazifasidan ozod etadi."
+msgstr ""
+
+#: templates/post/journal.html:125
+msgid ""
+"12 shriftda, 1,5 intervalda, 10&nbsp;sahifa (A-4 format) dan ortiq bо‘lmagan "
+"(reklama tipidagi materiallardan tashqari) xabar yoki materialni muallif "
+"nomidan jurnal&nbsp;sahifalariga joylashtiradi."
+msgstr ""
+
+#: templates/post/journal.html:127
+msgid "Qonunda belgilanga tartibda jurnal faoliyatini tо‘xtatadi"
+msgstr ""
+
+#: templates/post/journal.html:129
+msgid "Tahririyat tashkil etadi"
+msgstr ""
+
+#: templates/post/journal.html:130
+msgid "Ommaviy axborot vositasining chiqarilishini ta’minlaydi"
+msgstr ""
+
+#: templates/post/journal.html:132
+msgid "Jurnal uchun zarur axborot va materiallarni&nbsp;о‘z vaqtida yetkazadi."
+msgstr ""
+
+#: templates/post/journal.html:134
+msgid "Jurnalni targ‘ib etish yordamlashadi"
+msgstr ""
+
+#: templates/post/journal.html:135
+msgid ""
+"Tahririyat tomonidan jurnalxonlar&nbsp;о‘rtasida tashkil&nbsp;etiladigan "
+"turli xil ijodiy tanlov, sovrinli о‘yin va sport musobaqalarida, shuningdeq "
+"homiylik ishlarini amalga oshirishda qatnashadi."
+msgstr ""
+
+#: templates/post/journal.html:137
+msgid ""
+"Ommaviy axborot vositalari tо‘g‘risidagi qonun hujjatlariga&nbsp;rioya "
+"etilishi ustidan nazoratni ta’minlaydi."
+msgstr ""
+
+#: templates/post/journal.html:139
+msgid ""
+"Jurnalning muntazam faoliyat kо‘rsatishi, moliyalashtirishi, tarqatish bilan "
+"bog‘liq bо‘lgan moddiy-texnik masalalarni yechishga, ishlab chiqarish, "
+"tahririyat xodimlari&nbsp;uchun zarur ijtimoiy sharoitlarni yaratishga "
+"kо‘maklashadi."
+msgstr ""
+
+#: templates/post/journal.html:143
+msgid ""
+"Muassis qonun hujjatlariga muvofiq boshqa huquqlarga ega bо‘lishi va uning"
+msgstr ""
+
+#: templates/post/journal.html:144
+msgid "zimmasida boshqa majburiyatlar ham bо‘lishi mumkin"
+msgstr ""
+
+#: templates/post/journal.html:145
+msgid "Tahririyatning"
+msgstr ""
+
+#: templates/post/journal.html:145
+msgid "huquq va"
+msgstr ""
+
+#: templates/post/journal.html:147
+msgid ""
+"Tahririyat tarkibiga bosh muharrir, mas’ul kotib va tahrir hay’ati kiradi"
+msgstr ""
+
+#: templates/post/journal.html:149
+msgid ""
+"Tahririyat о‘z muassisi Nizomida kо‘rsatilgan bandlarga og‘ishmay amal qiladi"
+msgstr ""
+
+#: templates/post/journal.html:151
+msgid ""
+"Tahririyat о‘z faoliyatini «Ommaviy axborot vositalari tо‘g‘risida»gi, "
+"“Axborot erkinligi prinsiplari va kafolatlari tо‘g‘risida”gi О‘zbekistan "
+"Respublikasi qonunlari doirasida hamda о‘z “Nizom”iga muvofiq amalga "
+"oshiradi."
+msgstr ""
+
+#: templates/post/journal.html:153
+msgid ""
+"Davlat sirlarini saqlaydi va davlat axborot resurslaridan ruxsatsiz tarzda "
+"foydalanmaydi."
+msgstr ""
+
+#: templates/post/journal.html:155
+msgid "Jurnalning belgilangan davr ichida chop etilishini tо‘liq ta’minlaydi"
+msgstr ""
+
+#: templates/post/journal.html:157
+msgid ""
+"Jurnal faoliyatiga tegishli har qanday javobgarlikni о‘z zimmasiga oladi."
+msgstr ""
+
+#: templates/post/journal.html:159
+msgid ""
+"Tahririyat Nizomi (Ustavi)ga о‘zgartirishlar kiritish va muassis tasdig‘idan "
+"о‘tkazish"
+msgstr ""
+
+#: templates/post/journal.html:163
+msgid ""
+"Tahririyatga kelgan maqolalarning&nbsp;mazmunini buzmagan holda tahrir "
+"etish, qisqartirish yoki kengaytirish"
+msgstr ""
+
+#: templates/post/journal.html:165
+msgid "Jurnal hajmi (formati)ni kamaytirish&nbsp;yoki kо‘paytirish, shuningdek"
+msgstr ""
+
+#: templates/post/journal.html:166
+msgid ""
+"davriyligi va rangini о‘zgartirish hamda tahririyat jamoasining manfaatini, "
+"faoliyatini himoya&nbsp;qilish huquqiga xam egadir"
+msgstr ""
+
+#: templates/post/journal.html:168
+msgid "Tahririyat kasb faoliyati bо‘yicha mustaqildir"
+msgstr ""
+
+#: templates/post/journal.html:169
+msgid ""
+"Tahririyatni moliyalashtirish manbai&nbsp;muassis tomonidan shakllantiriladi"
+msgstr ""
+
+#: templates/post/journal.html:173
+msgid "Tahrir hay’atining huquq va majburiyatlari"
+msgstr ""
+
+#: templates/post/journal.html:174
+msgid ""
+"Jurnalning umumiy yо‘nalishlarini ishlab chiqish va amalga oshirishni "
+"takomillashtirish maqsadida tahrir hay’ati tuziladi. Tahrir hay’ati "
+"a’zolari&nbsp; muassis tomonidan tayinlanadi va&nbsp;vazifasidan ozod "
+"etiladi. Uning tarkibiga bosh muharrir (tahrir&nbsp;xay’ati raisi), mas’ul "
+"kotib, Xalqaro va Respublika doirasidagi yetakchi professorlar, dotsentlar "
+"va kafedra mudirlari&nbsp;kiritiladi. Tahrir hay’ati quyidagi masalalarni "
+"kо‘rib chiqadi"
+msgstr ""
+
+#: templates/post/journal.html:176
+msgid "Nashrning ilmiy saviyasini oshirish"
+msgstr ""
+
+#: templates/post/journal.html:177
+msgid ""
+"Tahririyat ishining bosh yо‘nalishlarini&nbsp;belgilash va uni amalga "
+"oshirish"
+msgstr ""
+
+#: templates/post/journal.html:179
+msgid ""
+"Jurnalning ayrim muhim sonlarini&nbsp;bezash, qaysi materiallarni berish "
+"maqsadga muvofiqligini aniqlash"
+msgstr ""
+
+#: templates/post/journal.html:181
+msgid ""
+"Tashkiliy – ommaviy ishlardan kо‘zlangan maqsad, shuningdek tahririyat "
+"jamoasi ijodiy faoliyati va ayrim xodimlar ijodiy faoliyati&nbsp;bilan "
+"bog‘liq masalalar"
+msgstr ""
+
+#: templates/post/journal.html:183
+msgid "Nizomni о‘zgartirish haqida takliflar&nbsp;kiritish"
+msgstr ""
+
+#: templates/post/journal.html:184
+msgid ""
+"Tahrir hay’ati majlisioyda bir marta о‘tkaziladi. Zarur bо‘lgan "
+"taqdirda&nbsp;tahrir xay’ati&nbsp;raisi navbatdan tashkdri majlis chaqirishi "
+"mumkin. Unda tahrir xay’atining barcha&nbsp;a’zolari qatnashadilar va ular "
+"majlisda kо‘riladigan masala bilan oldindan qisman tanishtirilgan "
+"bо‘lishlari kerak. Yig‘ilish о‘tkazish mumkin bо‘lmagan hollarda&nbsp;tahrir "
+"hay’atining har bir a’zosi bilan alohida kelishilgan xolda qaror qabul&nbsp;"
+"qilinadi"
+msgstr ""
+
+#: templates/post/journal.html:186
+msgid ""
+"Tahrir hay’ati a’zolari о‘rtasida hamfikrlik&nbsp;bо‘lmagan taqdirda bosh "
+"muharrir muhokama etilayotgan&nbsp;masala yuzasidan hal qiluvchi qaror qabul "
+"qiladi"
+msgstr ""
+
+#: templates/post/journal.html:188
+msgid ""
+"Tahririyatning&nbsp;butun ishini amaldagi qonunlar, meyoriy hujjatlar va "
+"mazkur Nizomga&nbsp;muvofiq tarzda yо‘naltirib boradi"
+msgstr ""
+
+#: templates/post/journal.html:192
+msgid "Mas’ul&nbsp;kotibning huquq va majburiyatlari"
+msgstr ""
+
+#: templates/post/journal.html:195
+msgid "Tahrir hay’ati a’zosi hisoblanadi"
+msgstr ""
+
+#: templates/post/journal.html:196
+msgid ""
+"Jurnalni tayyorlash, chiqarish bо‘yicha kundalik&nbsp;faoliyatini "
+"yо‘naltirib boradi, rejalashtirish uchun javob beradi"
+msgstr ""
+
+#: templates/post/journal.html:198
+msgid ""
+"Kompyuter markazi faoliyati uchun shaxsan javobgar hisoblanadi, ular "
+"faoliyatini yо‘naltirib&nbsp;boradi"
+msgstr ""
+
+#: templates/post/journal.html:200
+msgid "Jurnal sonlarini rejalashtiradi, uning bajarilishini ta’minlaydi"
+msgstr ""
+
+#: templates/post/journal.html:202
+msgid "Jurnalning о‘z&nbsp;vaqtida sifatli chiqishi uchun javob beradi"
+msgstr ""
+
+#: templates/post/journal.html:204
+msgid ""
+"Tahririyatda jurnalxonlar&nbsp;konferensiyalarini, jurnal sonlarining "
+"taqdimotini&nbsp;(prizentatsiyasini) tashkil etadi va shu ishlar uchun javob "
+"beradi"
+msgstr ""
+
+#: templates/post/journal.html:206
+msgid ""
+"Tahririyatda materiallar zahirasini yuzaga keltiradi va&nbsp;nazorat kiladi, "
+"materiallar va suratlarning saklanishi,&nbsp;tahririyatda xatlar harakati"
+msgstr ""
+
+#: templates/post/journal.html:207
+msgid ""
+"uchun javob beradi. Kotibiyatdagi&nbsp;barcha hujjatlashtirish&nbsp;ishlari "
+"uchun mas’uldir."
+msgstr ""
+
+#: templates/post/journal.html:209
+msgid ""
+"Jurnal ruknlarining turi,&nbsp;qо‘llanilishi va yangilanib borishi uchun "
+"javob beradi."
+msgstr ""
+
+#: templates/post/journal.html:211
+msgid ""
+"Tahrir xay’ati faoliyatida&nbsp;faol qatnashadi, jurnal materiallari "
+"saviyasi,"
+msgstr ""
+
+#: templates/post/journal.html:212
+msgid "jurnalning bezatilishi uchun javob beradi"
+msgstr ""
+
+#: templates/post/journal.html:214
+msgid ""
+"Jurnal har bir sonining vaqtida, sifatli chiqishi uchun&nbsp;shaxsan "
+"javobgar hisoblanadi"
+msgstr ""
+
+#: templates/post/journal.html:216
+msgid "Jurnal sonlariga navbatchilik qiladi"
+msgstr ""
+
+#: templates/post/journal.html:219
+msgid "Nizom (Ustav) ni qabul qilish va o‘zgartirishlar kiritish&nbsp;tartibi"
+msgstr ""
+
+#: templates/post/journal.html:221
+msgid ""
+"Tahririyat Nizom (Ustav)i tahririyatning&nbsp;umumiy yig‘ilishida kо‘pchilik "
+"ovoz bilan qabul qilinadi va muassis tomonidan tasdiqlanadi. Nizom (Ustav)ga "
+"kiritiladigan&nbsp;о‘zgartirishlar&nbsp;ham xuddi shunday tartibda amalga "
+"oshiriladi."
+msgstr ""
+
+#: templates/post/journal.html:223
+msgid ""
+"Muassis va tahririyat ommaviy&nbsp;axborot vositalari va matbuot "
+"tо‘g‘risidagi qonun&nbsp;va boshqa tegishli qonunlarga о‘zgartirish va "
+"qо‘shimchalar kiritilganda hamda bu borada yangi farmonlar, qarorlar "
+"chiqarilganda"
+msgstr ""
+
+#: templates/post/journal.html:224
+msgid "jurnal Nizom (Ustav)ini konunchilikka muvofiqlashtirib boradi."
+msgstr ""
+
+#: templates/post/journal.html:229
+msgid ""
+"Ushbu Nizom (Ustav) «Modern Science and Research» jurnali&nbsp;"
+"tahririyatining"
+msgstr ""
+
+#: templates/post/journal.html:229
+msgid ""
+"2022 yil 12 apreldagi 1-sonli umumiy yig‘ilishida kо‘pchilik ovozi bilan "
+"qabul qilindi"
+msgstr ""
+
+#: templates/post/science.html:15
+msgid "esdalik ko'krak nishoni"
+msgstr ""
+
+#: templates/post/science.html:18
+msgid "Ilm-fan va innovatsiyalar akademiyasi va"
+msgstr ""
+
+#: templates/post/science.html:19
+msgid ""
+"xalqaro ilmiy jurnali tomonidan ilm-fan rivoji va uning targ'iboti bilan "
+"shug'ullanayotgan, OTM lar xalqaro reytingini oshirishda munosib hissa "
+"qo'shayotgan, xalqaro darajada ommalashtirilayotgan ilmiy tadqiqot ishlari "
+"olib borayotgan, ilmiy faoliyat va ilmiy tanlovlarga homiylik qilayotgan "
+"olimlar, ilmiy tadqiqotchilar va tashabbuskor fuqarolar"
+msgstr ""
+
+#: templates/post/science.html:20
+msgid "ko'krak nishoni bilan taqdirlanadi. Shuningdek,"
+msgstr ""
+
+#: templates/post/science.html:22
+msgid ""
+"xalqaro ilmiy jurnali tashabbusi bilan jurnal faoliyati, uning targ'ibotida "
+"faol bo'lgan, jurnalga yil davomida eng ko'p maqolalarni jalb qilgan 10 "
+"nafar targ'ibotchilar yil yakunida ushbu ko'krak nishoni bilan taqdirlanadi."
+msgstr ""
+
+#: templates/post/science_base.html:13
+msgid "xalqaro ilmiy jurnali maqolalari joylashtiriladigan ilmiy bazalar"
+msgstr ""
+
+#: templates/post/send_article.html:11
+msgid "xalqaro ilmiy jurnaliga maqola yuborish"
+msgstr ""
+
+#: templates/post/send_article.html:22
+msgid "Ilmiy maqola yuborish uchun"
+msgstr ""
+
+#: templates/post/send_article.html:28
+msgid "Ilmiy maqolalar"
+msgstr ""
+
+#: templates/post/send_article.html:29
+msgid ""
+"o‘zbek, rus, ingliz, nemis, qoraqalpoq, qozoq, tojik</b> tillarida va IMRAD "
+"talabi asosida qabul qilinadi."
+msgstr ""
+
+#: templates/post/send_article.html:31
+msgid "Maqola muallifiga BEPUL"
+msgstr ""
+
+#: templates/post/send_article.html:32 templates/post/send_article.html:104
+msgid "qabul qilinganlik haqida"
+msgstr ""
+
+#: templates/post/send_article.html:35
+msgid "elektron (pdf) holatda beriladi."
+msgstr ""
+
+#: templates/post/send_article.html:36
+msgid ""
+"Yuborilgan maqolalar 3 kun ichida, jurnalning yakuniy to'plami esa har "
+"oyning 15 sanasida"
+msgstr ""
+
+#: templates/post/send_article.html:39
+msgid "saytida va"
+msgstr ""
+
+#: templates/post/send_article.html:41
+msgid "telegram kanalida e'lon qilinadi"
+msgstr ""
+
+#: templates/post/send_article.html:44
+msgid "Axborot xatini ko'chirib olish"
+msgstr ""
+
+#: templates/post/send_article.html:53
+msgid "xalqaro ilmiy jurnali Axborot xati"
+msgstr ""
+
+#: templates/post/send_article.html:55
+msgid "Ilm-fan va ilmiy faoliyat to’g’risida"
+msgstr ""
+
+#: templates/post/send_article.html:56
+msgid ""
+"O‘zbekiston Respublikasi Qonuni, O‘zbekiston Respublikasi Prezidentining "
+"2020 yil 29-oktabrdagi PF-6097-sonli farmonida ko‘zda tutilgan vazifalar, "
+"jumladan"
+msgstr ""
+
+#: templates/post/send_article.html:57
+msgid "Ilm-fanni 2030-yilgacha rivojlantirish konsepsiyasi"
+msgstr ""
+
+#: templates/post/send_article.html:58
+msgid "ijrosini  ta’minlash maqsadida tashkil etilgan"
+msgstr ""
+
+#: templates/post/send_article.html:59
+msgid ""
+"xalqaro ilmiy jurnali uchun maqolalar qabulini e’lon qiladi. Ushbu jurnal "
+"nufuzli bazalarda indekslanib, elektron va bosma holatda nashr etib boriladi."
+msgstr ""
+
+#: templates/post/send_article.html:89
+msgid "har oyning 10-sanasiga qadar"
+msgstr ""
+
+#: templates/post/send_article.html:90
+msgid "o‘zbek, qozoq, rus, ingliz"
+msgstr ""
+
+#: templates/post/send_article.html:91
+msgid "Har oyning 15-kunida"
+msgstr ""
+
+#: templates/post/send_article.html:96
+msgid "Maqolalar elektron shaklda"
+msgstr ""
+
+#: templates/post/send_article.html:99
+msgid "telegram manzili orqali qabul qilinadi"
+msgstr ""
+
+#: templates/post/send_article.html:100
+msgid "Murojaat uchun telefon raqami"
+msgstr ""
+
+#: templates/post/send_article.html:101
+msgid ""
+"Yuborilgan ilmiy maqolalar tahrir hay’ati tomonidan ko‘rib chiqiladi va "
+"tahrirdan o‘tmagan, talablar bo‘yicha yuborilmagan maqolalar nashr etilmaydi"
+msgstr ""
+
+#: templates/post/send_article.html:102
+msgid ""
+"Jurnalga professor-o‘qituvchilar, doktorantlar, mustaqil izlanuvchilar, "
+"umumta’lim maktablari va akademik litseylar o’qituvchilari, magistrantlar, "
+"iqtidorli talabalar va boshqa ilm-fan vakillari maqolalar yuborishlari "
+"mumkin."
+msgstr ""
+
+#: templates/post/send_article.html:103
+msgid "Jurnalga qabul qilingan maqolalar"
+msgstr ""
+
+#: templates/post/send_article.html:103
+msgid "1-3 kunda"
+msgstr ""
+
+#: templates/post/send_article.html:103
+msgid ""
+"jurnal rasmiy web sayti (http://scientists.uz/)ga joylanadi, hamda muallifga "
+"maqola havolasi taqdim etiladi. O’sha kunning o’zida muallifga"
+msgstr ""
+
+#: templates/post/send_article.html:104
+msgid "BEPUL sertifikat"
+msgstr ""
+
+#: templates/post/send_article.html:105
+msgid "taqdim etiladi"
+msgstr ""
+
+#: templates/post/send_article.html:106
+msgid "Har bir maqola"
+msgstr ""
+
+#: templates/post/send_article.html:106
+msgid ""
+"Google Scholar (iqtiboslik va h-indexni oshirish uchun), Zenodo (xalqaro "
+"bazada pdf shaklida chiqarish va DOI raqam olish uchun), OpenAire (Yevropa "
+"asosiy bazalaridan biri), Directory of Reserch Journals Indexing (OAK 16 "
+"baza), Index Copernicus (OAK 15-baza), Cyberleninka"
+msgstr ""
+
+#: templates/post/send_article.html:107
+msgid "xalqaro bazalarida  indekslanadi. Har bir maqolaga"
+msgstr ""
+
+#: templates/post/send_article.html:107
+msgid "DOI raqami"
+msgstr ""
+
+#: templates/post/send_article.html:107
+msgid "beriladi"
+msgstr ""
+
+#: templates/post/send_article.html:108
+msgid "Jurnalning to‘plam shakli"
+msgstr ""
+
+#: templates/post/send_article.html:108
+msgid "har oyning 15-kuni"
+msgstr ""
+
+#: templates/post/send_article.html:111
+msgid "veb saytiga va"
+msgstr ""
+
+#: templates/post/send_article.html:113
+msgid "telegram kanaliga joylashtiriladi"
+msgstr ""
+
+#: templates/post/send_article.html:114
+msgid "Jurnalning bosma (qog’oz) nashri alohida buyurtma asosida beriladi"
+msgstr ""
+
+#: templates/post/send_article.html:115
+msgid "Taqdim etiladigan maqolalarga qo‘yiladigan talablar"
+msgstr ""
+
+#: templates/post/send_article.html:117
+msgid ""
+"Maqola xalqaro talab darajasidagi IMRAD shaklida yozilgan bo‘lishi lozim"
+msgstr ""
+
+#: templates/post/send_article.html:119
+msgid ""
+"Maqola nomi, annotatsiya va kalit so’zlar o’zbek, rus va ingliz tillarida "
+"taqdim qilinishi lozim. (Agar maqolangiz rus yoki ingliz tilida bo’lsa "
+"annotatsiya va kalit so’zlar ikki rus va ingliz tillarida bo’lishi yetarli)"
+msgstr ""
+
+#: templates/post/send_article.html:121
+msgid ""
+"Maqolalar ilmiy jurnal yo‘nalishiga oid dolzarb mavzularda, ilmiy va "
+"tugallangan fikrlarga asoslangan, taklif va tavsiyalar bilan taqdim etilishi "
+"lozim"
+msgstr ""
+
+#: templates/post/send_article.html:123
+msgid ""
+"Maqola matnlari A4 hajmda, yuqoridan va pastdan 2sm, chapdan 3 sm, o‘ngdan "
+"1.5 sm xoshiyaga ega bo‘lishi kerak"
+msgstr ""
+
+#: templates/post/send_article.html:125
+msgid ""
+"Maqola matni Word matn muharririda, Times New Roman shrifti, 12 o‘lchamida, "
+"1,15 intervalda bo‘lishi va 3-12 bet hajmda bo‘lishi lozim"
+msgstr ""
+
+#: templates/post/vacancy.html:13
+msgid "xalqaro ilmiy jurnali jamoasiga qo'shiling!"
+msgstr ""
+
+#: templates/post/vacancy.html:16
+msgid ""
+"Jurnal jamoasida ishlashni xohlaganlarni biz bilan ishlashga taklif qilamiz!"
+msgstr ""
+
+#: templates/post/vacancy.html:17
+msgid ""
+"Ingliz, fransuz, nemis, rus, qozoq, tojik, qoraqalpoq yoki boshqa chet "
+"tillaridan birini biladigan, kompyuter, internetdan erkin foydalana "
+"oladigan, o'zbek tili grammatik qoidalarini tushunadigan, kamida bitta ilmiy "
+"maqola yozgan yosh olimlarni ishga taklif qilamiz."
+msgstr ""
+
+#: templates/post/vacancy.html:18
+msgid ""
+"Kompyuteri, interneti va masofaviy ishlash imkoniyati mavjud bo'lgan "
+"insonlarni ishga olamiz."
+msgstr ""
+
+#: templates/post/vacancy.html:19
+msgid ""
+"Onlayn ishlash imkoniyati, qulay ish grafigi, ilmiy maqola chiqarishda "
+"bonuslar."
+msgstr ""

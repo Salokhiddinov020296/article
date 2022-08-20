@@ -1,0 +1,68 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title1 %}Maqolalar{% endblock %}
+{% block content %}
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form method="get" action="" class="d-flex" role="search">
+                        <input class="form-control me-2" name="name" value="{{ name }}" type="search"
+                               placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <hr class="bg-danger">
+                    {% for list in object_list %}
+                        <div class="card border-secondary mb-5" style="text-align: left;">
+                            <a href="{% url 'post:detail' list.pk %}" target="_blank"
+                               style="text-decoration: none;background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(167,252,70,1) 100%);">
+                                <div class="card-header text-dark"><i
+                                        class="bi bi-patch-check-fill text-primary"></i> {{ list.article_name }}
+                                </div>
+                            </a>
+                            <div class="card-body"
+                                 style="text-align: left;background: linear-gradient(45deg, rgba(63,251,115,1) 0%, rgba(255,255,255,1) 45%, rgba(116,117,114,0.9065826159565389) 100%);">
+                                <h5
+                                        class="card-title">{{ list.writer }}</h5>
+                                <p class="card-text text-words"> {{ list.annotation }}</p><br>
+                                <span class="badge bg-dark" style="white-space: normal;"><i
+                                        class="bi bi-calendar2-date"></i>{{ list.date|date:"d.m.Y" }}</span>
+                                <span class="badge bg-dark"> Volume {{ row.volume }} Issue {{ row.issue }}</span>
+                                <a href="view.php?id=1067" class="card-link" style="margin-left:1px;"><span
+                                        class="badge bg-danger"><i class="bi bi-eye"></i> View more</span></a>
+                                <a href="http://scientists.uz/uploads/202205/B-2.pdf" target="_blank" class="card-link"
+                                   style="margin-left:1px;"><span class="badge bg-success"><i
+                                        class="bi bi-arrow-down-circle"></i> Download</span></a>
+                                <a href="https://doi.org/10.5281/zenodo.6988240" target="_blank" class="card-link"
+                                   style="margin-left:1px;"><img src="{% static 'images/DOI_logo.png' %}"
+                                                                 style="width:20px"></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center mt-4">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link text-primary" href="?page=1">&laquo; First</a></li>
+                    <li class="page-item"><a class="page-link"
+                                             href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                {% endif %}
+                {% for i in page_obj %}
+                    <li class="page-item"><a class="page-link text-primary"
+                                             href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link text-primary"
+                                             href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-primary"
+                                             href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </section>
+{% endblock %}

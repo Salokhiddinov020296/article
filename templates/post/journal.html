@@ -1,0 +1,237 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block title1 %}Journal Nizomi{% endblock %}
+{% block content %}
+    <section class="heading-page header-text" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="text-align:center">
+                                <span class="badge" style="white-space: normal;background-color: rgba(44, 62, 80);">
+                                    " Modern Science and Research" {% translate "xalqaro ilmiy jurnali nizomi " %}
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-words"><strong>{% translate "JURNALI NIZOMI" %}</strong></p>
+                            <p class="text-words"><strong>{% translate "Umumiy qoidalar" %}</strong></p>
+                            <ol style="text-align: left;padding-left: 20px;">
+                                <li>1.
+                                    <strong>{% translate "Ommaviy axborot vositasining turi" %}: </strong>{% translate "Ilmiy jurnal" %}.
+                                </li>
+                                <li>2. <strong>{% translate "Ommaviy axborot vositasining nomi" %}</strong>: «Modern
+                                    Science and Research»
+                                </li>
+                                <li>3. <strong>«Modern Science and
+                                    Research» {% translate "jurnalining tili" %}:</strong> {% translate "jurnal&nbsp;davlat tilida yuritiladi, shu bilan birga unda rus va ingliz tilida maqolalar chop etiladi." %}
+                                </li>
+                                <li>4.<strong>{% translate "Ixtisoslashuvi" %}:</strong>
+                                    {% translate "Ilmiy jurnal О‘zbekistan Respublikasi va Xalqaro oliy ta’lim muassasalari professor-о‘qituvchilari va mustaqil ilmiy izlanuvchilar tomonidan olib borilayotgan ilmiy-tadqiqot&nbsp;ishlari natijalarini ilmiy maqola tarzida chop etadi. Shuningdek, jurnalga oliy&nbsp;ta’lim muassasalaridan tashqari viloyatimiz va respublikamizning boshqa ilmiy- tadqiqot&nbsp;institutlari, ishlab chiqarish tashkilotlari va korxonalarida faoliyat kо‘rsatib, ilmiy-tadqiqot ishlari olib borayotgan xodimlarning ham ilmiy maqolalari kiritiladi." %}
+                                </li>
+                                <li>5.
+                                    <strong>{% translate "Tarqatish&nbsp;hududi" %}:</strong> {% translate "Xalqaro, elektron (online) ko’rinishda" %}.
+                                </li>
+                                <li>6.
+                                    <strong>{% translate "Davriyligi va&nbsp;hajmi" %}:</strong> {% translate "Jurnal har&nbsp;oyda elektron ko’rinishda chiqariladi" %}.
+                                </li>
+                                <li>
+                                    7.<strong> {% translate "Tahririyatning&nbsp;joylashgan joyi" %}:</strong> {% translate "Toshkent shahri, Yangi hayot tumani, Humo mahallasi, 8-uy, 41-xonadon. Telefon" %}:
+                                    91&nbsp;982 31 31
+                                </li>
+                            </ol>
+                            <br>
+                            <p class="text-words">«Modern Science and
+                                Research» {% translate "jurnali&nbsp;tahririyati (kelgusida&nbsp;«Tahririyat» deb&nbsp;yuritiladi) О‘zbekiston Respublikasi Konstitusiyasiga, О‘zbekistan Respublikasining «Ommaviy axborot» vositalari tо‘g‘risida”gi Qonunga, shuningdek&nbsp;О‘zbekistan Respublikasi Prezidenti Farmonlari va hukumat qarorlari," %}
+                                <br>{% translate "О‘zbekiston Respublikasining&nbsp;boshqa qonun hujjatlari hamda mazkur Nizom (Ustav)ga asosan о‘z faoliyatini&nbsp;amalga oshiradi." %}
+                            </p><br>
+                            <p class="text-words">«Modern Science and
+                                Research» {% translate "ilmiy jurnali har&nbsp;oyda" %} <a
+                                        href="http://www.scientists.uz">www.modernscience.uz</a>
+                                {% translate "sayti orqali elektron ko’rinishda chiqariladi va har&nbsp; bir&nbsp; maqola&nbsp; Google&nbsp; Scholar, Zenodo, ResearchBible (OAK 14-baza) xalqaro bazalarida &nbsp;&nbsp;indekslanadi&nbsp; va Cyberleninka.ru saytiga joylanadi. Har bir maqolaga" %}
+                                <strong>DOI</strong> {% translate "raqami beriladi." %}
+
+                            </p><br>
+                            <p class="text-words">
+                                {% translate "Jurnalga&nbsp; qabul&nbsp; qilingan&nbsp; maqolalar&nbsp; " %}<strong>{% translate "3&nbsp; ish&nbsp; kuni&nbsp; " %}</strong>
+                                {% translate "ichida&nbsp;jurnal&nbsp; web&nbsp; sayti" %}
+                                (<strong><a href="http://scientists.uz/">http://scientists.uz/</a></strong>)
+                                {% translate "ga joylanadi&nbsp; hamda&nbsp; muallifga&nbsp; maqola havolasi taqdim etiladi. O’sha kunning o’zida muallifga&nbsp; " %}
+                                <strong>{% translate "BEPUL" %}</strong>
+                                <strong>{% translate "sertifikat" %}</strong>, {% translate "qabul qilinganlik haqida " %}
+                                <strong>{% translate "Diplom" %}</strong> {% translate "va" %}
+                                <strong>{% translate "mualliflik guvohnomasi" %}</strong>
+                                {% translate "taqdim&nbsp; etiladi.&nbsp; &nbsp;" %}
+                            </p><br>
+                            <p class="text-words">
+                                <strong>{% translate "Tahririyat&nbsp;faoliyatining maqsad va vazifalari" %}</strong>
+                            </p><br>
+                            <p class="text-words"><strong>«Modern Science and
+                                Research»</strong> {% translate "jurnali Respublikamizdagi va Xalqaro oily ta’lim muassasalari &nbsp;professor-о‘qituvchilari&nbsp;va mustaqil ilmiy izlanuvchilar tomonidan olib borilayotgan ilmiy-tadqiqot ishlari&nbsp;natijalarini ilmiy maqola tarzida chop etadi. Shuningdek jurnalga Xalqaro va Respublikamizning boshqa ilmiy dargohlari, ishlab chiqarish tashkilotlari&nbsp;va korxonalarida faoliyat ko’rsatib, ilmiy-tadqiqot ishlari olib borayotgan xodimlarning ham ilmiy maqolalari kiritiladi" %}.
+                            </p>
+                            <br>
+                            <p class="text-words"><strong>«Modern Science and
+                                Research»</strong> {% translate "xalqaro ilmiy jurnali quyidagi yo’nalishlar bo’yicha maqolalar qabul qiladi" %}:
+                            </p><br>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><b>“Modern Science and Research” {% translate "xalqaro ilmiy jurnali" %}:</b></li>
+                                <li><i class="bi bi-dot"></i> 01.00.00 {% translate "FIZIKA-MATEMATIKA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 02.00.00 {% translate "KIMYO fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 05.00.00 {% translate "TEXNIKA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 08.00.00 {% translate "IQTISODIYOT fanlari" %}</li>
+                                <br>
+                                <li><i class="bi bi-dot"></i> 09.00.00 {% translate "FALSAFA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 10.00.00 {% translate "FILOLOGIYA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 13.00.00 {% translate "PEDAGOGIKA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 19.00.00 {% translate "PSIXOLOGIYA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 22.00.00 {% translate "SOTSIOLOGIYA fanlari" %}</li>
+                                <br>
+                                <li><i class="bi bi-dot"></i>
+                                    04.00.00 {% translate "GEOLOGIYA va MINERALOGIYA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 07.00.00 {% translate "TARIX fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i>11.00.00 {% translate "GEOGRAFIYA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 12.00.00 {% translate "YURIDIK fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 17.00.00 {% translate "SAN'ATSHUNOSLIK fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 18.00.00 {% translate "ARXITEKTURA fanlari" %}</li>
+                                <br>
+                                <li><i class="bi bi-dot"></i> 03.00.00 {% translate "BIOLOGIYA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 06.00.00 {% translate "QISHLOQ XO'JALIGI fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 14.00.00 {% translate "TIBBIYOT fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 15.00.00 {% translate "FARMATSEVTIKA fanlari" %}</li>
+                                <li><i class="bi bi-dot"></i> 16.00.00 {% translate "VETERINARIYA fanlari" %}</li>
+                            </ul>
+                            <p class="text-words">{% translate "Maqolalarni qabul qilish muddati" %}: <strong>
+                                {% translate "Har oyning 10-sanasiga qadar" %}</strong></p>
+                            <p class="text-words">{% translate "Jurnalning rasmiy tillari" %}: <strong>{% translate "o‘zbek, rus, ingliz" %}</strong></p>
+                            <p class="text-words">{% translate "Jurnalning nashr etilish sanasi" %}: <strong>{% translate "Har oyning 15-sanasi" %}</strong>
+                            </p>
+                            <p class="text-words">{% translate "Jurnal rasmiy sayti" %}<strong> <a
+                                    href="http://scientists.uz/">http://modernscience.uz/</a></strong></p>
+                            <p class="text-words">{% translate "Jurnal telegram kanali" %}: <strong><a
+                                    href="https://t.me/science_research">https://t.me/science_research</a>
+                            </strong></p>
+                            <p class="text-words">&nbsp;</p>
+                            <p class="text-words"><strong>{% translate "Muassisning huquq va majburiyatlari" %}</strong></p>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><i class="bi bi-dot"></i> {% translate "Muassis&nbsp;о‘z Nizomi (Ustavi) va qonun hujjatlarida belgilangan vakolatlari doirasida tahririyat&nbsp;ishlarini tashkil etadi va boshqaradi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal&nbsp;tahririyatining Nizomini, Nizomga kiritiladigan о‘zgartirish va qо‘shimchalarni tasdiqlaydi, uning ro’yxatda qayd etilgan nomidan foydalanadi va tasarruf etadi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Muassis bir paytning o’zida jurnal bosh muharriri hisoblanadi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal tahrir hay’ati a’zolarini tayinlaydi va vazifasidan ozod etadi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "12 shriftda, 1,5 intervalda, 10&nbsp;sahifa (A-4 format) dan ortiq bо‘lmagan (reklama tipidagi materiallardan tashqari) xabar yoki materialni muallif nomidan jurnal&nbsp;sahifalariga joylashtiradi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Qonunda belgilanga tartibda jurnal faoliyatini tо‘xtatadi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat tashkil etadi" %}.</li>
+                                <li><i class="bi bi-dot"></i> {% translate "Ommaviy axborot vositasining chiqarilishini ta’minlaydi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal uchun zarur axborot va materiallarni&nbsp;о‘z vaqtida yetkazadi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnalni targ‘ib etish yordamlashadi" %}.</li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat tomonidan jurnalxonlar&nbsp;о‘rtasida tashkil&nbsp;etiladigan turli xil ijodiy tanlov, sovrinli о‘yin va sport musobaqalarida, shuningdeq homiylik ishlarini amalga oshirishda qatnashadi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Ommaviy axborot vositalari tо‘g‘risidagi qonun hujjatlariga&nbsp;rioya etilishi ustidan nazoratni ta’minlaydi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnalning muntazam faoliyat kо‘rsatishi, moliyalashtirishi, tarqatish bilan bog‘liq bо‘lgan moddiy-texnik masalalarni yechishga, ishlab chiqarish, tahririyat xodimlari&nbsp;uchun zarur ijtimoiy sharoitlarni yaratishga kо‘maklashadi." %}
+                                </li>
+                            </ul>
+                            <br>
+                            <p class="text-words">{% translate "Muassis qonun hujjatlariga muvofiq boshqa huquqlarga ega bо‘lishi va uning" %}<br>
+                                {% translate "zimmasida boshqa majburiyatlar ham bо‘lishi mumkin" %}.</p><br>
+                            <p class="text-words"><strong>{% translate "Tahririyatning" %}</strong><strong> {% translate "huquq va" %}</strong><strong>&nbsp;majburiyatlari:</strong></p><br>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat tarkibiga bosh muharrir, mas’ul kotib va tahrir hay’ati kiradi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat о‘z muassisi Nizomida kо‘rsatilgan bandlarga og‘ishmay amal qiladi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat о‘z faoliyatini «Ommaviy axborot vositalari tо‘g‘risida»gi, “Axborot erkinligi prinsiplari va kafolatlari tо‘g‘risida”gi О‘zbekistan Respublikasi qonunlari doirasida hamda о‘z “Nizom”iga muvofiq amalga oshiradi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Davlat sirlarini saqlaydi va davlat axborot resurslaridan ruxsatsiz tarzda foydalanmaydi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnalning belgilangan davr ichida chop etilishini tо‘liq ta’minlaydi" %};
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal faoliyatiga tegishli har qanday javobgarlikni о‘z zimmasiga oladi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat Nizomi (Ustavi)ga о‘zgartirishlar kiritish va muassis tasdig‘idan о‘tkazish" %};
+                                </li>
+                            </ul>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyatga kelgan maqolalarning&nbsp;mazmunini buzmagan holda tahrir etish, qisqartirish yoki kengaytirish" %};
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal hajmi (formati)ni kamaytirish&nbsp;yoki kо‘paytirish, shuningdek" %}<br>
+                                    {% translate "davriyligi va rangini о‘zgartirish hamda tahririyat jamoasining manfaatini, faoliyatini himoya&nbsp;qilish huquqiga xam egadir" %};
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat kasb faoliyati bо‘yicha mustaqildir" %}.</li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyatni moliyalashtirish manbai&nbsp;muassis tomonidan shakllantiriladi" %}.
+                                </li>
+                            </ul>
+                            <br>
+                            <p class="text-words"><strong>{% translate "Tahrir hay’atining huquq va majburiyatlari" %}</strong></p><br>
+                            <p class="text-words">{% translate "Jurnalning umumiy yо‘nalishlarini ishlab chiqish va amalga oshirishni takomillashtirish maqsadida tahrir hay’ati tuziladi. Tahrir hay’ati a’zolari&nbsp; muassis tomonidan tayinlanadi va&nbsp;vazifasidan ozod etiladi. Uning tarkibiga bosh muharrir (tahrir&nbsp;xay’ati raisi), mas’ul kotib, Xalqaro va Respublika doirasidagi yetakchi professorlar, dotsentlar va kafedra mudirlari&nbsp;kiritiladi. Tahrir hay’ati quyidagi masalalarni kо‘rib chiqadi" %}:</p>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><i class="bi bi-dot"></i> {% translate "Nashrning ilmiy saviyasini oshirish" %};</li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat ishining bosh yо‘nalishlarini&nbsp;belgilash va uni amalga oshirish" %};
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnalning ayrim muhim sonlarini&nbsp;bezash, qaysi materiallarni berish maqsadga muvofiqligini aniqlash" %};
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tashkiliy – ommaviy ishlardan kо‘zlangan maqsad, shuningdek tahririyat jamoasi ijodiy faoliyati va ayrim xodimlar ijodiy faoliyati&nbsp;bilan bog‘liq masalalar" %};
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Nizomni о‘zgartirish haqida takliflar&nbsp;kiritish" %}.</li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahrir hay’ati majlisioyda bir marta о‘tkaziladi. Zarur bо‘lgan taqdirda&nbsp;tahrir xay’ati&nbsp;raisi navbatdan tashkdri majlis chaqirishi mumkin. Unda tahrir xay’atining barcha&nbsp;a’zolari qatnashadilar va ular majlisda kо‘riladigan masala bilan oldindan qisman tanishtirilgan bо‘lishlari kerak. Yig‘ilish о‘tkazish mumkin bо‘lmagan hollarda&nbsp;tahrir hay’atining har bir a’zosi bilan alohida kelishilgan xolda qaror qabul&nbsp;qilinadi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahrir hay’ati a’zolari о‘rtasida hamfikrlik&nbsp;bо‘lmagan taqdirda bosh muharrir muhokama etilayotgan&nbsp;masala yuzasidan hal qiluvchi qaror qabul qiladi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyatning&nbsp;butun ishini amaldagi qonunlar, meyoriy hujjatlar va mazkur Nizomga&nbsp;muvofiq tarzda yо‘naltirib boradi" %}.
+                                </li>
+                            </ul>
+                            <p class="text-words"><strong>&nbsp;</strong></p><br>
+                            <p class="text-words"><strong>{% translate "Mas’ul&nbsp;kotibning huquq va majburiyatlari" %}</strong></p>
+                            <p class="text-words">&nbsp;</p>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><i class="bi bi-dot"></i> {% translate "Tahrir hay’ati a’zosi hisoblanadi" %}.</li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnalni tayyorlash, chiqarish bо‘yicha kundalik&nbsp;faoliyatini yо‘naltirib boradi, rejalashtirish uchun javob beradi" %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Kompyuter markazi faoliyati uchun shaxsan javobgar hisoblanadi, ular faoliyatini yо‘naltirib&nbsp;boradi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal sonlarini rejalashtiradi, uning bajarilishini ta’minlaydi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnalning о‘z&nbsp;vaqtida sifatli chiqishi uchun javob beradi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyatda jurnalxonlar&nbsp;konferensiyalarini, jurnal sonlarining taqdimotini&nbsp;(prizentatsiyasini) tashkil etadi va shu ishlar uchun javob beradi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyatda materiallar zahirasini yuzaga keltiradi va&nbsp;nazorat kiladi, materiallar va suratlarning saklanishi,&nbsp;tahririyatda xatlar harakati" %}<br>
+                                    {% translate "uchun javob beradi. Kotibiyatdagi&nbsp;barcha hujjatlashtirish&nbsp;ishlari uchun mas’uldir." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal ruknlarining turi,&nbsp;qо‘llanilishi va yangilanib borishi uchun javob beradi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Tahrir xay’ati faoliyatida&nbsp;faol qatnashadi, jurnal materiallari saviyasi," %}<br>
+                                    {% translate "jurnalning bezatilishi uchun javob beradi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal har bir sonining vaqtida, sifatli chiqishi uchun&nbsp;shaxsan javobgar hisoblanadi" %}.
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Jurnal sonlariga navbatchilik qiladi" %}.</li>
+                            </ul>
+                            <br>
+                            <p class="text-words"><strong>{% translate "Nizom (Ustav) ni qabul qilish va o‘zgartirishlar kiritish&nbsp;tartibi" %}</strong></p><br>
+                            <ul style="text-align: left;padding-left: 20px;">
+                                <li><i class="bi bi-dot"></i> {% translate "Tahririyat Nizom (Ustav)i tahririyatning&nbsp;umumiy yig‘ilishida kо‘pchilik ovoz bilan qabul qilinadi va muassis tomonidan tasdiqlanadi. Nizom (Ustav)ga kiritiladigan&nbsp;о‘zgartirishlar&nbsp;ham xuddi shunday tartibda amalga oshiriladi." %}
+                                </li>
+                                <li><i class="bi bi-dot"></i> {% translate "Muassis va tahririyat ommaviy&nbsp;axborot vositalari va matbuot tо‘g‘risidagi qonun&nbsp;va boshqa tegishli qonunlarga о‘zgartirish va qо‘shimchalar kiritilganda hamda bu borada yangi farmonlar, qarorlar chiqarilganda"%}
+                                    <br>{% translate "jurnal Nizom (Ustav)ini konunchilikka muvofiqlashtirib boradi." %}
+                                </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p class="text-words">
+                                {% translate "Ushbu Nizom (Ustav) «Modern Science and Research» jurnali&nbsp;tahririyatining" %}<br>{% translate "2022 yil 12 apreldagi 1-sonli umumiy yig‘ilishida kо‘pchilik ovozi bilan qabul qilindi" %}.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

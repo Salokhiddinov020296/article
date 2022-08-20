@@ -1,0 +1,1228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-20 15:16+0500\n"
+"PO-Revision-Date: 2022-08-17 17:55+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: post/models.py:7
+msgid "yo'nalishi"
+msgstr ""
+
+#: post/models.py:18 post/models.py:45
+msgid "Qaysi tilda yozilgan"
+msgstr ""
+
+#: post/models.py:29 post/models.py:63
+msgid "Targ'ibotchi"
+msgstr ""
+
+#: post/models.py:43
+msgid "Yo'nalishi"
+msgstr ""
+
+#: post/models.py:46
+msgid "Sahifalar"
+msgstr ""
+
+#: post/models.py:47
+msgid "Maqola (pdf)"
+msgstr ""
+
+#: post/models.py:51
+msgid "Mualliflar"
+msgstr ""
+
+#: post/models.py:52
+msgid "Maqola nomi (Asosiy til) (uz)"
+msgstr ""
+
+#: post/models.py:53
+msgid "Maqola nomi (Asosiy til) (en)"
+msgstr ""
+
+#: post/models.py:54
+msgid "Maqola nomi (Asosiy til) (ru)"
+msgstr ""
+
+#: post/models.py:55
+msgid "Annotasiya (Asosiy til) (uz)"
+msgstr ""
+
+#: post/models.py:56
+msgid "Annotasiya (Asosiy til) (en)"
+msgstr ""
+
+#: post/models.py:57
+msgid "Annotasiya (Asosiy til) (ru)"
+msgstr ""
+
+#: post/models.py:58
+msgid "Kalit so'zlar (uz)"
+msgstr ""
+
+#: post/models.py:59
+msgid "Kalit so'zlar (en)"
+msgstr ""
+
+#: post/models.py:60
+msgid "Kalit so'zlar (ru)"
+msgstr ""
+
+#: post/models.py:61
+msgid "Adabiyotlar"
+msgstr ""
+
+#: post/models.py:64
+msgid "Mualliflik Guvohnomasi"
+msgstr ""
+
+#: post/models.py:65
+msgid "Tabriknoma"
+msgstr ""
+
+#: post/models.py:66
+msgid "Ma'lumotnoma"
+msgstr ""
+
+#: post/models.py:67
+msgid "Sertifikat"
+msgstr ""
+
+#: templates/layouts/navbar.html:10
+msgid "Modern Science & Research"
+msgstr ""
+
+#: templates/layouts/navbar.html:16
+msgid "Maqolalar"
+msgstr "Articles"
+
+#: templates/layouts/navbar.html:17
+msgid "Maqola yuborish"
+msgstr "Submit Articles"
+
+#: templates/layouts/navbar.html:18
+msgid "Tahrir hay'ati"
+msgstr "Editorial Board"
+
+#: templates/layouts/navbar.html:19
+msgid "Arxiv"
+msgstr "Archive"
+
+#: templates/layouts/navbar.html:21
+msgid "Mukofotlar"
+msgstr "Awards"
+
+#: templates/layouts/navbar.html:23
+msgid "Ilm-fan targ'ibotchisi"
+msgstr "Science Promoter"
+
+#: templates/layouts/navbar.html:24
+msgid "Ilmiy-innovatsion tadqiqotlar yetakchisi"
+msgstr "For authors"
+
+#: templates/layouts/navbar.html:26
+msgid "Sovg'alar"
+msgstr "Gifts"
+
+#: templates/layouts/navbar.html:30
+msgid "Biz haqimizda"
+msgstr "About Us"
+
+#: templates/layouts/navbar.html:32
+msgid "Jurnal nizomi"
+msgstr "Journal regulations"
+
+#: templates/layouts/navbar.html:33
+msgid "Bizga bog'lanish"
+msgstr "Contact Us"
+
+#: templates/layouts/navbar.html:34
+msgid "Vakansiyalar"
+msgstr "Vacancies"
+
+#: templates/layouts/navbar.html:35
+msgid "Ilmiy bazalar"
+msgstr "Scientific bases"
+
+#: templates/layouts/navbar.html:36
+msgid "Impact Factor"
+msgstr "Impact Factor"
+
+#: templates/post/journal.html:13
+msgid "xalqaro ilmiy jurnali nizomi "
+msgstr "international scientific journal regulation"
+
+#: templates/post/journal.html:18
+msgid "JURNALI NIZOMI"
+msgstr "Journal Regulation"
+
+#: templates/post/journal.html:19
+msgid "Umumiy qoidalar"
+msgstr "General rules"
+
+#: templates/post/journal.html:22
+msgid "Ommaviy axborot vositasining turi"
+msgstr "Type of mass media"
+
+#: templates/post/journal.html:22
+msgid "Ilmiy jurnal"
+msgstr "Scientific journal"
+
+#: templates/post/journal.html:24
+msgid "Ommaviy axborot vositasining nomi"
+msgstr "The name of the media"
+
+#: templates/post/journal.html:28
+msgid "jurnalining tili"
+msgstr "The language of the journal"
+
+#: templates/post/journal.html:28
+msgid ""
+"jurnal&nbsp;davlat tilida yuritiladi, shu bilan birga unda rus va ingliz "
+"tilida maqolalar chop etiladi."
+msgstr ""
+"the journal is published in the state language, and at the same time it is "
+"published in Russian and English"
+
+#: templates/post/journal.html:30
+msgid "Ixtisoslashuvi"
+msgstr "Specialization"
+
+#: templates/post/journal.html:31
+msgid ""
+"Ilmiy jurnal О‘zbekistan Respublikasi va Xalqaro oliy ta’lim muassasalari "
+"professor-о‘qituvchilari va mustaqil ilmiy izlanuvchilar tomonidan olib "
+"borilayotgan ilmiy-tadqiqot&nbsp;ishlari natijalarini ilmiy maqola tarzida "
+"chop etadi. Shuningdek, jurnalga oliy&nbsp;ta’lim muassasalaridan tashqari "
+"viloyatimiz va respublikamizning boshqa ilmiy- tadqiqot&nbsp;institutlari, "
+"ishlab chiqarish tashkilotlari va korxonalarida faoliyat kо‘rsatib, ilmiy-"
+"tadqiqot ishlari olib borayotgan xodimlarning ham ilmiy maqolalari "
+"kiritiladi."
+msgstr ""
+"The scientific journal publishes the results of scientific research carried "
+"out by professors and teachers of the Republic of Uzbekistan and "
+"international higher education institutions and independent researchers in "
+"the form of scientific articles. In addition to higher educational "
+"institutions, scientific articles of employees working in other scientific-"
+"research institutes, production organizations and enterprises of our region "
+"and republic are also included in the magazine."
+
+#: templates/post/journal.html:34
+msgid "Tarqatish&nbsp;hududi"
+msgstr "Distribution&nbsp;area"
+
+#: templates/post/journal.html:34
+msgid "Xalqaro, elektron (online) ko’rinishda"
+msgstr "In international electronic (online) form"
+
+#: templates/post/journal.html:37
+msgid "Davriyligi va&nbsp;hajmi"
+msgstr "Periodicity and volume"
+
+#: templates/post/journal.html:37
+msgid "Jurnal har&nbsp;oyda elektron ko’rinishda chiqariladi"
+msgstr "The magazine is published monthly in electronic form"
+
+#: templates/post/journal.html:40
+msgid "Tahririyatning&nbsp;joylashgan joyi"
+msgstr "Location of editorial office"
+
+#: templates/post/journal.html:40
+msgid ""
+"Toshkent shahri, Yangi hayot tumani, Humo mahallasi, 8-uy, 41-xonadon. "
+"Telefon"
+msgstr ""
+"Tashkent city, New Life district, Humo neighborhood, 8th house, room 41. "
+"Phone"
+
+#: templates/post/journal.html:46
+msgid ""
+"jurnali&nbsp;tahririyati (kelgusida&nbsp;«Tahririyat» deb&nbsp;yuritiladi) "
+"О‘zbekiston Respublikasi Konstitusiyasiga, О‘zbekistan Respublikasining "
+"«Ommaviy axborot» vositalari tо‘g‘risida”gi Qonunga, shuningdek&nbsp;"
+"О‘zbekistan Respublikasi Prezidenti Farmonlari va hukumat qarorlari,"
+msgstr ""
+"editorial office of the magazine (hereinafter referred to as 'Editorial "
+"Office') to the Constitution of the Republic of Uzbekistan, the Law on 'Mass "
+"Information' of the Republic of Uzbekistan, as well as&nbsp; Decrees of the "
+"President of the Republic of Uzbekistan and government decisions,"
+
+#: templates/post/journal.html:47
+msgid ""
+"О‘zbekiston Respublikasining&nbsp;boshqa qonun hujjatlari hamda mazkur Nizom "
+"(Ustav)ga asosan о‘z faoliyatini&nbsp;amalga oshiradi."
+msgstr ""
+"It carries out its activities based on other laws and regulations of the "
+"Republic of Uzbekistan and this Charter."
+
+#: templates/post/journal.html:50
+msgid "ilmiy jurnali har&nbsp;oyda"
+msgstr "scientific magazine every month"
+
+#: templates/post/journal.html:52
+msgid ""
+"sayti orqali elektron ko’rinishda chiqariladi va har&nbsp; bir&nbsp; "
+"maqola&nbsp; Google&nbsp; Scholar, Zenodo, ResearchBible (OAK 14-baza) "
+"xalqaro bazalarida &nbsp;&nbsp;indekslanadi&nbsp; va Cyberleninka.ru saytiga "
+"joylanadi. Har bir maqolaga"
+msgstr ""
+"is issued electronically through the website and every&nbsp; one&nbsp; "
+"article&nbsp; Google&nbsp; &nbsp;&nbsp;indexed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+"&nbsp;&nbsp; and posted on Cyberleninka.ru. For each article"
+
+#: templates/post/journal.html:53
+msgid "raqami beriladi."
+msgstr "number is given."
+
+#: templates/post/journal.html:57
+msgid "Jurnalga&nbsp; qabul&nbsp; qilingan&nbsp; maqolalar&nbsp; "
+msgstr "To the magazine&nbsp; accept&nbsp; made&nbsp; articles&nbsp;"
+
+#: templates/post/journal.html:57
+msgid "3&nbsp; ish&nbsp; kuni&nbsp; "
+msgstr "3&nbsp; work&nbsp; on&nbsp;"
+
+#: templates/post/journal.html:58
+msgid "ichida&nbsp;jurnal&nbsp; web&nbsp; sayti"
+msgstr "in&nbsp;magazine&nbsp; web&nbsp; site"
+
+#: templates/post/journal.html:60
+msgid ""
+"ga joylanadi&nbsp; hamda&nbsp; muallifga&nbsp; maqola havolasi taqdim "
+"etiladi. O’sha kunning o’zida muallifga&nbsp; "
+msgstr ""
+"will be placed in&nbsp; and&nbsp; to the author&nbsp; article link provided. "
+"On the same day, the author was told&nbsp;"
+
+#: templates/post/journal.html:61
+msgid "BEPUL"
+msgstr "Free"
+
+#: templates/post/journal.html:62 templates/post/send_article.html:32
+msgid "sertifikat"
+msgstr "certificate"
+
+#: templates/post/journal.html:62
+msgid "qabul qilinganlik haqida "
+msgstr "about acceptance"
+
+#: templates/post/journal.html:63 templates/post/send_article.html:33
+#: templates/post/send_article.html:104
+msgid "Diplom"
+msgstr "Diploma"
+
+#: templates/post/journal.html:63 templates/post/send_article.html:34
+#: templates/post/send_article.html:104
+msgid "va"
+msgstr "and"
+
+#: templates/post/journal.html:64 templates/post/send_article.html:35
+#: templates/post/send_article.html:105
+msgid "mualliflik guvohnomasi"
+msgstr "copyright certificate"
+
+#: templates/post/journal.html:65
+msgid "taqdim&nbsp; etiladi.&nbsp; &nbsp;"
+msgstr "present&nbsp; will be done.&nbsp; &nbsp;"
+
+#: templates/post/journal.html:68
+msgid "Tahririyat&nbsp;faoliyatining maqsad va vazifalari"
+msgstr "The goals and tasks of editorial activity"
+
+#: templates/post/journal.html:71
+msgid ""
+"jurnali Respublikamizdagi va Xalqaro oily ta’lim muassasalari &nbsp;"
+"professor-о‘qituvchilari&nbsp;va mustaqil ilmiy izlanuvchilar tomonidan olib "
+"borilayotgan ilmiy-tadqiqot ishlari&nbsp;natijalarini ilmiy maqola tarzida "
+"chop etadi. Shuningdek jurnalga Xalqaro va Respublikamizning boshqa ilmiy "
+"dargohlari, ishlab chiqarish tashkilotlari&nbsp;va korxonalarida faoliyat "
+"ko’rsatib, ilmiy-tadqiqot ishlari olib borayotgan xodimlarning ham ilmiy "
+"maqolalari kiritiladi"
+msgstr ""
+"journal Higher educational institutions in our Republic and International "
+"&nbsp; publishes the results of scientific research conducted by professors "
+"and teachers and independent researchers in the form of scientific articles. "
+"The magazine also includes scientific articles by employees working in "
+"international and other scientific institutes, production organizations and "
+"enterprises, conducting scientific research work."
+
+#: templates/post/journal.html:75 templates/post/send_article.html:60
+msgid ""
+"xalqaro ilmiy jurnali quyidagi yo’nalishlar bo’yicha maqolalar qabul qiladi"
+msgstr ""
+"The international scientific journal accepts articles in the following areas"
+
+#: templates/post/journal.html:78 templates/post/send_article.html:63
+msgid "xalqaro ilmiy jurnali"
+msgstr "international scientific journal"
+
+#: templates/post/journal.html:79 templates/post/send_article.html:64
+msgid "FIZIKA-MATEMATIKA fanlari"
+msgstr "PHYSICS-MATHEMATICS sciences"
+
+#: templates/post/journal.html:80 templates/post/send_article.html:65
+msgid "KIMYO fanlari"
+msgstr "CHEMISTRY"
+
+#: templates/post/journal.html:81 templates/post/send_article.html:66
+msgid "TEXNIKA fanlari"
+msgstr "TECHNICAL sciences"
+
+#: templates/post/journal.html:82 templates/post/send_article.html:67
+msgid "IQTISODIYOT fanlari"
+msgstr ""
+
+#: templates/post/journal.html:84 templates/post/send_article.html:69
+msgid "FALSAFA fanlari"
+msgstr "ECONOMICS sciences"
+
+#: templates/post/journal.html:85 templates/post/send_article.html:70
+msgid "FILOLOGIYA fanlari"
+msgstr "Philological sciences"
+
+#: templates/post/journal.html:86 templates/post/send_article.html:71
+msgid "PEDAGOGIKA fanlari"
+msgstr "PEDAGOGICAL sciences"
+
+#: templates/post/journal.html:87 templates/post/send_article.html:72
+msgid "PSIXOLOGIYA fanlari"
+msgstr "PSYCHOLOGY sciences"
+
+#: templates/post/journal.html:88 templates/post/send_article.html:73
+msgid "SOTSIOLOGIYA fanlari"
+msgstr "Sciences of SOCIOLOGY"
+
+#: templates/post/journal.html:91 templates/post/send_article.html:75
+msgid "GEOLOGIYA va MINERALOGIYA fanlari"
+msgstr "GEOLOGY and MINERALOGY"
+
+#: templates/post/journal.html:92 templates/post/send_article.html:76
+msgid "TARIX fanlari"
+msgstr "HISTORY subjects"
+
+#: templates/post/journal.html:93 templates/post/send_article.html:77
+msgid "GEOGRAFIYA fanlari"
+msgstr "Sciences of GEOGRAPHY"
+
+#: templates/post/journal.html:94 templates/post/send_article.html:78
+msgid "YURIDIK fanlari"
+msgstr "LEGAL sciences"
+
+#: templates/post/journal.html:95 templates/post/send_article.html:79
+msgid "SAN'ATSHUNOSLIK fanlari"
+msgstr "ARTS subjects"
+
+#: templates/post/journal.html:96 templates/post/send_article.html:80
+msgid "ARXITEKTURA fanlari"
+msgstr "ARCHITECTURAL sciences"
+
+#: templates/post/journal.html:98 templates/post/send_article.html:82
+msgid "BIOLOGIYA fanlari"
+msgstr "BIOLOGICAL sciences"
+
+#: templates/post/journal.html:99 templates/post/send_article.html:83
+msgid "QISHLOQ XO'JALIGI fanlari"
+msgstr "AGRICULTURAL Sciences"
+
+#: templates/post/journal.html:100 templates/post/send_article.html:84
+msgid "TIBBIYOT fanlari"
+msgstr "MEDICAL sciences"
+
+#: templates/post/journal.html:101 templates/post/send_article.html:85
+msgid "FARMATSEVTIKA fanlari"
+msgstr "PHARMACEUTICALS science"
+
+#: templates/post/journal.html:102 templates/post/send_article.html:86
+msgid "VETERINARIYA fanlari"
+msgstr "VETERINARY SCIENCES"
+
+#: templates/post/journal.html:104 templates/post/send_article.html:89
+msgid "Maqolalarni qabul qilish muddati"
+msgstr "Deadline for receiving articles"
+
+#: templates/post/journal.html:105
+msgid "Har oyning 10-sanasiga qadar"
+msgstr "By the 10th of every month"
+
+#: templates/post/journal.html:106 templates/post/send_article.html:90
+msgid "Jurnalning rasmiy tillari"
+msgstr "Jurnalning rasmiy tillari"
+
+#: templates/post/journal.html:106
+msgid "o‘zbek, rus, ingliz"
+msgstr "uzbek, russian, english"
+
+#: templates/post/journal.html:107 templates/post/send_article.html:91
+msgid "Jurnalning nashr etilish sanasi"
+msgstr "Publication date of the journal"
+
+#: templates/post/journal.html:107
+msgid "Har oyning 15-sanasi"
+msgstr "15th of every month"
+
+#: templates/post/journal.html:109 templates/post/send_article.html:92
+msgid "Jurnal rasmiy sayti"
+msgstr "The official website of the journal"
+
+#: templates/post/journal.html:111 templates/post/send_article.html:93
+msgid "Jurnal telegram kanali"
+msgstr "Journal telegram channel"
+
+#: templates/post/journal.html:115
+msgid "Muassisning huquq va majburiyatlari"
+msgstr "Rights and obligations of the founder"
+
+#: templates/post/journal.html:117
+msgid ""
+"Muassis&nbsp;о‘z Nizomi (Ustavi) va qonun hujjatlarida belgilangan "
+"vakolatlari doirasida tahririyat&nbsp;ishlarini tashkil etadi va boshqaradi."
+msgstr ""
+"The founder organizes and manages the editorial work within the scope of his "
+"Charter (Charter) and statutory powers."
+
+#: templates/post/journal.html:119
+msgid ""
+"Jurnal&nbsp;tahririyatining Nizomini, Nizomga kiritiladigan о‘zgartirish va "
+"qо‘shimchalarni tasdiqlaydi, uning ro’yxatda qayd etilgan nomidan "
+"foydalanadi va tasarruf etadi."
+msgstr ""
+"Approves the Regulations of the editorial office of the journal, amendments "
+"and additions to the Regulations, uses and disposes of its registered name"
+
+#: templates/post/journal.html:121
+msgid "Muassis bir paytning o’zida jurnal bosh muharriri hisoblanadi."
+msgstr "The founder is also the editor-in-chief of the magazine"
+
+#: templates/post/journal.html:123
+msgid "Jurnal tahrir hay’ati a’zolarini tayinlaydi va vazifasidan ozod etadi."
+msgstr "The journal appoints and dismisses members of the editorial board."
+
+#: templates/post/journal.html:125
+msgid ""
+"12 shriftda, 1,5 intervalda, 10&nbsp;sahifa (A-4 format) dan ortiq bо‘lmagan "
+"(reklama tipidagi materiallardan tashqari) xabar yoki materialni muallif "
+"nomidan jurnal&nbsp;sahifalariga joylashtiradi."
+msgstr ""
+"12 fonts, 1.5 spacing, no more than 10&nbsp;pages (A-4 format) (except "
+"advertising type materials) places the message or material on the "
+"magazine&nbsp;pages on behalf of the author."
+
+#: templates/post/journal.html:127
+msgid "Qonunda belgilanga tartibda jurnal faoliyatini tо‘xtatadi"
+msgstr "The journal shall be suspended in accordance with the law"
+
+#: templates/post/journal.html:129
+msgid "Tahririyat tashkil etadi"
+msgstr "Organized by the editors"
+
+#: templates/post/journal.html:130
+msgid "Ommaviy axborot vositasining chiqarilishini ta’minlaydi"
+msgstr "Ensures the release of mass media"
+
+#: templates/post/journal.html:132
+msgid "Jurnal uchun zarur axborot va materiallarni&nbsp;о‘z vaqtida yetkazadi."
+msgstr "Delivers necessary information and materials for the magazine on time"
+
+#: templates/post/journal.html:134
+msgid "Jurnalni targ‘ib etish yordamlashadi"
+msgstr "Magazine promotion helps"
+
+#: templates/post/journal.html:135
+msgid ""
+"Tahririyat tomonidan jurnalxonlar&nbsp;о‘rtasida tashkil&nbsp;etiladigan "
+"turli xil ijodiy tanlov, sovrinli о‘yin va sport musobaqalarida, shuningdeq "
+"homiylik ishlarini amalga oshirishda qatnashadi."
+msgstr ""
+"He participates in various creative contests, prize-winning games and sports "
+"competitions organized by the editors among journalists, as well as in the "
+"implementation of sponsorship work."
+
+#: templates/post/journal.html:137
+msgid ""
+"Ommaviy axborot vositalari tо‘g‘risidagi qonun hujjatlariga&nbsp;rioya "
+"etilishi ustidan nazoratni ta’minlaydi."
+msgstr ""
+"The mass media provides control over the compliance with the legal documents."
+
+#: templates/post/journal.html:139
+msgid ""
+"Jurnalning muntazam faoliyat kо‘rsatishi, moliyalashtirishi, tarqatish bilan "
+"bog‘liq bо‘lgan moddiy-texnik masalalarni yechishga, ishlab chiqarish, "
+"tahririyat xodimlari&nbsp;uchun zarur ijtimoiy sharoitlarni yaratishga "
+"kо‘maklashadi."
+msgstr ""
+"They help to solve the material and technical issues related to the regular "
+"operation, financing, and distribution of the magazine, and to create the "
+"necessary social conditions for the production and editorial staff."
+
+#: templates/post/journal.html:143
+msgid ""
+"Muassis qonun hujjatlariga muvofiq boshqa huquqlarga ega bо‘lishi va uning"
+msgstr ""
+"The founder has other rights in accordance with legal documents and his"
+
+#: templates/post/journal.html:144
+msgid "zimmasida boshqa majburiyatlar ham bо‘lishi mumkin"
+msgstr "may have other obligations"
+
+#: templates/post/journal.html:145
+msgid "Tahririyatning"
+msgstr "Editor's"
+
+#: templates/post/journal.html:145
+msgid "huquq va"
+msgstr "law and"
+
+#: templates/post/journal.html:147
+msgid ""
+"Tahririyat tarkibiga bosh muharrir, mas’ul kotib va tahrir hay’ati kiradi"
+msgstr ""
+"The editorial staff includes the editor-in-chief, the responsible secretary "
+"and the editorial board"
+
+#: templates/post/journal.html:149
+msgid ""
+"Tahririyat о‘z muassisi Nizomida kо‘rsatilgan bandlarga og‘ishmay amal qiladi"
+msgstr ""
+"The editorial office shall adhere to the provisions of the Articles of "
+"Association"
+
+#: templates/post/journal.html:151
+msgid ""
+"Tahririyat о‘z faoliyatini «Ommaviy axborot vositalari tо‘g‘risida»gi, "
+"“Axborot erkinligi prinsiplari va kafolatlari tо‘g‘risida”gi О‘zbekistan "
+"Respublikasi qonunlari doirasida hamda о‘z “Nizom”iga muvofiq amalga "
+"oshiradi."
+msgstr ""
+"The editorial office conducts its activities within the framework of the "
+"laws of the Republic of Uzbekistan \"On Mass Media\", \"Principles and "
+"Guarantees of Freedom of Information\" and It is carried out in accordance "
+"with the Regulations."
+
+#: templates/post/journal.html:153
+msgid ""
+"Davlat sirlarini saqlaydi va davlat axborot resurslaridan ruxsatsiz tarzda "
+"foydalanmaydi."
+msgstr ""
+"Keeps state secrets and does not use state information resources in an "
+"unauthorized manner."
+
+#: templates/post/journal.html:155
+msgid "Jurnalning belgilangan davr ichida chop etilishini tо‘liq ta’minlaydi"
+msgstr "It ensures that the magazine is published within the specified period"
+
+#: templates/post/journal.html:157
+msgid ""
+"Jurnal faoliyatiga tegishli har qanday javobgarlikni о‘z zimmasiga oladi."
+msgstr ""
+"Any responsibility related to the activity of the magazine is assumed by "
+"Ð¾âĂĀĂ."
+
+#: templates/post/journal.html:159
+msgid ""
+"Tahririyat Nizomi (Ustavi)ga о‘zgartirishlar kiritish va muassis tasdig‘idan "
+"о‘tkazish"
+msgstr ""
+"Amendments to the Editorial Regulations (Statute) and approval of the founder"
+
+#: templates/post/journal.html:163
+msgid ""
+"Tahririyatga kelgan maqolalarning&nbsp;mazmunini buzmagan holda tahrir "
+"etish, qisqartirish yoki kengaytirish"
+msgstr ""
+"Editing, shortening or expanding the content of the articles received by the "
+"editors"
+
+#: templates/post/journal.html:165
+msgid "Jurnal hajmi (formati)ni kamaytirish&nbsp;yoki kо‘paytirish, shuningdek"
+msgstr ""
+"Reducing the size (format) of the magazine or increasing its size, as well"
+
+#: templates/post/journal.html:166
+msgid ""
+"davriyligi va rangini о‘zgartirish hamda tahririyat jamoasining manfaatini, "
+"faoliyatini himoya&nbsp;qilish huquqiga xam egadir"
+msgstr ""
+"has the right to change its periodicity and color and to protect the "
+"interests and activities of the editorial team"
+
+#: templates/post/journal.html:168
+msgid "Tahririyat kasb faoliyati bо‘yicha mustaqildir"
+msgstr "The editors are independent in terms of professional activity"
+
+#: templates/post/journal.html:169
+msgid ""
+"Tahririyatni moliyalashtirish manbai&nbsp;muassis tomonidan shakllantiriladi"
+msgstr ""
+"The source of funding for the editorial office is formed by the founder"
+
+#: templates/post/journal.html:173
+msgid "Tahrir hay’atining huquq va majburiyatlari"
+msgstr "Rights and obligations of the editorial board"
+
+#: templates/post/journal.html:174
+msgid ""
+"Jurnalning umumiy yо‘nalishlarini ishlab chiqish va amalga oshirishni "
+"takomillashtirish maqsadida tahrir hay’ati tuziladi. Tahrir hay’ati "
+"a’zolari&nbsp; muassis tomonidan tayinlanadi va&nbsp;vazifasidan ozod "
+"etiladi. Uning tarkibiga bosh muharrir (tahrir&nbsp;xay’ati raisi), mas’ul "
+"kotib, Xalqaro va Respublika doirasidagi yetakchi professorlar, dotsentlar "
+"va kafedra mudirlari&nbsp;kiritiladi. Tahrir hay’ati quyidagi masalalarni "
+"kо‘rib chiqadi"
+msgstr ""
+"An editorial board will be formed in order to develop and improve the "
+"general guidelines of the magazine. Members of the editorial board&nbsp; "
+"appointed by the founder and released from his position. It includes the "
+"editor-in-chief (chairman of the editorial board), responsible secretary, "
+"leading international and republican professors, associate professors and "
+"heads of departments. The editorial board will consider the following issues"
+
+#: templates/post/journal.html:176
+msgid "Nashrning ilmiy saviyasini oshirish"
+msgstr "Increasing the scientific level of the publication"
+
+#: templates/post/journal.html:177
+msgid ""
+"Tahririyat ishining bosh yо‘nalishlarini&nbsp;belgilash va uni amalga "
+"oshirish"
+msgstr "Determining the main directions of editorial work and implementing it"
+
+#: templates/post/journal.html:179
+msgid ""
+"Jurnalning ayrim muhim sonlarini&nbsp;bezash, qaysi materiallarni berish "
+"maqsadga muvofiqligini aniqlash"
+msgstr ""
+"To decorate some important issues of the magazine, to determine which "
+"materials are appropriate to give"
+
+#: templates/post/journal.html:181
+msgid ""
+"Tashkiliy – ommaviy ishlardan kо‘zlangan maqsad, shuningdek tahririyat "
+"jamoasi ijodiy faoliyati va ayrim xodimlar ijodiy faoliyati&nbsp;bilan "
+"bog‘liq masalalar"
+msgstr ""
+"Organizational issues related to the purpose of mass work, as well as the "
+"creative activity of the editorial team and the creative activity of some "
+"employees."
+
+#: templates/post/journal.html:183
+msgid "Nizomni о‘zgartirish haqida takliflar&nbsp;kiritish"
+msgstr "Submission of proposals to change the statute"
+
+#: templates/post/journal.html:184
+msgid ""
+"Tahrir hay’ati majlisioyda bir marta о‘tkaziladi. Zarur bо‘lgan "
+"taqdirda&nbsp;tahrir xay’ati&nbsp;raisi navbatdan tashkdri majlis chaqirishi "
+"mumkin. Unda tahrir xay’atining barcha&nbsp;a’zolari qatnashadilar va ular "
+"majlisda kо‘riladigan masala bilan oldindan qisman tanishtirilgan "
+"bо‘lishlari kerak. Yig‘ilish о‘tkazish mumkin bо‘lmagan hollarda&nbsp;tahrir "
+"hay’atining har bir a’zosi bilan alohida kelishilgan xolda qaror qabul&nbsp;"
+"qilinadi"
+msgstr ""
+"The editorial board is convened once per session. If necessary, the chairman "
+"of the editorial board may call an extraordinary meeting. All members of the "
+"editorial staff will participate in it, and they must be partially "
+"introduced to the issue to be discussed in the meeting. In cases where the "
+"meeting cannot be held, a decision will be made after a separate agreement "
+"with each member of the editorial board."
+
+#: templates/post/journal.html:186
+msgid ""
+"Tahrir hay’ati a’zolari о‘rtasida hamfikrlik&nbsp;bо‘lmagan taqdirda bosh "
+"muharrir muhokama etilayotgan&nbsp;masala yuzasidan hal qiluvchi qaror qabul "
+"qiladi"
+msgstr ""
+"If there is no agreement between the members of the editorial board, the "
+"editor-in-chief will make a decisive decision on the discussed issue."
+
+#: templates/post/journal.html:188
+msgid ""
+"Tahririyatning&nbsp;butun ishini amaldagi qonunlar, meyoriy hujjatlar va "
+"mazkur Nizomga&nbsp;muvofiq tarzda yо‘naltirib boradi"
+msgstr ""
+"Manages all the work of the editors in accordance with the current laws, "
+"regulatory documents and this Regulation."
+
+#: templates/post/journal.html:192
+msgid "Mas’ul&nbsp;kotibning huquq va majburiyatlari"
+msgstr "Rights and obligations of the responsible secretary"
+
+#: templates/post/journal.html:195
+msgid "Tahrir hay’ati a’zosi hisoblanadi"
+msgstr "He is a member of the editorial board"
+
+#: templates/post/journal.html:196
+msgid ""
+"Jurnalni tayyorlash, chiqarish bо‘yicha kundalik&nbsp;faoliyatini "
+"yо‘naltirib boradi, rejalashtirish uchun javob beradi"
+msgstr ""
+"Manages the daily activities of preparing and publishing the magazine, is "
+"responsible for planning"
+
+#: templates/post/journal.html:198
+msgid ""
+"Kompyuter markazi faoliyati uchun shaxsan javobgar hisoblanadi, ular "
+"faoliyatini yо‘naltirib&nbsp;boradi"
+msgstr ""
+"He is personally responsible for the activity of the computer center, and he "
+"will guide its activities"
+
+#: templates/post/journal.html:200
+msgid "Jurnal sonlarini rejalashtiradi, uning bajarilishini ta’minlaydi"
+msgstr "Plans the issue of the magazine, ensures its execution"
+
+#: templates/post/journal.html:202
+msgid "Jurnalning о‘z&nbsp;vaqtida sifatli chiqishi uchun javob beradi"
+msgstr "It is responsible for quality output of the magazine on time"
+
+#: templates/post/journal.html:204
+msgid ""
+"Tahririyatda jurnalxonlar&nbsp;konferensiyalarini, jurnal sonlarining "
+"taqdimotini&nbsp;(prizentatsiyasini) tashkil etadi va shu ishlar uchun javob "
+"beradi"
+msgstr ""
+"In the editorial office, he organizes conferences of magazine readers, "
+"presentation of magazine issues and is responsible for these works."
+
+#: templates/post/journal.html:206
+msgid ""
+"Tahririyatda materiallar zahirasini yuzaga keltiradi va&nbsp;nazorat kiladi, "
+"materiallar va suratlarning saklanishi,&nbsp;tahririyatda xatlar harakati"
+msgstr ""
+"Creates and controls the stock of materials in the editorial office, storage "
+"of materials and photos, movement of letters in the editorial office"
+
+#: templates/post/journal.html:207
+msgid ""
+"uchun javob beradi. Kotibiyatdagi&nbsp;barcha hujjatlashtirish&nbsp;ishlari "
+"uchun mas’uldir."
+msgstr ""
+"is responsible for Responsible for all documentation work in the secretariat."
+
+#: templates/post/journal.html:209
+msgid ""
+"Jurnal ruknlarining turi,&nbsp;qо‘llanilishi va yangilanib borishi uchun "
+"javob beradi."
+msgstr ""
+"It is suitable for the type, application and updating of magazine columns."
+
+#: templates/post/journal.html:211
+msgid ""
+"Tahrir xay’ati faoliyatida&nbsp;faol qatnashadi, jurnal materiallari "
+"saviyasi,"
+msgstr ""
+"Actively participates in the activities of the editorial board, the level of "
+"magazine materials,"
+
+#: templates/post/journal.html:212
+msgid "jurnalning bezatilishi uchun javob beradi"
+msgstr "suitable for magazine decoration"
+
+#: templates/post/journal.html:214
+msgid ""
+"Jurnal har bir sonining vaqtida, sifatli chiqishi uchun&nbsp;shaxsan "
+"javobgar hisoblanadi"
+msgstr ""
+"He is personally responsible for the quality and timeliness of each issue of "
+"the magazine"
+
+#: templates/post/journal.html:216
+msgid "Jurnal sonlariga navbatchilik qiladi"
+msgstr "He is in charge of magazine issues"
+
+#: templates/post/journal.html:219
+msgid "Nizom (Ustav) ni qabul qilish va o‘zgartirishlar kiritish&nbsp;tartibi"
+msgstr "The procedure for adopting and amending the Charter"
+
+#: templates/post/journal.html:221
+msgid ""
+"Tahririyat Nizom (Ustav)i tahririyatning&nbsp;umumiy yig‘ilishida kо‘pchilik "
+"ovoz bilan qabul qilinadi va muassis tomonidan tasdiqlanadi. Nizom (Ustav)ga "
+"kiritiladigan&nbsp;о‘zgartirishlar&nbsp;ham xuddi shunday tartibda amalga "
+"oshiriladi."
+msgstr ""
+"The editorial charter is adopted by a majority of votes at the general "
+"meeting of the editorial board and approved by the founder. Amendments to "
+"the Charter will be made in the same manner."
+
+#: templates/post/journal.html:223
+msgid ""
+"Muassis va tahririyat ommaviy&nbsp;axborot vositalari va matbuot "
+"tо‘g‘risidagi qonun&nbsp;va boshqa tegishli qonunlarga о‘zgartirish va "
+"qо‘shimchalar kiritilganda hamda bu borada yangi farmonlar, qarorlar "
+"chiqarilganda"
+msgstr ""
+"Founder and editors when amendments and additions are made to the law on "
+"mass media and press and other related laws and when new decrees and "
+"decisions are issued in this regard"
+
+#: templates/post/journal.html:224
+msgid "jurnal Nizom (Ustav)ini konunchilikka muvofiqlashtirib boradi."
+msgstr "The magazine complies with the Regulations."
+
+#: templates/post/journal.html:229
+#, fuzzy
+#| msgid ""
+#| "Ushbu Nizom (Ustav) «Science and Innovation» jurnali&nbsp;tahririyatining"
+msgid ""
+"Ushbu Nizom (Ustav) «Modern Science and Research» jurnali&nbsp;"
+"tahririyatining"
+msgstr ""
+"This Regulation (Charter) of the editorial office of the magazine \"Science "
+"and Innovation\"."
+
+#: templates/post/journal.html:229
+msgid ""
+"2022 yil 12 apreldagi 1-sonli umumiy yig‘ilishida kо‘pchilik ovozi bilan "
+"qabul qilindi"
+msgstr ""
+"It was adopted by a majority vote at the 1st general meeting on April 12, "
+"2022."
+
+#: templates/post/science.html:15
+msgid "esdalik ko'krak nishoni"
+msgstr "commemorative badge"
+
+#: templates/post/science.html:18
+msgid "Ilm-fan va innovatsiyalar akademiyasi va"
+msgstr "Academy of Science and Innovation and"
+
+#: templates/post/science.html:19
+msgid ""
+"xalqaro ilmiy jurnali tomonidan ilm-fan rivoji va uning targ'iboti bilan "
+"shug'ullanayotgan, OTM lar xalqaro reytingini oshirishda munosib hissa "
+"qo'shayotgan, xalqaro darajada ommalashtirilayotgan ilmiy tadqiqot ishlari "
+"olib borayotgan, ilmiy faoliyat va ilmiy tanlovlarga homiylik qilayotgan "
+"olimlar, ilmiy tadqiqotchilar va tashabbuskor fuqarolar"
+msgstr ""
+"scientists, scientific researchers, who are engaged in the development of "
+"science and its promotion by the international scientific journal, who make "
+"a worthy contribution to increasing the international rating of HEIs, who "
+"conduct scientific research works that are popularized at the international "
+"level, who sponsor scientific activities and scientific competitions "
+"enterprising citizens"
+
+#: templates/post/science.html:20
+msgid "ko'krak nishoni bilan taqdirlanadi. Shuningdek,"
+msgstr "awarded with a badge. also"
+
+#: templates/post/science.html:22
+msgid ""
+"xalqaro ilmiy jurnali tashabbusi bilan jurnal faoliyati, uning targ'ibotida "
+"faol bo'lgan, jurnalga yil davomida eng ko'p maqolalarni jalb qilgan 10 "
+"nafar targ'ibotchilar yil yakunida ushbu ko'krak nishoni bilan taqdirlanadi."
+msgstr ""
+"at the initiative of the international scientific journal, 10 propagandists "
+"who are active in the magazine's activities and promotion, and who have "
+"attracted the most articles to the magazine during the year, will be awarded "
+"with this badge at the end of the year."
+
+#: templates/post/science_base.html:13
+msgid "xalqaro ilmiy jurnali maqolalari joylashtiriladigan ilmiy bazalar"
+msgstr ""
+"scientific databases where international scientific journal articles are "
+"placed"
+
+#: templates/post/send_article.html:11
+msgid "xalqaro ilmiy jurnaliga maqola yuborish"
+msgstr "submitting an article to an international scientific journal"
+
+#: templates/post/send_article.html:22
+msgid "Ilmiy maqola yuborish uchun"
+msgstr "To submit a scientific article"
+
+#: templates/post/send_article.html:28
+msgid "Ilmiy maqolalar"
+msgstr "Scientific articles"
+
+#: templates/post/send_article.html:29
+msgid ""
+"o‘zbek, rus, ingliz, nemis, qoraqalpoq, qozoq, tojik</b> tillarida va IMRAD "
+"talabi asosida qabul qilinadi."
+msgstr ""
+"It is accepted in Uzbek, Russian, English, German, Karakalpak, Kazakh, Tajik "
+"languages and based on IMRAD's requirements."
+
+#: templates/post/send_article.html:31
+msgid "Maqola muallifiga BEPUL"
+msgstr "FREE to the author of the article"
+
+#: templates/post/send_article.html:32 templates/post/send_article.html:104
+msgid "qabul qilinganlik haqida"
+msgstr "about acceptance"
+
+#: templates/post/send_article.html:35
+msgid "elektron (pdf) holatda beriladi."
+msgstr "is provided in electronic (pdf) form."
+
+#: templates/post/send_article.html:36
+msgid ""
+"Yuborilgan maqolalar 3 kun ichida, jurnalning yakuniy to'plami esa har "
+"oyning 15 sanasida"
+msgstr ""
+"Submitted articles within 3 days, and the final collection of the magazine "
+"on the 15th of each month"
+
+#: templates/post/send_article.html:39
+msgid "saytida va"
+msgstr "on the site and"
+
+#: templates/post/send_article.html:41
+msgid "telegram kanalida e'lon qilinadi"
+msgstr "will be announced on the telegram channel"
+
+#: templates/post/send_article.html:44
+msgid "Axborot xatini ko'chirib olish"
+msgstr "Download the newsletter"
+
+#: templates/post/send_article.html:53
+msgid "xalqaro ilmiy jurnali Axborot xati"
+msgstr "International scientific journal Information letter"
+
+#: templates/post/send_article.html:55
+msgid "Ilm-fan va ilmiy faoliyat to’g’risida"
+msgstr "About science and scientific activity"
+
+#: templates/post/send_article.html:56
+msgid ""
+"O‘zbekiston Respublikasi Qonuni, O‘zbekiston Respublikasi Prezidentining "
+"2020 yil 29-oktabrdagi PF-6097-sonli farmonida ko‘zda tutilgan vazifalar, "
+"jumladan"
+msgstr ""
+"Tasks provided for by the Law of the Republic of Uzbekistan, Decree No. "
+"PF-6097 of the President of the Republic of Uzbekistan dated October 29, "
+"2020, including"
+
+#: templates/post/send_article.html:57
+msgid "Ilm-fanni 2030-yilgacha rivojlantirish konsepsiyasi"
+msgstr "The concept of development of science until 2030"
+
+#: templates/post/send_article.html:58
+msgid "ijrosini  ta’minlash maqsadida tashkil etilgan"
+msgstr "was established in order to ensure its execution"
+
+#: templates/post/send_article.html:59
+msgid ""
+"xalqaro ilmiy jurnali uchun maqolalar qabulini e’lon qiladi. Ushbu jurnal "
+"nufuzli bazalarda indekslanib, elektron va bosma holatda nashr etib boriladi."
+msgstr ""
+"announces the acceptance of articles for the international scientific "
+"journal. This journal is indexed in authoritative databases and published in "
+"electronic and printed form."
+
+#: templates/post/send_article.html:89
+msgid "har oyning 10-sanasiga qadar"
+msgstr "by the 10th of every month"
+
+#: templates/post/send_article.html:90
+msgid "o‘zbek, qozoq, rus, ingliz"
+msgstr "Uzbek, Kazakh, Russian, English"
+
+#: templates/post/send_article.html:91
+msgid "Har oyning 15-kunida"
+msgstr "On the 15th of every month"
+
+#: templates/post/send_article.html:96
+msgid "Maqolalar elektron shaklda"
+msgstr "Articles in electronic form"
+
+#: templates/post/send_article.html:99
+msgid "telegram manzili orqali qabul qilinadi"
+msgstr "received by telegram address"
+
+#: templates/post/send_article.html:100
+msgid "Murojaat uchun telefon raqami"
+msgstr "Contact phone number"
+
+#: templates/post/send_article.html:101
+msgid ""
+"Yuborilgan ilmiy maqolalar tahrir hay’ati tomonidan ko‘rib chiqiladi va "
+"tahrirdan o‘tmagan, talablar bo‘yicha yuborilmagan maqolalar nashr etilmaydi"
+msgstr ""
+"The sent scientific articles are reviewed by the editorial board, and "
+"unedited articles that are not sent according to the requirements will not "
+"be published."
+
+#: templates/post/send_article.html:102
+msgid ""
+"Jurnalga professor-o‘qituvchilar, doktorantlar, mustaqil izlanuvchilar, "
+"umumta’lim maktablari va akademik litseylar o’qituvchilari, magistrantlar, "
+"iqtidorli talabalar va boshqa ilm-fan vakillari maqolalar yuborishlari "
+"mumkin."
+msgstr ""
+"Professors, doctoral students, independent researchers, teachers of public "
+"schools and academic lyceums, master's students, gifted students and other "
+"representatives of science can send articles to the magazine."
+
+#: templates/post/send_article.html:103
+msgid "Jurnalga qabul qilingan maqolalar"
+msgstr "Articles accepted for the journal"
+
+#: templates/post/send_article.html:103
+msgid "1-3 kunda"
+msgstr "in 1-3 days"
+
+#: templates/post/send_article.html:103
+msgid ""
+"jurnal rasmiy web sayti (http://scientists.uz/)ga joylanadi, hamda muallifga "
+"maqola havolasi taqdim etiladi. O’sha kunning o’zida muallifga"
+msgstr ""
+"the journal will be posted on the official website (http://scientists.uz/), "
+"and the author will be provided with a link to the article. To the author on "
+"the same day"
+
+#: templates/post/send_article.html:104
+msgid "BEPUL sertifikat"
+msgstr "FREE certificate"
+
+#: templates/post/send_article.html:105
+msgid "taqdim etiladi"
+msgstr "is provided"
+
+#: templates/post/send_article.html:106
+msgid "Har bir maqola"
+msgstr "Every article"
+
+#: templates/post/send_article.html:106
+msgid ""
+"Google Scholar (iqtiboslik va h-indexni oshirish uchun), Zenodo (xalqaro "
+"bazada pdf shaklida chiqarish va DOI raqam olish uchun), OpenAire (Yevropa "
+"asosiy bazalaridan biri), Directory of Reserch Journals Indexing (OAK 16 "
+"baza), Index Copernicus (OAK 15-baza), Cyberleninka"
+msgstr ""
+"Google Scholar (to increase citations and h-index), Zenodo (to publish in "
+"pdf format and get a DOI number in an international database), OpenAire (one "
+"of the main European databases), Directory of Research Journals Indexing "
+"(OAK 16 bases), Index Copernicus (OAK 15 -base), Cyberleninka"
+
+#: templates/post/send_article.html:107
+msgid "xalqaro bazalarida  indekslanadi. Har bir maqolaga"
+msgstr "indexed in international databases. For each article"
+
+#: templates/post/send_article.html:107
+msgid "DOI raqami"
+msgstr "DOI number"
+
+#: templates/post/send_article.html:107
+msgid "beriladi"
+msgstr "is given"
+
+#: templates/post/send_article.html:108
+msgid "Jurnalning to‘plam shakli"
+msgstr "Collection form of the magazine"
+
+#: templates/post/send_article.html:108
+msgid "har oyning 15-kuni"
+msgstr "on the 15th of every month"
+
+#: templates/post/send_article.html:111
+msgid "veb saytiga va"
+msgstr "to the website and"
+
+#: templates/post/send_article.html:113
+msgid "telegram kanaliga joylashtiriladi"
+msgstr "will be placed on the telegram channel"
+
+#: templates/post/send_article.html:114
+msgid "Jurnalning bosma (qog’oz) nashri alohida buyurtma asosida beriladi"
+msgstr ""
+"The printed (paper) edition of the magazine is issued on a separate order "
+"basis"
+
+#: templates/post/send_article.html:115
+msgid "Taqdim etiladigan maqolalarga qo‘yiladigan talablar"
+msgstr "Requirements for submitted articles"
+
+#: templates/post/send_article.html:117
+msgid ""
+"Maqola xalqaro talab darajasidagi IMRAD shaklida yozilgan bo‘lishi lozim"
+msgstr ""
+"The article should be written in IMRAD format of international demand level"
+
+#: templates/post/send_article.html:119
+msgid ""
+"Maqola nomi, annotatsiya va kalit so’zlar o’zbek, rus va ingliz tillarida "
+"taqdim qilinishi lozim. (Agar maqolangiz rus yoki ingliz tilida bo’lsa "
+"annotatsiya va kalit so’zlar ikki rus va ingliz tillarida bo’lishi yetarli)"
+msgstr ""
+"The title of the article, abstract and keywords must be submitted in Uzbek, "
+"Russian and English languages. (If your article is in Russian or English, it "
+"is sufficient that the annotation and keywords are in both Russian and "
+"English)"
+
+#: templates/post/send_article.html:121
+msgid ""
+"Maqolalar ilmiy jurnal yo‘nalishiga oid dolzarb mavzularda, ilmiy va "
+"tugallangan fikrlarga asoslangan, taklif va tavsiyalar bilan taqdim etilishi "
+"lozim"
+msgstr ""
+"Articles should be presented on current topics related to the direction of "
+"the scientific journal, based on scientific and completed opinions, with "
+"suggestions and recommendations."
+
+#: templates/post/send_article.html:123
+msgid ""
+"Maqola matnlari A4 hajmda, yuqoridan va pastdan 2sm, chapdan 3 sm, o‘ngdan "
+"1.5 sm xoshiyaga ega bo‘lishi kerak"
+msgstr ""
+"The text of the article should be in A4 size, with a margin of 2 cm from the "
+"top and bottom, 3 cm from the left, and 1.5 cm from the right."
+
+#: templates/post/send_article.html:125
+msgid ""
+"Maqola matni Word matn muharririda, Times New Roman shrifti, 12 o‘lchamida, "
+"1,15 intervalda bo‘lishi va 3-12 bet hajmda bo‘lishi lozim"
+msgstr ""
+"The text of the article should be in the Word text editor, Times New Roman "
+"font, size 12, 1.15 spacing, and should be 3-12 pages long."
+
+#: templates/post/vacancy.html:13
+msgid "xalqaro ilmiy jurnali jamoasiga qo'shiling!"
+msgstr "Join the team of an international scientific journal!"
+
+#: templates/post/vacancy.html:16
+msgid ""
+"Jurnal jamoasida ishlashni xohlaganlarni biz bilan ishlashga taklif qilamiz!"
+msgstr "We invite those who want to work in the magazine team to work with us!"
+
+#: templates/post/vacancy.html:17
+msgid ""
+"Ingliz, fransuz, nemis, rus, qozoq, tojik, qoraqalpoq yoki boshqa chet "
+"tillaridan birini biladigan, kompyuter, internetdan erkin foydalana "
+"oladigan, o'zbek tili grammatik qoidalarini tushunadigan, kamida bitta ilmiy "
+"maqola yozgan yosh olimlarni ishga taklif qilamiz."
+msgstr ""
+"We invite young scientists who know English, French, German, Russian, "
+"Kazakh, Tajik, Karakalpak or other foreign languages, who can freely use a "
+"computer and the Internet, understand the grammatical rules of the Uzbek "
+"language, who have written at least one scientific article."
+
+#: templates/post/vacancy.html:18
+msgid ""
+"Kompyuteri, interneti va masofaviy ishlash imkoniyati mavjud bo'lgan "
+"insonlarni ishga olamiz."
+msgstr ""
+"We are hiring people who have access to a computer, the Internet, and the "
+"ability to work remotely."
+
+#: templates/post/vacancy.html:19
+msgid ""
+"Onlayn ishlash imkoniyati, qulay ish grafigi, ilmiy maqola chiqarishda "
+"bonuslar."
+msgstr ""
+"Ability to work online, convenient work schedule, bonuses for publishing "
+"scientific articles."
