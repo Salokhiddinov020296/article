@@ -22,3 +22,13 @@ class AuthorModel(models.Model):
     @property
     def content(self):
         return getattr(self, f"content_{get_language()}")
+
+
+class ArchiveModel(models.Model):
+    volume = models.PositiveIntegerField()
+    issue = models.PositiveIntegerField()
+    image = models.ImageField(upload_to='media/archive')
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.volume + self.issue

@@ -16,7 +16,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-6 mb-6">
-                                            <img src="{% static 'images/for_site_en.jpg' %}" class="img-thumbnail">
+                                            <img src="{% static 'images/journal.jpeg' %}" class="img-thumbnail">
                                         </div>
                                         <div class="col-lg-6 mb-6">
                                             <h4 class="card-title"><span class="badge bg-success"
@@ -31,14 +31,14 @@
                                                 elektron va bosma holatda nashr etib boriladi.<br>
                                                 Jurnalning rasmiy tillari: <b>o‘zbek, rus, ingliz</b><br>
                                                 Jurnal telegram kanali: <i class="bi bi-telegram text-info"></i> <a
-                                                    href="https://t.me/science_research" target="_blank"><b>https://t.me/science_innovations</b></a><br>
+                                                    href="https://t.me/science_research" target="_blank"><b>https://t.me/science_research</b></a><br>
                                                 Maqola muallifiga BEPUL qabul qilinganlik haqida <b>tabriknoma,
                                                 sertifikat,</b> indekslanganligi haqida <b>ma'lumotnoma</b> va <b>mualliflik
                                                 guvohnomasi</b> beriladi.<br>
                                                 Jurnal har oyda nashr qilinadi.<br>
                                                 Maqolalar yuborish uchun:
                                                 <i class="bi bi-telegram text-info"></i> <a
-                                                    href="https://t.me/science_inno"
+                                                    href="https://t.me/science_research"
                                                     target="_blank"><b>@science_research</b></a><br>
                                                 <i class="bi bi-envelope-fill text-danger"></i> <a
                                                     href="mailto:localhostuz@gmail.com" target="_blank"><b>golibboymurodov6@gmail.com</b></a><br>
@@ -81,7 +81,9 @@
                     <div class="card-body"
                          style="background: linear-gradient(45deg, rgba(63,251,115,1) 0%, rgba(255,255,255,1) 45%, rgba(116,117,114,0.9065826159565389) 100%); ">
                         <h4 class="card-title">{{ row.writer }}</h4>
-                        <p class="card-text">{{ row.annotation }}</p><br>
+                        <p class="card-text">
+                            {{ row.annotation }}
+                        </p><br>
                         <span class="badge bg-dark"><i
                                 class="bi bi-calendar2-date"></i> {{ row.date|date:"d.m.Y" }}</span>
                         <span class="badge bg-dark"> Volume {{ row.volume }} Issue {{ row.issue }}</span>
@@ -121,5 +123,4 @@
             </ul>
         </nav>
     </section>
-
 {% endblock %}

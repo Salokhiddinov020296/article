@@ -36,7 +36,7 @@ class MeetingsView(ListView):
 
 
 class ArxivView(ListView):
-    template_name = 'post/arxiv.html'
+    template_name = 'post/../templates/author/arxiv.html'
 
     def get_queryset(self):
         qs = AclassModel.objects.all()

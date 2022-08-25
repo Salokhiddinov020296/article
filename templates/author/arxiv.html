@@ -3,8 +3,8 @@
 {% block content %}
     <section class="heading-page header-text" id="top">
         <div class="container">
-            <div class="row">
-                {% if object_list %}
+            {% if object_list %}
+                <div class="row">
                     {% for a in object_list %}
                         <div class="col-lg-3" style="display:inline-block; margin-bottom: 25px">
                             <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
@@ -19,13 +19,7 @@
                                             <h4 class="card-title"></h4>
                                             <span class="badge bg-dark"><i
                                                     class="bi bi-calendar2-date"></i>{{ a.date|date:"d.m.Y" }}</span>
-                                            <a href="/media/{{ a.article_pdf }}" target="_blank"
-                                               class="card-link" data-bs-toggle="tooltip" data-bs-placement="top"
-                                               title=""
-                                               data-bs-original-title="">
-                                                <span class="badge bg-success"><i class="bi bi-arrow-down-circle"></i> Download</span>
-
-                                            </a><a href="/media/{{ a.article_pdf }}"
+                                            <a href="{% url 'post:meetings' %}"
                                                    class="card-link" style="margin-left:1px;"><span
                                                 class="badge bg-info"><i
                                                 class="bi bi-eye"></i> View more</span></a>
@@ -35,10 +29,10 @@
                             </div>
                         </div>
                     {% endfor %}
-                {% else %}
-                    <h1 class="text-danger">This page will be worked soon</h1>
-                {% endif %}
-            </div>
+                </div>
+            {% else %}
+                <h1 class="text-danger">This page will be added soon!!!!</h1>
+            {% endif %}
         </div>
     </section>
 {% endblock %}
