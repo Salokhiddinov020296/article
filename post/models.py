@@ -63,7 +63,10 @@ class AclassModel(models.Model):
     promoter = models.ForeignKey(PropagandistModel, on_delete=models.RESTRICT,
                                  verbose_name=_("Targ'ibotchi"))
     writer_document = models.ImageField(upload_to='images/document/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True)
-    greeting_card = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Tabriknoma"), null=True, blank=True)
+    greeting_card = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom"), null=True, blank=True)
+    greeting_card2 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom2"), null=True, blank=True)
+    greeting_card3 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom3"), null=True, blank=True)
+    greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True)
     handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True)
     certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True)
     author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 40, null=False, blank=False)
