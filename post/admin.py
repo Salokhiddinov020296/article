@@ -28,10 +28,10 @@ class WhichLanguageWriteModelAdmin(admin.ModelAdmin):
 
 @admin.register(AclassModel)
 class AclassModelAdmin(admin.ModelAdmin):
-    list_display = ['id', 'article_pdf', 'volume', 'issue', 'pages', 'writer', 'article_name_uz','article_name_en',
+    list_display = ['id', 'article_pdf', 'certificate','volume', 'issue', 'pages', 'article_name_uz','article_name_en',
                     'article_name_ru', 'field', 'language',
                     'date', 'promoter']
-    list_display_links = ['id', 'article_pdf', 'volume', 'issue', 'pages', 'writer', 'field',
+    list_display_links = ['id', 'article_pdf', 'certificate','volume', 'issue', 'pages','field',
                           'language', 'date', 'promoter']
     list_filter = ['date']
-    search_fields = ['writer']
+    search_fields = ['author1',]
