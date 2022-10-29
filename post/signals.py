@@ -148,7 +148,7 @@ def writeToCertificate(fullname, link, qrlink, theme):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\\certificate\\{fullname}.pdf"
+    linkpath = f"/certificate/{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     print(docpath)
     im_1.save(docpath)
@@ -192,7 +192,7 @@ def writetoDiplom(fullname, qrlink, tdate):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\diplom\{fullname}.pdf"
+    linkpath = f"/diplom/{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     im_1.save(docpath)
     return linkpath
@@ -293,7 +293,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\guvohnoma\{fullname}.pdf"
+    linkpath = f"/guvohnoma/{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     im_1.save(docpath)
     return linkpath
