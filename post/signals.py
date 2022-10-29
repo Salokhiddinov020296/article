@@ -13,7 +13,7 @@ today = date.today()
 def save_profile(sender, instance, **kwargs):
     if instance.certificate == ""  or instance.greeting_card == "":
         certificate = writeToCertificate(fullname = instance.author1,
-                        theme = instance.article_name_eng,
+                        theme = instance.article_name_en,
                         link = instance.doi,
                         qrlink = instance.openair)
         instance.greeting_card = writetoDiplom(fullname=instance.author1,
@@ -28,7 +28,7 @@ def save_profile(sender, instance, **kwargs):
         elif instance.author4:
             fullname = " " + instance.author4
          
-        handbook = writetoMalumotnoma(fullname=fullname, theme=instance.article_name_eng,
+        handbook = writetoMalumotnoma(fullname=fullname, theme=instance.article_name_en,
                                      tdate = today, qrlink = instance.doi, num = instance.id)
         instance.save()
     
@@ -56,14 +56,23 @@ def save_profile(sender, instance, **kwargs):
 post_save.connect(save_profile, sender=AclassModel)
 
 def writeToCertificate(fullname, link, qrlink, theme):
-    img = Image.open('C://Users//faxri//Desktop//article//documents//certificate.jpg')
+    try:
+        img = Image.open('C://Users//faxri//Desktop//article//documents//certificate.jpg')
+    except:
+        # /home/user/djangoapps/article
+        img = Image.open('/home//user//djangoapps//article//documents//certificate.jpg')
     image_width = img.width
     image_height = img.height  
     margin = 10
     draw = ImageDraw.Draw(img)
-    myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 38)
-    fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 34)
-    linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 26)
+    try:
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 38)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 34)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 26)
+    except:
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 38)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 34)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 26)
     fullname_y_position = 525
     link_y_position = 450
     char_limit = 35
@@ -137,19 +146,25 @@ def writeToCertificate(fullname, link, qrlink, theme):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\\certificate\\{fullname}.jpg"
+    linkpath = f"\\certificate\\{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     print(docpath)
-    img.save(docpath)
+    im_1.save(docpath)
     return linkpath
 
 
 def writetoDiplom(fullname, qrlink, tdate):
-    img = Image.open('C://Users//faxri//Desktop//article//documents//diplom.jpg')
-    draw = ImageDraw.Draw(img)
-    fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 80)
-    numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 60)
-
+    try:
+        img = Image.open('C://Users//faxri//Desktop//article//documents//diplom.jpg')
+        draw = ImageDraw.Draw(img)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 80)
+        numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 60)
+    except:
+        img = Image.open('/home//user//djangoapps//article//documents//diplom.jpg')
+        draw = ImageDraw.Draw(img)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 80)
+        numFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 60)
+    
     draw.text(
                 (
                     1650,1770
@@ -182,13 +197,20 @@ def writetoDiplom(fullname, qrlink, tdate):
 
 
 def writetoMalumotnoma(qrlink, num, tdate, fullname, theme):
+    try:
+        img = Image.open('/home//user//djangoapps//article//documents//guvohnoma.jpg')
+        draw = ImageDraw.Draw(img)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 138)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 96)
+        numFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 92)
+    except:
+        img = Image.open('C://Users//faxri//Desktop//article//documents//guvohnoma.jpg')
+        draw = ImageDraw.Draw(img)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 138)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 96)
+        numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 92)
     image_width = img.width
     image_height = img.height
-    img = Image.open('C://Users//faxri//Desktop//article//documents//guvohnoma.jpg')
-    draw = ImageDraw.Draw(img)
-    myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 138)
-    fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 96)
-    numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 92)
     num_y_position = 890
     char_limit = 35
     text_width, _ = draw.textsize(fullname, font = myFont)
@@ -198,7 +220,7 @@ def writetoMalumotnoma(qrlink, num, tdate, fullname, theme):
                 (image_width - text_width) / 2+380,
                 num_y_position
             ),
-            num,
+            str(num),
             fill =(0, 0, 0),
             font = numFont)
 
@@ -206,7 +228,7 @@ def writetoMalumotnoma(qrlink, num, tdate, fullname, theme):
                 (
                     2600,2300
                 ),
-                tdate,
+                str(tdate),
                 fill =(0, 0, 0),
                 font = numFont)
 
