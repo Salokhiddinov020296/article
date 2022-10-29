@@ -28,7 +28,7 @@ def save_profile(sender, instance, **kwargs):
         elif instance.author4:
             fullname = " " + instance.author4
          
-        handbook = writetoMalumotnoma(fullname=fullname, theme=instance.article_name_en,
+        instance.handbook = writetoGuvohnoma(fullname=fullname, theme=instance.article_name_en,
                                      tdate = today, qrlink = instance.doi, num = instance.id)
         instance.save()
     
@@ -196,7 +196,7 @@ def writetoDiplom(fullname, qrlink, tdate):
     return linkpath
 
 
-def writetoMalumotnoma(qrlink, num, tdate, fullname, theme):
+def writetoGuvohnoma(qrlink, num, tdate, fullname, theme):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//guvohnoma.jpg')
         draw = ImageDraw.Draw(img)
@@ -291,7 +291,7 @@ def writetoMalumotnoma(qrlink, num, tdate, fullname, theme):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\malumotnoma\{fullname}.pdf"
+    linkpath = f"\guvohnoma\{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     im_1.save(docpath)
     return linkpath
