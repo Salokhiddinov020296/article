@@ -190,7 +190,7 @@ def writetoDiplom(fullname, qrlink, tdate):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\\diplom\\{fullname}.pdf"
+    linkpath = f"\diplom\{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     im_1.save(docpath)
     return linkpath
@@ -291,7 +291,7 @@ def writetoMalumotnoma(qrlink, num, tdate, fullname, theme):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"\\malumotnoma\\{fullname}.pdf"
+    linkpath = f"\malumotnoma\{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     im_1.save(docpath)
     return linkpath
