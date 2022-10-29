@@ -97,8 +97,10 @@ def writeToCertificate(fullname, link, qrlink, theme):
                 font = fullnameFont)
 
     if len(theme)>45:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
-
+        try:
+            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
+        except:
+            myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 28)
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
