@@ -22,13 +22,13 @@ def save_profile(sender, instance, **kwargs):
         instance.certificate = certificate
         fullname = instance.author1
         if instance.author2:
-            fullname = " " + instance.author2
+            fullname = fullname + " " + instance.author2
         elif instance.author3:
-            fullname = " " + instance.author3
+            fullname = fullname + " " + instance.author3
         elif instance.author4:
-            fullname = " " + instance.author4
+            fullname = fullname + " " + instance.author4
          
-        instance.handbook = writetoGuvohnoma(fullname=fullname, theme=instance.article_name_en,
+        instance.writer_document = writetoGuvohnoma(fullname=fullname, theme=instance.article_name_en,
                                      tdate = today, qrlink = instance.doi, num = instance.id)
         instance.save()
     
@@ -51,7 +51,23 @@ def save_profile(sender, instance, **kwargs):
                                                 qrlink=instance.doi,
                                                 tdate=today)
         instance.save()
+
+    if instance.handbook == "":
+        fullname = instance.author1
+        fullname2 = None
+        if instance.author2:
+            fullname = fullname + ", " + instance.author2
+        if instance.author3:
+            fullname2 = instance.author3
+            if instance.author4:
+                fullname2 = fullname2 + ", " + instance.author4
         
+        print(fullname2)
+        instance.handbook = writeMalumotnoma(fullname=fullname, doilink=instance.doi,
+                                            cyberleninkalink=instance.doi, openaccesslink=instance.zenodo,
+                                            zenodolink = instance.zenodo, openairelink=instance.openair, 
+                                            theme=instance.article_name_en, fullname2=fullname2, google=instance.doi)
+        instance.save()
 
 post_save.connect(save_profile, sender=AclassModel)
 
@@ -296,4 +312,202 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme):
     linkpath = f"/guvohnoma/{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
     im_1.save(docpath)
+    return linkpath
+
+
+def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2):
+    try:
+        img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 18)
+        themeFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 16)
+    except:
+        img = Image.open('C://Users//faxri//Desktop//article//documents//malumotnoma.jpg')
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 18)
+        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 16)
+
+    draw = ImageDraw.Draw(img)
+    tdate = str(today)
+    theme = theme.upper()
+
+    tekstlen = 0
+    sumtekst = ""
+    ty = 240
+    themelist = theme.split()
+    lt = len(themelist)
+    i = 0
+    for tekst in themelist:
+        i+=1
+        tekstlen += len(tekst)
+        if tekstlen < 30:
+            sumtekst =sumtekst + " " + tekst
+            if i == lt:
+                draw.text(
+                    (
+                        238,ty
+                    ),
+                    sumtekst,
+                    fill =(0, 0, 0),
+                    font = themeFont)
+        else:
+            draw.text(
+                    (
+                        238,ty
+                    ),
+                    sumtekst,
+                    fill =(0, 0, 0),
+                    font = themeFont)
+            
+            tekstlen = 0
+            sumtekst = ""
+            ty += 20
+
+
+    draw.text(
+                (
+                    238,300
+                ),
+                fullname,
+                fill =(0, 0, 0),
+                font = linkFont)
+
+    if fullname2:
+        draw.text(
+                (
+                    238,325
+                ),
+                fullname2,
+                fill =(0, 0, 0),
+                font = linkFont)
+
+
+
+    draw.text(
+                (
+                    238,368
+                ),
+                tdate,
+                fill =(0, 0, 0),
+                font = linkFont)
+
+
+    draw.text(
+                (
+                    238,398
+                ),
+                doilink,
+                fill =(256, 0, 0),
+                font = linkFont)
+
+
+    draw.text(
+                (
+                    120,550
+                ),
+                doilink,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(doilink)
+    qr.make()
+    img_qr = qr.make_image()
+
+    pos = (653, 505)
+
+    img.paste(img_qr, pos)
+
+
+    zenodolink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+    draw.text(
+                (
+                    120,640
+                ),
+                zenodolink,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(zenodolink)
+    qr.make()
+    img_qr = qr.make_image()
+
+    pos = (653, 590)
+
+    img.paste(img_qr, pos)
+
+
+    openairelink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+    draw.text(
+                (
+                    120,725
+                ),
+                openairelink,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(openairelink)
+    qr.make()
+    img_qr = qr.make_image()
+    pos = (653, 685)
+    img.paste(img_qr, pos)
+
+    openaccesslink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+    draw.text(
+                (
+                    120,817
+                ),
+                openaccesslink,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(openaccesslink)
+    qr.make()
+    img_qr = qr.make_image()
+    pos = (653, 773)
+    img.paste(img_qr, pos)
+
+
+    cyberleninkalink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+    draw.text(
+                (
+                    120,902
+                ),
+                cyberleninkalink,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(cyberleninkalink)
+    qr.make()
+    img_qr = qr.make_image()
+    pos = (653, 858)
+    img.paste(img_qr, pos)
+
+    google = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+    draw.text(
+                (
+                    120,990
+                ),
+                google,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(google)
+    qr.make()
+    img_qr = qr.make_image()
+    pos = (653, 945)
+    img.paste(img_qr, pos)
+    im_1 = img.convert('RGB')
+    try:
+        linkpath = f"/malumotnoma/{fullname}.pdf"
+        docpath = str(settings.MEDIA_ROOT)+linkpath
+        im_1.save(docpath)
+    except:
+        linkpath = f"\\malumotnoma\\{fullname}.pdf"
+        docpath = str(settings.MEDIA_ROOT)+linkpath
+        im_1.save(docpath)
     return linkpath

@@ -8,7 +8,7 @@ margin = 10
 draw = ImageDraw.Draw(img)
 myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 24)
 fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 24)
-linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 16)
+linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 18)
 themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 16)
 fullname_y_position = 525
 link_y_position = 450
@@ -17,24 +17,21 @@ tdate = "2022-10-28"
 doilink = "https://doi.org/10.5281/zenodo.7239853"
 fullname = "Arslonov Faxriyorjon, Azizov Laziz"
 fullname2 = "Axmadov Shaxmat, Raxmatov Ahmad"
-theme = "THE MAXWELL PENDULUM ON THE MOTION OF THE MAXWELL PENDULUM"
+theme = "THE MAXWELL PENDULUM ON THE MOTION OF THE MAXWELL PENDULUM MEN KECHA KORDIM SENI QAYERDA EDING"
 text_width, _ = draw.textsize(fullname, font = myFont)
-qrlink = "https://note.nkmk.me/en/python-pillow-qrcode/"
 
 tekstlen = 0
 sumtekst = ""
 ty = 240
 themelist = theme.split()
+lt = len(themelist)
+i = 0
 for tekst in themelist:
+    i+=1
     tekstlen += len(tekst)
     if tekstlen < 30:
         sumtekst =sumtekst + " " + tekst
-        themelist.remove(tekst)
-        print(themelist, "themelist")
-        print(tekst)
-        print("1")
-        if len(themelist) == 0:
-            print("second if")
+        if i == lt:
             draw.text(
                 (
                     238,ty
@@ -53,7 +50,7 @@ for tekst in themelist:
         
         tekstlen = 0
         sumtekst = ""
-        ty += 30
+        ty += 20
 
 
 draw.text(
@@ -67,7 +64,7 @@ draw.text(
 if fullname2:
     draw.text(
             (
-                238,330
+                238,325
             ),
             fullname2,
             fill =(0, 0, 0),
@@ -92,14 +89,108 @@ draw.text(
             fill =(256, 0, 0),
             font = linkFont)
 
-#qrcode
-qr = qrcode.QRCode(box_size=3)
-qr.add_data(qrlink)
+
+draw.text(
+            (
+                120,550
+            ),
+            doilink,
+            fill =(0, 0, 256),
+            font = linkFont)
+
+qr = qrcode.QRCode(box_size=2)
+qr.add_data(doilink)
 qr.make()
 img_qr = qr.make_image()
 
-pos = (img.size[0] - img_qr.size[0], img.size[1] - img_qr.size[1])
+pos = (653, 505)
 
+img.paste(img_qr, pos)
+
+
+zenodolink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+draw.text(
+            (
+                120,640
+            ),
+            zenodolink,
+            fill =(0, 0, 256),
+            font = linkFont)
+
+qr = qrcode.QRCode(box_size=2)
+qr.add_data(zenodolink)
+qr.make()
+img_qr = qr.make_image()
+
+pos = (653, 590)
+
+img.paste(img_qr, pos)
+
+
+openairelink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+draw.text(
+            (
+                120,725
+            ),
+            openairelink,
+            fill =(0, 0, 256),
+            font = linkFont)
+
+
+qr = qrcode.QRCode(box_size=2)
+qr.add_data(openairelink)
+qr.make()
+img_qr = qr.make_image()
+pos = (653, 685)
+img.paste(img_qr, pos)
+
+openaccesslink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+draw.text(
+            (
+                120,817
+            ),
+            openaccesslink,
+            fill =(0, 0, 256),
+            font = linkFont)
+
+qr = qrcode.QRCode(box_size=2)
+qr.add_data(openaccesslink)
+qr.make()
+img_qr = qr.make_image()
+pos = (653, 773)
+img.paste(img_qr, pos)
+
+
+cyberleninkalink = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+draw.text(
+            (
+                120,902
+            ),
+            cyberleninkalink,
+            fill =(0, 0, 256),
+            font = linkFont)
+
+qr = qrcode.QRCode(box_size=2)
+qr.add_data(cyberleninkalink)
+qr.make()
+img_qr = qr.make_image()
+pos = (653, 858)
+img.paste(img_qr, pos)
+
+google = "https://phoenixnap.com/kb/how-to-change-root-password-linux"
+draw.text(
+            (
+                120,990
+            ),
+            google,
+            fill =(0, 0, 256),
+            font = linkFont)
+
+qr = qrcode.QRCode(box_size=2)
+qr.add_data(google)
+qr.make()
+img_qr = qr.make_image()
+pos = (653, 945)
 img.paste(img_qr, pos)
 
 img.show()
