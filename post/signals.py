@@ -243,8 +243,8 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme):
                 fill =(0,0,0),
                 font = fullnameFont)
 
-    if len(theme)>45:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
+    # if len(theme)>45:
+    #     myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
 
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
