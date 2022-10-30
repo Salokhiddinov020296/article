@@ -116,25 +116,6 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
                 fill =(255, 0, 0),
                 font = linkFont)
 
-    # if fullname2:
-    #     draw.text(
-    #             (
-    #                 (image_width - text_width) / 2+25,
-    #                 fullname_y_position-30
-    #             ),
-    #             fullname2,
-    #             fill =(66, 102, 245),
-    #             font = fullnameFont)
-
-    # draw.text(
-    #             (
-    #                 (image_width - text_width) / 2+25,
-    #                 fullname_y_position
-    #             ),
-    #             fullname,
-    #             fill =(66, 102, 245),
-    #             font = fullnameFont)
-
     if len(theme)>45:
         try:
             myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
@@ -174,6 +155,9 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
         draw.text((x, y), line, font=myFont, fill=(66, 102, 245))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i]
+
+    if fullname2:
+        fullname = fullname+" "+ fullname2
 
     text_lines = wrap(fullname+" "+ fullname2, char_limit)
     y, line_heights = get_y_and_heights(
