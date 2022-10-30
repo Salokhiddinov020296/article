@@ -159,7 +159,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     if fullname2:
         fullname = fullname+" "+ fullname2
 
-    text_lines = wrap(fullname+" "+ fullname2, char_limit)
+    text_lines = wrap(fullname, char_limit)
     y, line_heights = get_y_and_heights(
         text_lines,
         (image_width, image_height),
