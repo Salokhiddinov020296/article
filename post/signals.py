@@ -299,7 +299,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
     margin = 10
     draw.text(
             (
-                (image_width - text_width) / 2+880,
+                2350,
                 num_y_position
             ),
             str(num),
