@@ -93,7 +93,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
         img = Image.open('/home//user//djangoapps//article//documents//certificate.jpg')
     image_width = img.width
     image_height = img.height  
-    margin = 10
+    margin = 5  
     draw = ImageDraw.Draw(img)
     try:
         myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 38)
@@ -104,12 +104,12 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
         fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 34)
         linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 26)
     link_y_position = 450 
-    char_limit = 35
+    char_limit = 40
     theme = theme.upper()
     text_width, _ = draw.textsize(fullname, font = myFont)
     draw.text(
                 (
-                    (image_width - text_width) / 2 - 40,
+                    500,
                     link_y_position
                 ),
                 link,
@@ -137,7 +137,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
         y = (dimensions[1] - height_text) // 2
 
         # Return the first Y coordinate and a list with the height of each line
-        return (y+200, line_heights)
+        return (y+220, line_heights)
 
     text_lines = wrap(theme, char_limit)
 
@@ -170,7 +170,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     for i, line in enumerate(text_lines):
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x, y-120), line, font=myFont, fill=(66, 102, 245))
+        draw.text((x, y-110), line, font=myFont, fill=(66, 102, 245))
         # Move on to the height at which the next line should be drawn at
         y -= line_heights[i]
 
@@ -188,7 +188,6 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     im_1 = img.convert('RGB')
     linkpath = f"/certificate/{fullname}.pdf"
     docpath = str(settings.MEDIA_ROOT)+linkpath
-    print(docpath)
     im_1.save(docpath)
     return linkpath
 
@@ -242,7 +241,7 @@ def writetoDiplom(fullname, qrlink, tdate, theme):
     for i, line in enumerate(text_lines):
         # Calculate the horizontally-centered position at which to draw this line
         line_width = myFont.getmask(line).getbbox()[2]
-        x = ((image_width - line_width) // 2 - 1080)
+        x = ((image_width - line_width) // 2 - 1090)
         draw.text((x, y), line, font=theFont, fill=(0, 0, 0))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i]
@@ -258,7 +257,7 @@ def writetoDiplom(fullname, qrlink, tdate, theme):
 
     draw.text(
                 (
-                930,1180 
+                700,1180 
                 ),
                 fullname,
                 fill =(0,0,0),
@@ -272,9 +271,14 @@ def writetoDiplom(fullname, qrlink, tdate, theme):
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
-    linkpath = f"/diplom/{fullname}.pdf"
-    docpath = str(settings.MEDIA_ROOT)+linkpath
-    im_1.save(docpath)
+    try:
+        linkpath = f"/diplom/{fullname}.pdf"
+        docpath = str(settings.MEDIA_ROOT)+linkpath
+        im_1.save(docpath)
+    except:
+        linkpath = f"\\diplom\\{fullname}.pdf"
+        docpath = str(settings.MEDIA_ROOT)+linkpath
+        im_1.save(docpath)
     return linkpath
 
 
@@ -392,12 +396,12 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 18)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 15)
         themeFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 16)
     except:
         img = Image.open('C://Users//faxri//Desktop//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 18)
-        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 16)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 16)
+        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 15)
     draw = ImageDraw.Draw(img)
     tdate = str(today)
     theme = theme.upper()
@@ -410,20 +414,8 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     i = 0
     for tekst in themelist:
         i+=1
-        tekstlen += len(tekst)
-        if tekstlen < 30:
-            sumtekst =sumtekst + " " + tekst
-            print("tekst", tekst)
-            if  i == lt-1:
-                print("ifif", sumtekst)
-                draw.text(
-                        (
-                            238,ty
-                        ),
-                        sumtekst,
-                        fill =(0, 0, 0),
-                        font = themeFont)        
-        else:
+        sumtekst =sumtekst + " " + tekst
+        if len(sumtekst) > 35:
             draw.text(
                     (
                         238,ty
@@ -436,6 +428,30 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
             tekstlen = 0
             sumtekst = ""
             ty += 20
+        elif i == lt-1:
+            draw.text(
+                    (
+                        238,ty
+                    ),
+                    sumtekst,
+                    fill =(0, 0, 0),
+                    font = themeFont)
+            print("else", sumtekst)
+
+            
+            
+            # print("tekst", tekst)
+            # if  i == lt-1:
+            #     print("ifif", sumtekst)
+            #     draw.text(
+            #             (
+            #                 238,ty
+            #             ),
+            #             sumtekst,
+            #             fill =(0, 0, 0),
+            #             font = themeFont)        
+        # else:
+            
 
 
     draw.text(
