@@ -170,9 +170,9 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     for i, line in enumerate(text_lines):
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x, y-110), line, font=myFont, fill=(66, 102, 245))
+        draw.text((x+50, y-140), line, font=myFont, fill=(66, 102, 245))
         # Move on to the height at which the next line should be drawn at
-        y -= line_heights[i]
+        y += line_heights[i]
 
 
 
@@ -319,23 +319,53 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
                 font = numFont)
 
 
-    draw.text(
-                (
-                2600,2420  
-                ),
-                fullname,
-                fill =(0,0,0),
-                font = fullnameFont)
+    # draw.text(
+    #             (
+    #             2600,2420  
+    #             ),
+    #             fullname,
+    #             fill =(0,0,0),
+    #             font = fullnameFont)
 
     if fullname2 is not None:
-        draw.text(
-                (
-                2600,2520  
-                ),
-                fullname2,
-                fill =(0,0,0),
-                font = fullnameFont)
+        fullname = fullname + " " + fullname2
 
+    
+    def get_y_and_heights(text_wrapped, dimensions, margin, font):
+        """Get the first vertical coordinate at which to draw text and the height of each line of text"""
+        ascent, descent = font.getmetrics()
+        line_heights = [
+            font.getmask(text_line).getbbox()[3] + descent + margin
+            for text_line in text_wrapped
+        ]
+        line_heights[-1] -= margin
+
+        # Total height needed
+        height_text = sum(line_heights)
+
+        # Calculate the Y coordinate at which to draw the first line of text
+        y = (dimensions[1] - height_text) // 2
+
+        # Return the first Y coordinate and a list with the height of each line
+        return (y, line_heights)
+
+    text_lines = wrap(fullname, 35)
+
+    y, line_heights = get_y_and_heights(
+        text_lines,
+        (image_width, image_height),
+        -5,
+        fullnameFont
+    )
+
+    for i, line in enumerate(text_lines):
+        # Calculate the horizontally-centered position at which to draw this line
+
+        line_width = fullnameFont.getmask(line).getbbox()[2]
+        x = ((image_width - line_width) // 2)
+        draw.text((x+750, y+700), line, font=fullnameFont, fill=(0, 0, 0))
+        # Move on to the height at which the next line should be drawn at
+        y += line_heights[i] 
 
     # if len(theme)>45:
     #     myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
