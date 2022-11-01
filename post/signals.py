@@ -98,18 +98,18 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     try:
         myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 38)
         fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 34)
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 26)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 24)
     except:
         myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 38)
         fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 34)
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 26)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 24)
     link_y_position = 450 
     char_limit = 40
     theme = theme.upper()
     text_width, _ = draw.textsize(fullname, font = myFont)
     draw.text(
                 (
-                    500,
+                    540,
                     link_y_position
                 ),
                 link,
@@ -406,7 +406,6 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     tdate = str(today)
     theme = theme.upper()
 
-    tekstlen = 0
     sumtekst = ""
     ty = 240
     themelist = theme.split()
@@ -415,7 +414,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     for tekst in themelist:
         i+=1
         sumtekst =sumtekst + " " + tekst
+        print(lt, i)
         if len(sumtekst) > 35:
+            print("if", sumtekst)
             draw.text(
                     (
                         238,ty
@@ -423,12 +424,10 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                     sumtekst,
                     fill =(0, 0, 0),
                     font = themeFont)
-            print("else", sumtekst)
-            
-            tekstlen = 0
             sumtekst = ""
             ty += 20
-        elif i == lt-1:
+        elif i == lt:
+            print("elif", sumtekst)
             draw.text(
                     (
                         238,ty
@@ -436,23 +435,6 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                     sumtekst,
                     fill =(0, 0, 0),
                     font = themeFont)
-            print("else", sumtekst)
-
-            
-            
-            # print("tekst", tekst)
-            # if  i == lt-1:
-            #     print("ifif", sumtekst)
-            #     draw.text(
-            #             (
-            #                 238,ty
-            #             ),
-            #             sumtekst,
-            #             fill =(0, 0, 0),
-            #             font = themeFont)        
-        # else:
-            
-
 
     draw.text(
                 (
