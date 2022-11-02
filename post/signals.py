@@ -11,6 +11,12 @@ today = date.today()
 
 
 def save_profile(sender, instance, **kwargs):
+    if instance.language == "o'zbekcha":
+        theme = instance.article_name_uz
+    elif instance.language == "ruscha":
+        theme = instance.article_name_ru
+    else:
+        theme = instance.article_name_en
     if instance.certificate == "" or instance.greeting_card == "":
         fullname = instance.author1
         fullname2 = None
@@ -21,12 +27,12 @@ def save_profile(sender, instance, **kwargs):
             if instance.author4:
                 fullname2 = fullname2 + ", " + instance.author4
         certificate = writeToCertificate(fullname = fullname,
-                        theme = instance.article_name_en,
+                        theme = theme,
                         link = instance.doi,
                         qrlink = instance.openair, fullname2=fullname2)
         instance.greeting_card = writetoDiplom(fullname=instance.author1,
                                                 qrlink=instance.doi,
-                                                tdate=today, theme=instance.article_name_en)
+                                                tdate=today, theme=theme)
         instance.certificate = certificate
         instance.save()
          
@@ -39,28 +45,28 @@ def save_profile(sender, instance, **kwargs):
             fullname2 = instance.author3
             if instance.author4:
                 fullname2 = fullname2 + ", " + instance.author4
-        instance.writer_document = writetoGuvohnoma(fullname=fullname, theme=instance.article_name_en,
+        instance.writer_document = writetoGuvohnoma(fullname=fullname, theme=theme,
                                      tdate = today, qrlink = instance.doi, num = instance.id, fullname2=fullname2)
         instance.save()
     
     if  instance.author2 and instance.greeting_card2 == "":
         instance.greeting_card2 = writetoDiplom(fullname=instance.author2,
                                                 qrlink=instance.doi,
-                                                tdate=today, theme=instance.article_name_en)
+                                                tdate=today, theme=theme)
         instance.save()
     
     if  instance.author3 and instance.greeting_card3 == "":
         print(instance.author2)
         instance.greeting_card3 = writetoDiplom(fullname=instance.author3,
                                                 qrlink=instance.doi,
-                                                tdate=today, theme=instance.article_name_en)
+                                                tdate=today, theme=theme)
         instance.save()
 
     if  instance.author4 and instance.greeting_card4 == "":
         print(instance.author2)
         instance.greeting_card4 = writetoDiplom(fullname=instance.author4,
                                                 qrlink=instance.doi,
-                                                tdate=today, theme=instance.article_name_en)
+                                                tdate=today, theme=theme)
         instance.save()
 
     if instance.handbook == "":
@@ -72,12 +78,10 @@ def save_profile(sender, instance, **kwargs):
             fullname2 = instance.author3
             if instance.author4:
                 fullname2 = fullname2 + ", " + instance.author4
-        
-        print(fullname2)
         instance.handbook = writeMalumotnoma(fullname=fullname, doilink=instance.doi,
                                             cyberleninkalink=instance.cyberleninka, openaccesslink=instance.openaccess,
                                             zenodolink = instance.zenodo, openairelink=instance.openair, 
-                                            theme=instance.article_name_en, fullname2=fullname2, google=instance.google)
+                                            theme=theme, fullname2=fullname2, google=instance.google)
         instance.save()
 
 post_save.connect(save_profile, sender=AclassModel)

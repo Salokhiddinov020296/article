@@ -1,7 +1,14 @@
+from random import choices
 from tabnanny import verbose
 from django.db import models
 from django.utils.translation import get_language
 from django.utils.translation import gettext_lazy as _
+
+LANGUAGE_CHOICES = (
+                    ("o'zbekcha","o'zbekcha"),
+                    ("ruscha","ruscha"),
+                    ("inglizcha","inglizcha")
+                    )
 
 
 
@@ -75,8 +82,7 @@ class AclassModel(models.Model):
     issue = models.PositiveSmallIntegerField()
     date = models.DateTimeField(auto_now_add=True)
     field = models.ForeignKey(AFieldModel, on_delete=models.RESTRICT, verbose_name=_("Yo'nalishi"))
-    language = models.ForeignKey(WhichLanguageWriteModel, on_delete=models.RESTRICT,
-                                 verbose_name=_('Qaysi tilda yozilgan'))
+    language = models.CharField(choices=LANGUAGE_CHOICES,verbose_name=_('Qaysi tilda yozilgan'), max_length = 10)
     pages = models.CharField(max_length=255, verbose_name=_("Sahifalar"))
     article_pdf = models.FileField(blank=True, null=True, upload_to='article/', verbose_name=_("Maqola (pdf)"))
     doi = models.URLField(max_length=255, verbose_name = "DOI")
@@ -141,8 +147,7 @@ class BclassModel(models.Model):
     issue = models.PositiveSmallIntegerField()
     date = models.DateTimeField(auto_now_add=True)
     field = models.ForeignKey(BFieldModel, on_delete=models.RESTRICT, verbose_name=_("Yo'nalishi"))
-    language = models.ForeignKey(WhichLanguageWriteModel, on_delete=models.RESTRICT,
-                                 verbose_name=_('Qaysi tilda yozilgan'))
+    language = models.CharField(choices=LANGUAGE_CHOICES,verbose_name=_('Qaysi tilda yozilgan'), max_length = 10)
     pages = models.CharField(max_length=255, verbose_name=_("Sahifalar"))
     article_pdf = models.FileField(blank=True, null=True, upload_to='article/', verbose_name=_("Maqola (pdf)"))
     doi = models.URLField(max_length=255, verbose_name = "DOI")
@@ -208,8 +213,7 @@ class CclassModel(models.Model):
     issue = models.PositiveSmallIntegerField()
     date = models.DateTimeField(auto_now_add=True)
     field = models.ForeignKey(CFieldModel, on_delete=models.RESTRICT, verbose_name=_("Yo'nalishi"))
-    language = models.ForeignKey(WhichLanguageWriteModel, on_delete=models.RESTRICT,
-                                 verbose_name=_('Qaysi tilda yozilgan'))
+    language = models.CharField(choices=LANGUAGE_CHOICES,verbose_name=_('Qaysi tilda yozilgan'), max_length = 10)
     pages = models.CharField(max_length=255, verbose_name=_("Sahifalar"))
     article_pdf = models.FileField(blank=True, null=True, upload_to='article/', verbose_name=_("Maqola (pdf)"))
     doi = models.URLField(max_length=255, verbose_name = "DOI")
@@ -274,8 +278,7 @@ class DclassModel(models.Model):
     issue = models.PositiveSmallIntegerField()
     date = models.DateTimeField(auto_now_add=True)
     field = models.ForeignKey(DFieldModel, on_delete=models.RESTRICT, verbose_name=_("Yo'nalishi"))
-    language = models.ForeignKey(WhichLanguageWriteModel, on_delete=models.RESTRICT,
-                                 verbose_name=_('Qaysi tilda yozilgan'))
+    language = models.CharField(choices=LANGUAGE_CHOICES,verbose_name=_('Qaysi tilda yozilgan'), max_length = 10)
     pages = models.CharField(max_length=255, verbose_name=_("Sahifalar"))
     article_pdf = models.FileField(blank=True, null=True, upload_to='article/', verbose_name=_("Maqola (pdf)"))
     doi = models.URLField(max_length=255, verbose_name = "DOI")
