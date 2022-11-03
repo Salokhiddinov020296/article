@@ -496,8 +496,8 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 tdate,
                 fill =(0, 0, 0),
                 font = linkFont)
-
-
+    
+    
     draw.text(
                 (
                     238,398
@@ -515,9 +515,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     pos = (645, 505)
     img.paste(img_qr, pos)
     doilink2 = None
-    if len(doilink)>65:
-        doilink2 = doilink[65:]
-        doilink = doilink[:65]
+    if len(doilink)>60:
+        doilink2 = doilink[60:]
+        doilink = doilink[:60]
 
     draw.text(
                 (
@@ -548,9 +548,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img.paste(img_qr, pos)
 
     zenodolink2 = None
-    if len(zenodolink)>65:
-        zenodolink2 = zenodolink[65:]
-        zenodolink = zenodolink[:65]
+    if len(zenodolink)>60:
+        zenodolink2 = zenodolink[60:]
+        zenodolink = zenodolink[:60]
 
     draw.text(
                 (
@@ -577,9 +577,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img.paste(img_qr, pos)
 
     openairelink2 = None
-    if len(openairelink)>65:
-        openairelink2 = openairelink[65:]
-        openairelink = openairelink[:65]
+    if len(openairelink)>60:
+        openairelink2 = openairelink[60:]
+        openairelink = openairelink[:60]
 
     draw.text(
                 (
@@ -606,9 +606,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img.paste(img_qr, pos)
     openaccesslink2 = None
     
-    if len(openaccesslink)>65:
-        openaccesslink2 = openaccesslink[65:]
-        openaccesslink = openaccesslink[:65]
+    if len(openaccesslink)>60:
+        openaccesslink2 = openaccesslink[60:]
+        openaccesslink = openaccesslink[:60]
     
     draw.text(
                 (
@@ -635,9 +635,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img.paste(img_qr, pos)
 
     cyberleninkalink2 = None
-    if len(cyberleninkalink)>65:
-        cyberleninkalink2 = cyberleninkalink[65:]
-        cyberleninkalink = cyberleninkalink[:65]
+    if len(cyberleninkalink)>60:
+        cyberleninkalink2 = cyberleninkalink[60:]
+        cyberleninkalink = cyberleninkalink[:60]
     
     draw.text(
                 (
@@ -666,9 +666,9 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     im_1 = img.convert('RGB')
 
     google2 = None
-    if len(google)>65:
-        google2 = google[65:]
-        google = google[:65]
+    if len(google)>60:
+        google2 = google[60:]
+        google = google[:60]
     
     draw.text(
                 (
