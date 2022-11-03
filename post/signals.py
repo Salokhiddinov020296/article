@@ -100,13 +100,13 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     margin = 5  
     draw = ImageDraw.Draw(img)
     try:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 38)
-        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 34)
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 24)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 20)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 22)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 20)
     except:
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 38)
-        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 34)
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 24)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 20)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 22)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 20)
     link_y_position = 450 
     char_limit = 40
     theme = theme.upper()
@@ -122,9 +122,9 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
 
     if len(theme)>45:
         try:
-            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
+            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 20)
         except:
-            myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 28)
+            myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 20)
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
@@ -167,14 +167,14 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     y, line_heights = get_y_and_heights(
         text_lines,
         (image_width, image_height),
-        -5,
+        4,
         fullnameFont
     )
 
     for i, line in enumerate(text_lines):
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x+50, y-140), line, font=myFont, fill=(66, 102, 245))
+        draw.text((x+28, y-140), line, font=fullnameFont, fill=(66, 102, 245))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i]
 
@@ -290,13 +290,13 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//guvohnoma.jpg')
         draw = ImageDraw.Draw(img)
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 138)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 100)
         fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 96)
         numFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 92)
     except:
         img = Image.open('C://Users//faxri//Desktop//article//documents//guvohnoma.jpg')
         draw = ImageDraw.Draw(img)
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 138)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 100)
         fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 96)
         numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 92)
     image_width = img.width
@@ -430,12 +430,12 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 15)
-        themeFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 16)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 12)
+        themeFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 12)
     except:
         img = Image.open('C://Users//faxri//Desktop//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 16)
-        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 15)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 12)
+        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 12)
     draw = ImageDraw.Draw(img)
     tdate = str(today)
     theme = theme.upper()
@@ -449,7 +449,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
         i+=1
         sumtekst =sumtekst + " " + tekst
         print(lt, i)
-        if len(sumtekst) > 35:
+        if len(sumtekst) > 63:
             print("if", sumtekst)
             draw.text(
                     (
@@ -459,7 +459,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                     fill =(0, 0, 0),
                     font = themeFont)
             sumtekst = ""
-            ty += 20
+            ty += 12
         elif i == lt:
             print("elif", sumtekst)
             draw.text(
@@ -496,8 +496,6 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 tdate,
                 fill =(0, 0, 0),
                 font = linkFont)
-    
-    
     draw.text(
                 (
                     238,398
@@ -656,14 +654,13 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 fill =(0, 0, 256),
                 font = linkFont)
 
-    
+
     qr = qrcode.QRCode(box_size=2)
     qr.add_data(google)
     qr.make()
     img_qr = qr.make_image()
     pos = (645, 942)
     img.paste(img_qr, pos)
-    im_1 = img.convert('RGB')
 
     google2 = None
     if len(google)>60:
@@ -677,16 +674,18 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 google,
                 fill =(0, 0, 256),
                 font = linkFont)
-
-    if google2:
+    
+    if cyberleninkalink2:
         draw.text(
                 (
                     120,987
                 ),
-                google2,
+                google,
                 fill =(0, 0, 256),
                 font = linkFont)
-
+    
+    img.paste(img_qr, pos)
+    im_1 = img.convert('RGB')
     try:
         linkpath = f"/malumotnoma/{fullname}.pdf"
         docpath = str(settings.MEDIA_ROOT)+linkpath
