@@ -506,6 +506,18 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 fill =(256, 0, 0),
                 font = linkFont)
 
+    #links body begin
+
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(doilink)
+    qr.make()
+    img_qr = qr.make_image()
+    pos = (645, 505)
+    img.paste(img_qr, pos)
+    doilink2 = None
+    if len(doilink)>65:
+        doilink2 = doilink[65:]
+        doilink = doilink[:65]
 
     draw.text(
                 (
@@ -514,21 +526,17 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 doilink,
                 fill =(0, 0, 256),
                 font = linkFont)
-
-    qr = qrcode.QRCode(box_size=2)
-    qr.add_data(doilink)
-    qr.make()
-    img_qr = qr.make_image()
-
-    pos = (645, 505)
-    img.paste(img_qr, pos)
-    draw.text(
+    
+    if doilink2:
+        draw.text(
                 (
-                    120,630
+                    120,570
                 ),
-                zenodolink,
+                doilink2,
                 fill =(0, 0, 256),
                 font = linkFont)
+
+
 
     qr = qrcode.QRCode(box_size=2)
     qr.add_data(zenodolink)
@@ -538,11 +546,25 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     pos = (645, 605)
 
     img.paste(img_qr, pos)
+
+    zenodolink2 = None
+    if len(zenodolink)>65:
+        zenodolink2 = zenodolink[65:]
+        zenodolink = zenodolink[:65]
+
     draw.text(
                 (
-                    120,725
+                    120,630
                 ),
-                openairelink,
+                zenodolink,
+                fill =(0, 0, 256),
+                font = linkFont)
+    if zenodolink2:
+        draw.text(
+                (
+                    120,645
+                ),
+                zenodolink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
@@ -553,11 +575,26 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img_qr = qr.make_image()
     pos = (645, 685)
     img.paste(img_qr, pos)
+
+    openairelink2 = None
+    if len(openairelink)>65:
+        openairelink2 = openairelink[65:]
+        openairelink = openairelink[:65]
+
     draw.text(
                 (
-                    120,800
+                    120,725
                 ),
-                openaccesslink,
+                openairelink,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    if openairelink2:
+        draw.text(
+                (
+                    120,740
+                ),
+                openairelink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
@@ -567,11 +604,26 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img_qr = qr.make_image()
     pos = (645, 773)
     img.paste(img_qr, pos)
+    openaccesslink2 = None
+    
+    if len(openaccesslink)>65:
+        openaccesslink2 = openaccesslink[65:]
+        openaccesslink = openaccesslink[:65]
+    
     draw.text(
                 (
-                    120,893
+                    120,800
                 ),
-                cyberleninkalink,
+                openaccesslink,
+                fill =(0, 0, 256),
+                font = linkFont)
+    
+    if openaccesslink2:
+        draw.text(
+                (
+                    120,815
+                ),
+                openaccesslink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
@@ -581,6 +633,43 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     img_qr = qr.make_image()
     pos = (645, 858)
     img.paste(img_qr, pos)
+
+    cyberleninkalink2 = None
+    if len(cyberleninkalink)>65:
+        cyberleninkalink2 = cyberleninkalink[65:]
+        cyberleninkalink = cyberleninkalink[:65]
+    
+    draw.text(
+                (
+                    120,893
+                ),
+                cyberleninkalink,
+                fill =(0, 0, 256),
+                font = linkFont)
+    
+    if cyberleninkalink2:
+        draw.text(
+                (
+                    120,908
+                ),
+                cyberleninkalink2,
+                fill =(0, 0, 256),
+                font = linkFont)
+
+    
+    qr = qrcode.QRCode(box_size=2)
+    qr.add_data(google)
+    qr.make()
+    img_qr = qr.make_image()
+    pos = (645, 942)
+    img.paste(img_qr, pos)
+    im_1 = img.convert('RGB')
+
+    google2 = None
+    if len(google)>65:
+        google2 = google[65:]
+        google = google[:65]
+    
     draw.text(
                 (
                     120,972
@@ -589,13 +678,15 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 fill =(0, 0, 256),
                 font = linkFont)
 
-    qr = qrcode.QRCode(box_size=2)
-    qr.add_data(google)
-    qr.make()
-    img_qr = qr.make_image()
-    pos = (645, 942)
-    img.paste(img_qr, pos)
-    im_1 = img.convert('RGB')
+    if google2:
+        draw.text(
+                (
+                    120,987
+                ),
+                google2,
+                fill =(0, 0, 256),
+                font = linkFont)
+
     try:
         linkpath = f"/malumotnoma/{fullname}.pdf"
         docpath = str(settings.MEDIA_ROOT)+linkpath
