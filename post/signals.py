@@ -302,7 +302,6 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
     image_width = img.width
     image_height = img.height
     num_y_position = 890
-    char_limit = 35
     text_width, _ = draw.textsize(fullname, font = myFont)
     margin = 10
     draw.text(
@@ -311,7 +310,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
                 num_y_position
             ),
             str(num),
-            fill =(0, 0, 0),
+            fill =(0, 0, 255),
             font = numFont)
 
     draw.text(
@@ -319,17 +318,8 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
                     2600,2300
                 ),
                 str(tdate),
-                fill =(0, 0, 0),
+                fill =(0, 0, 255),
                 font = numFont)
-
-
-    # draw.text(
-    #             (
-    #             2600,2420  
-    #             ),
-    #             fullname,
-    #             fill =(0,0,0),
-    #             font = fullnameFont)
 
     if fullname2 is not None:
         fullname = fullname + " " + fullname2
@@ -367,7 +357,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x+750, y+700), line, font=fullnameFont, fill=(0, 0, 0))
+        draw.text((x+750, y+700), line, font=fullnameFont, fill=(0, 0, 255))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i] 
 
@@ -392,7 +382,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         # Return the first Y coordinate and a list with the height of each line
         return (y, line_heights)
 
-    text_lines = wrap(theme, char_limit)
+    text_lines = wrap(theme, 70)
 
     y, line_heights = get_y_and_heights(
         text_lines,
@@ -406,7 +396,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
         line_width = myFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x, y), line, font=myFont, fill=(0, 0, 0))
+        draw.text((x, y), line, font=myFont, fill=(0, 0, 255))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i]
 
