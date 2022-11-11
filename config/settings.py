@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'articledb',
-        'USER': 'articleuser',
-        'PASSWORD': 'articlepassword',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'article_db',
+        'USER': 'articleadmin',
+        'PASSWORD': 'article_db@123',
         'HOST': 'localhost',
         'PORT': '5432',
     }
