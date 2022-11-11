@@ -343,7 +343,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         # Return the first Y coordinate and a list with the height of each line
         return (y, line_heights)
 
-    text_lines = wrap(fullname, 35)
+    text_lines = wrap(fullname, 42)
 
     y, line_heights = get_y_and_heights(
         text_lines,
@@ -357,7 +357,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x+750, y+700), line, font=fullnameFont, fill=(0, 0, 255))
+        draw.text((x+865, y+745), line, font=fullnameFont, fill=(0, 0, 255))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i] 
 

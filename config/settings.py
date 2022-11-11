@@ -11,12 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import environ
-
-env = environ.Env(
-    DEBUG=(bool, False)
-)
-environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -81,18 +75,27 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+import platform
+my_os = platform.system()
 
-
-DATABASES = {
+if my_os == "Windows":
+    DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'article_db',
-        'USER': 'articleadmin',
-        'PASSWORD': 'new_db@123',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'articledb',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'article_db',
+            'USER': 'articleadmin',
+            'PASSWORD': 'new_db@123',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 # DATABASES = {
 #     'default': {

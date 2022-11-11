@@ -111,10 +111,10 @@ class AclassModel(models.Model):
     greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
     handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
     certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
-    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 40, null=False, blank=False)
-    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 40, null=True, blank=True)
-    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 40, null=True, blank=True)
-    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 40, null=True, blank=True)
+    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
+    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
+    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
+    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
 
     # def __str__(self):
     #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
@@ -176,10 +176,10 @@ class BclassModel(models.Model):
     greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
     handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
     certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
-    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 40, null=False, blank=False)
-    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 40, null=True, blank=True)
-    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 40, null=True, blank=True)
-    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 40, null=True, blank=True)
+    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
+    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
+    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
+    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
 
     # def __str__(self):
     #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
@@ -242,10 +242,10 @@ class CclassModel(models.Model):
     greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
     handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
     certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
-    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 40, null=False, blank=False)
-    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 40, null=True, blank=True)
-    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 40, null=True, blank=True)
-    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 40, null=True, blank=True)
+    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
+    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
+    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
+    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
 
     # def __str__(self):
     #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
@@ -307,10 +307,10 @@ class DclassModel(models.Model):
     greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
     handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
     certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
-    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 40, null=False, blank=False)
-    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 40, null=True, blank=True)
-    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 40, null=True, blank=True)
-    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 40, null=True, blank=True)
+    author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
+    author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
+    author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
+    author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
 
     # def __str__(self):
     #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
