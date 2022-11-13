@@ -29,12 +29,12 @@
                                 <span class="badge bg-dark" style="white-space: normal;"><i
                                         class="bi bi-calendar2-date"></i>{{ list.date|date:"d.m.Y" }}</span>
                                 <span class="badge bg-dark"> Volume {{ row.volume }} Issue {{ row.issue }}</span>
-                                <a href="#" class="card-link" style="margin-left:1px;"><span
+                                <a href="{% url 'post:detail' list.pk %}" class="card-link" style="margin-left:1px;"><span
                                         class="badge bg-danger"><i class="bi bi-eye"></i> View more</span></a>
-                                <a href="#" target="_blank" class="card-link"
+                                <a href="/media/{{ list.article_pdf }}" target="_blank" class="card-link"
                                    style="margin-left:1px;"><span class="badge bg-success"><i
                                         class="bi bi-arrow-down-circle"></i> Download</span></a>
-                                <a href="#" target="_blank" class="card-link"
+                                <a href="{{ list.doi }}" target="_blank" class="card-link"
                                    style="margin-left:1px;"><img src="{% static 'images/DOI_logo.png' %}"
                                                                  style="width:20px"></a>
                             </div>
