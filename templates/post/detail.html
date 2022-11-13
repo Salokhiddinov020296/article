@@ -40,21 +40,21 @@
                                        class="card-link" style="text-decoration:none" title="Jurnal rasmiy sayti">
                                         <img src="{% static "images/premium-icon-pdf-4726010.png" %}" style="width: 30px;">
                                     </a>
-                                    <a href="https://doi.org/10.5281/zenodo.6466351" target="_blank"
+                                    <a href="{{ object.doi }}" target="_blank"
                                        class="card-link" style="margin-left:1px;" title="DOI"><img
                                             src="{% static "images/DOI_logo.png" %}" style="width:30px"></a>
-                                    <a href="https://zenodo.org/record/6466351" target="_blank" class="card-link"
+                                    <a href="{{ object.zenodo }}" target="_blank" class="card-link"
                                        style="margin-left:1px;" title="ZENODO"><img src="{% static "images/zenodo_logo.png" %}"
                                                                                     style="width: 40px;"></a>
-                                    <a href="https://explore.openaire.eu/search/publication?pid=10.5281%2Fzenodo.6466351"
+                                    <a href="{{ object.openaire }}"
                                        target="_blank" class="card-link" style="margin-left:1px;"
                                        title="OpenAire"><img src="{% static "images/openaire_logo.png" %}"
                                                              style="margin-top:6px;width: 50px;"></a>
-                                    <a href="http://olddrji.lbp.world/JournalVolumeDetails.aspx?jid=2181-3337&amp;vol=Volume%20:%201%20Issue%20:%201,%20April,%202022&amp;volid=1"
+                                    <a href="#"
                                        target="_blank" class="card-link" style="margin-left:1px;"
                                        title="Directory of Research Journals Indexing"><img
                                             src="{% static "images/drji_logo.png" %}" style="margin-top:4px;width: 30px;"></a>
-                                    <a href="https://journals.indexcopernicus.com/search/journal/issue?issueId=313931&amp;journalId=123131"
+                                    <a href="#"
                                        target="_blank" class="card-link" style="margin-left:1px;"
                                        title="Index Copernicus"><img src="{% static "images/logo_ici.png" %}"
                                                                      style="margin-top:4px;width: 30px"></a>

@@ -87,15 +87,15 @@
                         <span class="badge bg-dark"><i
                                 class="bi bi-calendar2-date"></i> {{ row.date|date:"d.m.Y" }}</span>
                         <span class="badge bg-dark"> Volume {{ row.volume }} Issue {{ row.issue }}</span>
-                        <a href="view.php?id=1067" class="card-link" style="margin-left:1px;"><span
+                        <a href="{% url "post:detail" row.pk %}" class="card-link" style="margin-left:1px;"><span
                                 class="badge bg-danger"><i
                                 class="bi bi-eye"></i> View more</span></a>
-                        <a href="http://scientists.uz/uploads/202205/B-2.pdf" target="_blank" class="card-link"
+                        <a href="/media/{{row.article_pdf}}" target="_blank" class="card-link"
                            style="margin-left:1px;"><span class="badge bg-success"><i
                                 class="bi bi-arrow-down-circle"></i> Download</span></a>
-                        <a href="https://doi.org/10.5281/zenodo.6988240" target="_blank" class="card-link"
+                        <a href="{{ row.doi }}" target="_blank" class="card-link"
                            style="margin-left:1px;"><img src="{% static 'images/DOI_logo.png' %}"
-                                                         style="width:20px"></a>
+                                                 style="width:20px"></a>
                     </div>
                 </div>
             {% endfor %}
