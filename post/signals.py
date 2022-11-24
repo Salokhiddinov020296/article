@@ -11,6 +11,7 @@ today = date.today()
 
 
 def save_profile(sender, instance, **kwargs):
+    today =  instance.date.date()
     if instance.language == "o'zbekcha":
         theme = instance.article_name_uz
     elif instance.language == "ruscha":
@@ -78,7 +79,7 @@ def save_profile(sender, instance, **kwargs):
             fullname2 = instance.author3
             if instance.author4:
                 fullname2 = fullname2 + ", " + instance.author4
-        instance.handbook = writeMalumotnoma(fullname=fullname, doilink=instance.doi,
+        instance.handbook = writeMalumotnoma(today = today, fullname=fullname, doilink=instance.doi,
                                             cyberleninkalink=instance.cyberleninka, openaccesslink=instance.openaccess,
                                             zenodolink = instance.zenodo, openairelink=instance.openair, 
                                             theme=theme, fullname2=fullname2, google=instance.google)
@@ -417,7 +418,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
     return linkpath
 
 
-def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2):
+def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2, today):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
         linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 12)
