@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
-
 from post.models import AclassModel
 
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
 
 class PostDetailView(DetailView):
     template_name = 'post/detail.html'
