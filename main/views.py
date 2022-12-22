@@ -9,8 +9,8 @@ class MainIndexView(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        qs = AclassModel.objects.all()
+        qs = AclassModel.objects.all().order_by('-date')
         name = self.request.GET.get('name')
         if name:
-            qs = qs.filter(writer__icontains=name)
+            qs = qs.filter(writer__icontains=name).order_by('-date')
         return qs
