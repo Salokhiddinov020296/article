@@ -115,6 +115,8 @@ class AclassModel(models.Model):
     author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
     author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
     author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     # def __str__(self):
     #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \

@@ -17,6 +17,7 @@ def save_profile(sender, instance, **kwargs):
     elif instance.language == "ruscha":
         theme = instance.article_name_ru
     else:
+        
         theme = instance.article_name_en
     if instance.certificate == "" or instance.greeting_card == "":
         fullname = instance.author1
@@ -92,7 +93,7 @@ post_save.connect(save_profile, sender=DclassModel)
 
 def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     try:
-        img = Image.open('C://Users//faxri//Desktop//article//documents//certificate.jpg')
+        img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//certificate.jpg')
     except:
         # /home/user/djangoapps/article
         img = Image.open('/home//user//djangoapps//article//documents//certificate.jpg')
@@ -101,15 +102,15 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     margin = 5  
     draw = ImageDraw.Draw(img)
     try:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 20)
-        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 22)
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_BoldItalic.ttf', 20)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 20)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 34)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbolditalic.ttf', 20)
     except:
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 20)
-        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 22)
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_BoldItalic.ttf', 20)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 20)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 34)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbolditalic.ttf', 20)
     link_y_position = 450 
-    char_limit = 75
+    char_limit = 65
     theme = theme.upper()
     text_width, _ = draw.textsize(fullname, font = myFont)
     draw.text(
@@ -123,9 +124,9 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
 
     if len(theme)>45:
         try:
-            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 20)
+            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 20)
         except:
-            myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 20)
+            myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 20)
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
@@ -164,7 +165,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     if fullname2:
         fullname = fullname+" "+ fullname2
 
-    text_lines = wrap(fullname, 40)
+    text_lines = wrap(fullname, 38)
     y, line_heights = get_y_and_heights(
         text_lines,
         (image_width, image_height),
@@ -200,19 +201,19 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
 def writetoDiplom(fullname, qrlink, tdate, theme):    
 
     try:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
-        theFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 64)
-        img = Image.open('C://Users//faxri//Desktop//article//documents//diplom.jpg')
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 28)
+        theFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 64)
+        img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//diplom.jpg')
         draw = ImageDraw.Draw(img)
-        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 80)
-        numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 60)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 80)
+        numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 60)
     except:
         img = Image.open('/home//user//djangoapps//article//documents//diplom.jpg')
         draw = ImageDraw.Draw(img)
-        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 80)
-        numFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 60)
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 28)
-        theFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 64)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 80)
+        numFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 60)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 28)
+        theFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 64)
     image_width = img.width
     image_height = img.height
     margin = 0
@@ -291,15 +292,15 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//guvohnoma.jpg')
         draw = ImageDraw.Draw(img)
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 100)
-        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 96)
-        numFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Bold.ttf', 92)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 100)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 96)
+        numFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 92)
     except:
-        img = Image.open('C://Users//faxri//Desktop//article//documents//guvohnoma.jpg')
+        img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//guvohnoma.jpg')
         draw = ImageDraw.Draw(img)
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 100)
-        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 96)
-        numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 92)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 100)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 96)
+        numFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 92)
     image_width = img.width
     image_height = img.height
     num_y_position = 890
@@ -363,7 +364,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         y += line_heights[i] 
 
     # if len(theme)>45:
-    #     myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Bold.ttf', 28)
+    #     myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 28)
 
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
@@ -421,12 +422,12 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2, today):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 12)
-        themeFont = ImageFont.truetype('/home//user//djangoapps//article//Roboto//Roboto_Italic.ttf', 12)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
+        themeFont = ImageFont.truetype('/home//user//djangoapps//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
     except:
-        img = Image.open('C://Users//faxri//Desktop//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 12)
-        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//Roboto//Roboto_Italic.ttf', 12)
+        img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//malumotnoma.jpg')
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
+        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
     draw = ImageDraw.Draw(img)
     tdate = str(today)
     theme = theme.upper()

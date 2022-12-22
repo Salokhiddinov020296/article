@@ -35,6 +35,36 @@
     {% elif object.author4 %}
     <meta name="citation_author" content="{{ object.author4 }}">
     {% endif %}
+
+    {% if object.language == "o'zbekcha" %}
+    <meta name="description" content="{{ object.annotation_uz}}">
+    <meta name="citation_title" content=" {{ object.article_name_uz }}">
+    {% elif object.language == "ruscha" %}
+    <meta name="description" content="{{ object.annotation_ru }}">
+    <meta name="citation_title" content=" {{ object.article_name_ru }}">
+    {% else %}
+    <meta name="description" content="{{ object.annotation_en }}">
+    <meta name="citation_title" content=" {{ object.article_name_en }}">
+    {% endif %}
+    <meta name="citation_publication_date" content="{{ object.date|date:'Y/m/d' }}">
+    {% if object.language == "o'zbekcha" %}
+    <meta name="citation_keywords" content="{{ object.key_word_uz }}">
+    {% elif object.language == "ruscha" %}
+    <meta name="citation_keywords" content="{{ object.key_word_ru }}">
+    {% else %}
+    <meta name="citation_keywords" content="{{ object.key_word_en }}">
+    {% endif %}
+    <meta name="citation_abstract_html_url" content="http://modernscience.uz/ru/post/detail/{{object.pk}}/">
+    <meta name="citation_abstract_pdf_url" content="http://modernscience.uz/media/{{ object.article_pdf }}">
+    <meta name="eprints.creators_name
+    " content="{{ object.author1 }}">
+    {% if object.author2 %}
+    <meta name="eprints.creators_name" content="{{ object.author2 }}">
+    {% elif object.author3 %}
+    <meta name="eprints.creators_name" content="{{ object.author3 }}">
+    {% elif object.author4 %}
+    <meta name="eprints.creators_name" content="{{ object.author4 }}">
+    {% endif %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
           integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
