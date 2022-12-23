@@ -102,20 +102,20 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     margin = 5  
     draw = ImageDraw.Draw(img)
     try:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 20)
-        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 34)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 24)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 38)
         linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbolditalic.ttf', 20)
     except:
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 20)
-        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 34)
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 24)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 38)
         linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbolditalic.ttf', 20)
     link_y_position = 450 
-    char_limit = 65
+    char_limit = 60
     theme = theme.upper()
     text_width, _ = draw.textsize(fullname, font = myFont)
     draw.text(
                 (
-                    575,
+                    600,
                     link_y_position
                 ),
                 link,
@@ -126,7 +126,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
         try:
             myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 20)
         except:
-            myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 20)
+            myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 24)
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
@@ -169,7 +169,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     y, line_heights = get_y_and_heights(
         text_lines,
         (image_width, image_height),
-        4,
+        0,
         fullnameFont
     )
 
@@ -188,7 +188,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     qr.make()
     img_qr = qr.make_image()
 
-    pos = (img.size[0] - img_qr.size[0]-180, img.size[1] - img_qr.size[1]-180)
+    pos = (img.size[0] - img_qr.size[0]-180, img.size[1] - img_qr.size[1]-400)
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
@@ -422,8 +422,8 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2, today):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
-        themeFont = ImageFont.truetype('/home//user//djangoapps//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 12)
+        themeFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 12)
     except:
         img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//malumotnoma.jpg')
         linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
