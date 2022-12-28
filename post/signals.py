@@ -441,7 +441,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
         i+=1
         sumtekst =sumtekst + " " + tekst
         print(lt, i)
-        if len(sumtekst) > 63:
+        if len(sumtekst) > 45:
             print("if", sumtekst)
             draw.text(
                     (
