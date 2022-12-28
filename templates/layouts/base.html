@@ -8,14 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     {% if object.language == "o'zbekcha" %}
-        <meta name="description" content="{{ object.annotation_uz}}">
-        <meta name="citation_title" content=" {{ object.article_name_uz }}">
+    <meta name="description" content="{{ object.annotation_uz}}">
+    <meta name="citation_title" content=" {{ object.article_name_uz }}">
     {% elif object.language == "ruscha" %}
-        <meta name="description" content="{{ object.annotation_ru }}">
-        <meta name="citation_title" content=" {{ object.article_name_ru }}">
+    <meta name="description" content="{{ object.annotation_ru }}">
+    <meta name="citation_title" content=" {{ object.article_name_ru }}">
     {% else %}
-        <meta name="description" content="{{ object.annotation_en }}">
-        <meta name="citation_title" content=" {{ object.article_name_en }}">
+    <meta name="description" content="{{ object.annotation_en }}">
+    <meta name="citation_title" content=" {{ object.article_name_en }}">
     {% endif %}
     <meta name="citation_publication_date" content="{{ object.date|date:'Y/m/d' }}">
     {% if object.language == "o'zbekcha" %}
@@ -39,26 +39,22 @@
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
     <meta name="DC.Creator.PersonalName" content="{{ object.author1 }}"/>
     {% if object.author2 %}
-        <meta name="DC.Creator.PersonalName" content="{{ object.author2 }}"/>
+    <meta name="DC.Creator.PersonalName" content="{{ object.author2 }}"/>
     {% elif object.author3 %}
-        <meta name="DC.Creator.PersonalName" content="{{ object.author3 }}"/>
+    <meta name="DC.Creator.PersonalName" content="{{ object.author3 }}"/>
     {% elif object.author4 %}
-        <meta name="DC.Creator.PersonalName" content="{{ object.author4 }}"/>
+    <meta name="DC.Creator.PersonalName" content="{{ object.author4 }}"/>
     {% endif %}
     <meta name="DC.Date.created" scheme="ISO8601" content="{{ object.date|date:'Y-m-d' }}"/>
     <meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="{{ object.date|date:'Y-m-d' }}"/>
     <meta name="DC.Date.issued" scheme="ISO8601" content="{{ object.date|date:'Y-m-d' }}"/>
     <meta name="DC.Date.modified" scheme="ISO8601" content="{{ object.date|date:'Y-m-d' }}"/>
-    <meta name="DC.Description" xml:lang="en" content="Ushbu maqolada Boshlang'ich sinf o’quvchilarida ona tilining muhim qoidalari bulan tanishtirish, imloviy xato va kamchiliklarga&amp;nbsp; yo’l qo’ymaslikka va grammatik bilimlarni eng sodda usulda tushuntirish haqida ma’lumot berilgan."/>
     {% if object.language == "o'zbekcha" %}
-        <meta name="DC.Description" xml:lang="en" content="{{ object.annotation_uz}}"/>
-        <meta name="citation_title" content=" {{ object.article_name_uz }}">
+    <meta name="DC.Description" xml:lang="en" content="{{ object.annotation_uz}}"/>
     {% elif object.language == "ruscha" %}
-        <meta name="DC.Description" xml:lang="ru" content="{{ object.annotation_ru }}"/>
-        <meta name="citation_title" content=" {{ object.article_name_ru }}">
+    <meta name="DC.Description" xml:lang="ru" content="{{ object.annotation_ru }}"/>
     {% else %}
-        <meta name="DC.Description" xml:lang="en" content="{{ object.annotation_en }}"/>
-        <meta name="citation_title" content="{{ object.article_name_en }}">
+    <meta name="DC.Description" xml:lang="en" content="{{ object.annotation_en }}"/>
     {% endif %}
     <meta name="DC.Format" scheme="IMT" content="application/pdf"/>
     <meta name="DC.Identifier" content="1290"/>
@@ -72,18 +68,18 @@
     <meta name="DC.Source.Volume" content="1"/>
     <meta name="DC.Source.URI" content="http://modernscience.uz/ru/post/detail/{{object.pk}}/"/>
     {% if object.language == "o'zbekcha" %}
-        <meta name="DC.Subject" xml:lang="en" content="object.key_word_uz"/>
+    <meta name="DC.Subject" xml:lang="en" content="{{ object.key_word_uz }}"/>
     {% elif object.language == "ruscha" %}
-        <meta name="DC.Subject" xml:lang="ru" content="object.key_word_ru"/>
+    <meta name="DC.Subject" xml:lang="ru" content="{{ object.key_word_ru }}"/>
     {% else %}
-        <meta name="DC.Subject" xml:lang="ru" content="object.key_word_en"/>
+    <meta name="DC.Subject" xml:lang="ru" content="{{ object.key_word_en }}"/>
     {% endif %}
     {% if object.language == "o'zbekcha" %}
-        <meta name="DC.Title" content="&quot;object.article_name_uz"/>
+    <meta name="DC.Title" content="&quot;{{object.article_name_uz }}"/>
     {% elif object.language == "ruscha" %}
-    <meta name="DC.Title" content="&quot;object.article_name_ru"/>
+    <meta name="DC.Title" content="&quot;{{object.article_name_ru }}"/>
     {% else %}
-        <meta name="DC.Title" content="&quot;object.article_name_en"/>
+    <meta name="DC.Title" content="&quot;{{ object.article_name_en }}"/>
     {% endif %}
     <meta name="DC.Type" content="Text.Serial.Journal"/>
     <meta name="DC.Type.articleType" content="Articles"/>
