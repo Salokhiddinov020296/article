@@ -317,7 +317,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
     draw.text(
                 (
-                    2600,2300
+                    2640,2300
                 ),
                 str(tdate),
                 fill =(0, 0, 255),
@@ -359,7 +359,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x+865, y+745), line, font=fullnameFont, fill=(0, 0, 255))
+        draw.text((x+960, y+620), line, font=fullnameFont, fill=(0, 0, 255))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i] 
 
@@ -384,7 +384,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         # Return the first Y coordinate and a list with the height of each line
         return (y, line_heights)
 
-    text_lines = wrap(theme, 70)
+    text_lines = wrap(theme, 60)
 
     y, line_heights = get_y_and_heights(
         text_lines,
@@ -422,27 +422,25 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2, today):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 12)
-        themeFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 12)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 14)
+        themeFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 14)
     except:
         img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
-        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 12)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 14)
+        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 14)
     draw = ImageDraw.Draw(img)
     tdate = str(today)
     theme = theme.upper()
 
     sumtekst = ""
-    ty = 240
+    ty = 225
     themelist = theme.split()
     lt = len(themelist)
     i = 0
     for tekst in themelist:
         i+=1
         sumtekst =sumtekst + " " + tekst
-        print(lt, i)
-        if len(sumtekst) > 45:
-            print("if", sumtekst)
+        if len(sumtekst) > 40:
             draw.text(
                     (
                         238,ty
@@ -453,7 +451,6 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
             sumtekst = ""
             ty += 12
         elif i == lt:
-            print("elif", sumtekst)
             draw.text(
                     (
                         238,ty
@@ -464,7 +461,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    238,300
+                    238,288
                 ),
                 fullname,
                 fill =(0, 0, 0),
@@ -473,7 +470,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if fullname2:
         draw.text(
                 (
-                    238,325
+                    238,310
                 ),
                 fullname2,
                 fill =(0, 0, 0),
@@ -483,14 +480,14 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    238,368
+                    238,353
                 ),
                 tdate,
                 fill =(0, 0, 0),
                 font = linkFont)
     draw.text(
                 (
-                    238,398
+                    238,383
                 ),
                 doilink,
                 fill =(256, 0, 0),
@@ -511,7 +508,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    120,555
+                    120,545
                 ),
                 doilink,
                 fill =(0, 0, 256),
@@ -520,7 +517,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if doilink2:
         draw.text(
                 (
-                    120,570
+                    120,560
                 ),
                 doilink2,
                 fill =(0, 0, 256),
@@ -544,7 +541,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    120,630
+                    120,643
                 ),
                 zenodolink,
                 fill =(0, 0, 256),
@@ -552,7 +549,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if zenodolink2:
         draw.text(
                 (
-                    120,645
+                    120,658
                 ),
                 zenodolink2,
                 fill =(0, 0, 256),
@@ -573,7 +570,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    120,725
+                    120,743
                 ),
                 openairelink,
                 fill =(0, 0, 256),
@@ -582,7 +579,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if openairelink2:
         draw.text(
                 (
-                    120,740
+                    120,758
                 ),
                 openairelink2,
                 fill =(0, 0, 256),
@@ -602,7 +599,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     
     draw.text(
                 (
-                    120,800
+                    120,825
                 ),
                 openaccesslink,
                 fill =(0, 0, 256),
@@ -611,7 +608,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if openaccesslink2:
         draw.text(
                 (
-                    120,815
+                    120,840
                 ),
                 openaccesslink2,
                 fill =(0, 0, 256),
@@ -631,7 +628,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     
     draw.text(
                 (
-                    120,893
+                    120,925
                 ),
                 cyberleninkalink,
                 fill =(0, 0, 256),
@@ -640,7 +637,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if cyberleninkalink2:
         draw.text(
                 (
-                    120,908
+                    120,940
                 ),
                 cyberleninkalink2,
                 fill =(0, 0, 256),
@@ -661,7 +658,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     
     draw.text(
                 (
-                    120,972
+                    120,1024
                 ),
                 google,
                 fill =(0, 0, 256),
@@ -670,7 +667,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if cyberleninkalink2:
         draw.text(
                 (
-                    120,987
+                    120,1040
                 ),
                 google,
                 fill =(0, 0, 256),
