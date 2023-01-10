@@ -42,11 +42,11 @@ def save_profile(sender, instance, **kwargs):
         fullname = instance.author1
         fullname2 = None
         if instance.author2:
-            fullname = fullname + ", " + instance.author2
+            fullname = fullname + " " + instance.author2
         if instance.author3:
             fullname2 = instance.author3
             if instance.author4:
-                fullname2 = fullname2 + ", " + instance.author4
+                fullname2 = fullname2 + " " + instance.author4
         instance.writer_document = writetoGuvohnoma(fullname=fullname, theme=theme,
                                      tdate = today, qrlink = instance.doi, num = instance.id, fullname2=fullname2)
         instance.save()
@@ -325,6 +325,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
     if fullname2 is not None:
         fullname = fullname + " " + fullname2
+        
 
     
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
@@ -353,6 +354,9 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         -5,
         fullnameFont
     )
+    
+    if len(fullname) > 60:
+        y += 100
 
     for i, line in enumerate(text_lines):
         # Calculate the horizontally-centered position at which to draw this line
