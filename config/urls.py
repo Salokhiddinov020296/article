@@ -13,7 +13,6 @@ sitemaps = {'articles': ArticleSitemap}
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    path('post/detail/<int:pk>/', PostDetailView.as_view(), name='detail'),
 
 ]
 urlpatterns += i18n_patterns(

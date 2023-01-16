@@ -8,4 +8,4 @@ class ArticleSitemap(Sitemap):
         return AclassModel.objects.all()
 
     def location(self, obj):
-        return reverse('detail', args=[str(obj.id)])
+        return reverse('post:detail', args=[str(obj.id)])

@@ -145,7 +145,7 @@ class AclassModel(models.Model):
         return self.article_name_uz + "#" + self.author1
 
     def get_absolute_url(self):
-        return reverse('detail', args=[str(self.id)])
+        return reverse('post:detail', args=[str(self.id)])
 
 
 class BclassModel(models.Model):
