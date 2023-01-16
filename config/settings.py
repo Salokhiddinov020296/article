@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'author',
     'main',
     'post',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

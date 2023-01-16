@@ -1,6 +1,7 @@
 from random import choices
 from tabnanny import verbose
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import get_language
 from django.utils.translation import gettext_lazy as _
 
@@ -142,6 +143,9 @@ class AclassModel(models.Model):
 
     def __str__(self):
         return self.article_name_uz + "#" + self.author1
+
+    def get_absolute_url(self):
+        return reverse('detail', args=[str(self.id)])
 
 
 class BclassModel(models.Model):

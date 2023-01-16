@@ -16,5 +16,5 @@ urlpatterns = [
     path('vacancy/', VacancyView.as_view(), name='vacancy'),
     path('science/base/', ScienceBaseView.as_view(), name='science_base'),
     path('impact/factor/', ImpactFactorView.as_view(), name='impact_factor'),
-    path('detail/<int:pk>/', PostDetailView.as_view(), name='detail'),
+    
 ]

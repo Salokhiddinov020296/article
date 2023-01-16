@@ -346,7 +346,7 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         # Return the first Y coordinate and a list with the height of each line
         return (y, line_heights)
 
-    text_lines = wrap(fullname, 42)
+    text_lines = wrap(fullname, 35)
 
     y, line_heights = get_y_and_heights(
         text_lines,
@@ -359,16 +359,10 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         y += 100
 
     for i, line in enumerate(text_lines):
-        # Calculate the horizontally-centered position at which to draw this line
-
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
         draw.text((x+960, y+620), line, font=fullnameFont, fill=(0, 0, 255))
-        # Move on to the height at which the next line should be drawn at
         y += line_heights[i] 
-
-    # if len(theme)>45:
-    #     myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 28)
 
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
