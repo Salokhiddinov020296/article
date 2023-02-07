@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 from textwrap import wrap
 from django.conf import settings
 import qrcode
-
+Image.MAX_IMAGE_PIXELS = 1000000000 
 from datetime import date
 today = date.today()
 
@@ -23,15 +23,15 @@ def save_profile(sender, instance, **kwargs):
         fullname = instance.author1
         fullname2 = None
         if instance.author2:
-            fullname = fullname + ", " + instance.author2
+            fullname = fullname + " " + instance.author2
         if instance.author3:
             fullname2 = instance.author3
             if instance.author4:
-                fullname2 = fullname2 + ", " + instance.author4
+                fullname2 = fullname2 + " " + instance.author4
         certificate = writeToCertificate(fullname = fullname,
                         theme = theme,
                         link = instance.doi,
-                        qrlink = instance.openair, fullname2=fullname2)
+                        qrlink = instance.openair, fullname2=fullname2, date=today)
         instance.greeting_card = writetoDiplom(fullname=instance.author1,
                                                 qrlink=instance.doi,
                                                 tdate=today, theme=theme)
@@ -75,7 +75,7 @@ def save_profile(sender, instance, **kwargs):
         fullname = instance.author1
         fullname2 = None
         if instance.author2:
-            fullname = fullname + ", " + instance.author2
+            fullname = fullname + " " + instance.author2
         if instance.author3:
             fullname2 = instance.author3
             if instance.author4:
@@ -91,7 +91,7 @@ post_save.connect(save_profile, sender=BclassModel)
 post_save.connect(save_profile, sender=CclassModel)
 post_save.connect(save_profile, sender=DclassModel)
 
-def writeToCertificate(fullname, fullname2, link, qrlink, theme):
+def writeToCertificate(fullname, fullname2, link, qrlink, theme, date):
     try:
         img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//certificate.jpg')
     except:
@@ -102,31 +102,38 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     margin = 5  
     draw = ImageDraw.Draw(img)
     try:
-        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 24)
-        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 38)
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbolditalic.ttf', 20)
+        myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 214)
+        fullnameFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 268)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbolditalic.ttf', 200)
     except:
-        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 24)
-        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 38)
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbolditalic.ttf', 20)
-    link_y_position = 450 
+        myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 214)
+        fullnameFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 268)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbolditalic.ttf', 200)
+ 
     char_limit = 60
     theme = theme.upper()
-    text_width, _ = draw.textsize(fullname, font = myFont)
+    # text_width, _ = draw.textsize(fullname, font = myFont)
     draw.text(
                 (
-                    600,
-                    link_y_position
+                    4200,6820
+                ),
+                str(date),
+                fill =(0, 0, 0),
+                font = myFont)
+    draw.text(
+                (
+                    4300,
+                    2400
                 ),
                 link,
-                fill =(255, 0, 0),
+                fill =(80,31,17),
                 font = linkFont)
 
     if len(theme)>45:
         try:
-            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 20)
+            myFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanbold.ttf', 208)
         except:
-            myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 24)
+            myFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanbold.ttf', 208)
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
         """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
@@ -143,7 +150,7 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
         y = (dimensions[1] - height_text) // 2
 
         # Return the first Y coordinate and a list with the height of each line
-        return (y+220, line_heights)
+        return (y+100, line_heights)
 
     text_lines = wrap(theme, char_limit)
 
@@ -155,11 +162,9 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     )
 
     for i, line in enumerate(text_lines):
-        # Calculate the horizontally-centered position at which to draw this line
         line_width = myFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x, y), line, font=myFont, fill=(66, 102, 245))
-        # Move on to the height at which the next line should be drawn at
+        draw.text((x+15, y+350), line, font=myFont, fill=(25,38,144))
         y += line_heights[i]
 
     if fullname2:
@@ -169,26 +174,26 @@ def writeToCertificate(fullname, fullname2, link, qrlink, theme):
     y, line_heights = get_y_and_heights(
         text_lines,
         (image_width, image_height),
-        0,
+        margin,
         fullnameFont
     )
 
     for i, line in enumerate(text_lines):
         line_width = fullnameFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
-        draw.text((x+20, y-190), line, font=fullnameFont, fill=(66, 102, 245))
+        draw.text((x+10, y-990), line, font=fullnameFont, fill=(25,38,144))
         # Move on to the height at which the next line should be drawn at
         y += line_heights[i]
 
 
 
     #qrcode
-    qr = qrcode.QRCode(box_size=4)
+    qr = qrcode.QRCode(box_size=30)
     qr.add_data(qrlink)
     qr.make()
     img_qr = qr.make_image()
 
-    pos = (img.size[0] - img_qr.size[0]-180, img.size[1] - img_qr.size[1]-400)
+    pos = (img.size[0] - img_qr.size[0]-8500, img.size[1] - img_qr.size[1]-1350)
 
     img.paste(img_qr, pos)
     im_1 = img.convert('RGB')
@@ -420,38 +425,38 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberleninkalink, google, zenodolink, theme, fullname2, today):
     try:
         img = Image.open('/home//user//djangoapps//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 14)
-        themeFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 14)
+        linkFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 210)
+        themeFont = ImageFont.truetype('/home//user//djangoapps//article//TNR//timesnewromanitalic.ttf', 178)
     except:
         img = Image.open('C://Users//faxri//Desktop//article//documents//article//documents//malumotnoma.jpg')
-        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 14)
-        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 14)
+        linkFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 210)
+        themeFont = ImageFont.truetype('C://Users//faxri//Desktop//article//documents//article//TNR//timesnewromanitalic.ttf', 178)
     draw = ImageDraw.Draw(img)
     tdate = str(today)
     theme = theme.upper()
 
     sumtekst = ""
-    ty = 225
+    ty = 3665
     themelist = theme.split()
     lt = len(themelist)
     i = 0
     for tekst in themelist:
         i+=1
         sumtekst =sumtekst + " " + tekst
-        if len(sumtekst) > 40:
+        if len(sumtekst) > 56:
             draw.text(
                     (
-                        238,ty
+                        3050,ty
                     ),
                     sumtekst,
                     fill =(0, 0, 0),
                     font = themeFont)
             sumtekst = ""
-            ty += 12
+            ty += 200
         elif i == lt:
             draw.text(
                     (
-                        238,ty
+                        3050,ty
                     ),
                     sumtekst,
                     fill =(0, 0, 0),
@@ -459,7 +464,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    238,288
+                    3050,4300
                 ),
                 fullname,
                 fill =(0, 0, 0),
@@ -468,7 +473,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if fullname2:
         draw.text(
                 (
-                    238,310
+                    3050,4500
                 ),
                 fullname2,
                 fill =(0, 0, 0),
@@ -478,14 +483,14 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    238,353
+                    3050,5040
                 ),
                 tdate,
                 fill =(0, 0, 0),
                 font = linkFont)
     draw.text(
                 (
-                    238,383
+                    3050,5370
                 ),
                 doilink,
                 fill =(256, 0, 0),
@@ -493,11 +498,11 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     #links body begin
 
-    qr = qrcode.QRCode(box_size=2)
+    qr = qrcode.QRCode(box_size=28)
     qr.add_data(doilink)
     qr.make()
     img_qr = qr.make_image()
-    pos = (623, 505)
+    pos = (9400, 7200)
     img.paste(img_qr, pos)
     doilink2 = None
     if len(doilink)>60:
@@ -506,7 +511,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    120,545
+                    1500,7450   
                 ),
                 doilink,
                 fill =(0, 0, 256),
@@ -515,7 +520,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if doilink2:
         draw.text(
                 (
-                    120,560
+                    1500,7650
                 ),
                 doilink2,
                 fill =(0, 0, 256),
@@ -523,12 +528,12 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
 
 
-    qr = qrcode.QRCode(box_size=2)
+    qr = qrcode.QRCode(box_size=27)
     qr.add_data(zenodolink)
     qr.make()
     img_qr = qr.make_image()
 
-    pos = (623, 605)
+    pos = (9400, 8400)
 
     img.paste(img_qr, pos)
 
@@ -539,7 +544,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    120,643
+                    1500,8900
                 ),
                 zenodolink,
                 fill =(0, 0, 256),
@@ -547,18 +552,18 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if zenodolink2:
         draw.text(
                 (
-                    120,658
+                    1500,9100
                 ),
                 zenodolink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
 
-    qr = qrcode.QRCode(box_size=2)
+    qr = qrcode.QRCode(box_size=25)
     qr.add_data(openairelink)
     qr.make()
     img_qr = qr.make_image()
-    pos = (623, 685)
+    pos = (9400, 9600)
     img.paste(img_qr, pos)
 
     openairelink2 = None
@@ -568,7 +573,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
 
     draw.text(
                 (
-                    120,743
+                    1500,10100
                 ),
                 openairelink,
                 fill =(0, 0, 256),
@@ -577,17 +582,17 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if openairelink2:
         draw.text(
                 (
-                    120,758
+                    1500,10300
                 ),
                 openairelink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
-    qr = qrcode.QRCode(box_size=2)
+    qr = qrcode.QRCode(box_size=25)
     qr.add_data(openaccesslink)
     qr.make()
     img_qr = qr.make_image()
-    pos = (623, 773)
+    pos = (9400, 10800)
     img.paste(img_qr, pos)
     openaccesslink2 = None
     
@@ -597,7 +602,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     
     draw.text(
                 (
-                    120,825
+                    1500,11070
                 ),
                 openaccesslink,
                 fill =(0, 0, 256),
@@ -606,19 +611,20 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if openaccesslink2:
         draw.text(
                 (
-                    120,840
+                    1500,11270
                 ),
                 openaccesslink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
-    qr = qrcode.QRCode(box_size=2)
+    cyberleninkalink = "http://olddrji.lbp.world/Publisher/ShowAllArticles.aspx?uname=2181-3906"
+    qr = qrcode.QRCode(box_size=25)
     qr.add_data(cyberleninkalink)
     qr.make()
     img_qr = qr.make_image()
-    pos = (623, 858)
+    pos = (9400, 12000)
     img.paste(img_qr, pos)
-
+    
     cyberleninkalink2 = None
     if len(cyberleninkalink)>60:
         cyberleninkalink2 = cyberleninkalink[60:]
@@ -626,7 +632,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     
     draw.text(
                 (
-                    120,925
+                    1500,12540
                 ),
                 cyberleninkalink,
                 fill =(0, 0, 256),
@@ -635,18 +641,18 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     if cyberleninkalink2:
         draw.text(
                 (
-                    120,940
+                    1500,12740
                 ),
                 cyberleninkalink2,
                 fill =(0, 0, 256),
                 font = linkFont)
 
 
-    qr = qrcode.QRCode(box_size=2)
+    qr = qrcode.QRCode(box_size=25)
     qr.add_data(google)
     qr.make()
     img_qr = qr.make_image()
-    pos = (623, 942)
+    pos = (9400, 13250)
     img.paste(img_qr, pos)
 
     google2 = None
@@ -656,18 +662,18 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
     
     draw.text(
                 (
-                    120,1024
+                    1500,13750
                 ),
                 google,
                 fill =(0, 0, 256),
                 font = linkFont)
     
-    if cyberleninkalink2:
+    if google2:
         draw.text(
                 (
-                    120,1040
+                    1500,13950
                 ),
-                google,
+                google2,
                 fill =(0, 0, 256),
                 font = linkFont)
     
