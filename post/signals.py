@@ -588,7 +588,7 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 fill =(0, 0, 256),
                 font = linkFont)
 
-    qr = qrcode.QRCode(box_size=6)
+    qr = qrcode.QRCode(box_size=8)
     qr.add_data(openaccesslink)
     qr.make()
     img_qr = qr.make_image()
