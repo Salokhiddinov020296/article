@@ -334,21 +334,14 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
 
     
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
-        """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
         line_heights = [
             font.getmask(text_line).getbbox()[3] + descent + margin
             for text_line in text_wrapped
         ]
         line_heights[-1] -= margin
-
-        # Total height needed
         height_text = sum(line_heights)
-
-        # Calculate the Y coordinate at which to draw the first line of text
         y = (dimensions[1] - height_text) // 2
-
-        # Return the first Y coordinate and a list with the height of each line
         return (y, line_heights)
 
     text_lines = wrap(fullname, 35)
@@ -370,21 +363,14 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
         y += line_heights[i] 
 
     def get_y_and_heights(text_wrapped, dimensions, margin, font):
-        """Get the first vertical coordinate at which to draw text and the height of each line of text"""
         ascent, descent = font.getmetrics()
         line_heights = [
             font.getmask(text_line).getbbox()[3] + descent + margin
             for text_line in text_wrapped
         ]
         line_heights[-1] -= margin
-
-        # Total height needed
         height_text = sum(line_heights)
-
-        # Calculate the Y coordinate at which to draw the first line of text
         y = (dimensions[1] - height_text) // 2
-
-        # Return the first Y coordinate and a list with the height of each line
         return (y, line_heights)
 
     text_lines = wrap(theme, 60)
@@ -397,16 +383,10 @@ def writetoGuvohnoma(qrlink, num, tdate, fullname, theme, fullname2):
     )
 
     for i, line in enumerate(text_lines):
-        # Calculate the horizontally-centered position at which to draw this line
-
         line_width = myFont.getmask(line).getbbox()[2]
         x = ((image_width - line_width) // 2)
         draw.text((x, y), line, font=myFont, fill=(0, 0, 255))
-        # Move on to the height at which the next line should be drawn at
         y += line_heights[i]
-
-
-    #qrcode
     qr = qrcode.QRCode(box_size=14)
     qr.add_data(qrlink)
     qr.make()
@@ -495,9 +475,6 @@ def writeMalumotnoma(fullname, doilink, openairelink, openaccesslink, cyberlenin
                 doilink,
                 fill =(256, 0, 0),
                 font = linkFont)
-
-    #links body begin
-
     qr = qrcode.QRCode(box_size=8)
     qr.add_data(doilink)
     qr.make()

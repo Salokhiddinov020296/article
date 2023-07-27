@@ -4,6 +4,8 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import get_language
 from django.utils.translation import gettext_lazy as _
+from django.db.models.signals import post_delete
+from .utils import file_cleanup
 
 LANGUAGE_CHOICES = (
                     ("o'zbekcha","o'zbekcha"),
@@ -92,7 +94,6 @@ class AclassModel(models.Model):
     openaccess = models.URLField(max_length=255, verbose_name = "OpenAccess")
     cyberleninka = models.URLField(max_length=255, verbose_name = "Cyberleninka")
     google = models.URLField(max_length=200, verbose_name = "Google Schoolar")
-    # writer = models.CharField(max_length=255, verbose_name=_("Mualliflar"))
     article_name_uz = models.TextField(blank=True, verbose_name=_("Maqola nomi (Asosiy til) (uz)"))
     article_name_en = models.TextField(blank=True, verbose_name=_("Maqola nomi (Asosiy til) (en)"))
     article_name_ru = models.TextField(blank=True, verbose_name=_("Maqola nomi (Asosiy til) (ru)"))
@@ -105,25 +106,19 @@ class AclassModel(models.Model):
     literature = models.TextField(blank=True, verbose_name=_("Adabiyotlar"))
     promoter = models.ForeignKey(PropagandistModel, on_delete=models.RESTRICT,
                                  verbose_name=_("Targ'ibotchi"))
-    writer_document = models.ImageField(upload_to='images/document/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
-    greeting_card = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
-    greeting_card2 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
-    greeting_card3 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
-    greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
-    handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
-    certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
+    writer_document = models.ImageField(upload_to='guvohnoma/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
+    greeting_card = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
+    greeting_card2 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
+    greeting_card3 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
+    greeting_card4 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
+    handbook = models.ImageField(upload_to='malumotnoma/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
+    certificate = models.ImageField(upload_to='certificate', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
     author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
     author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
     author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
     author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-    # def __str__(self):
-    #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
-    #            f"{self.article_name_uz} {self.article_name_en} {self.article_name_ru}... " \
-    #            f"{self.field} " \
-    #            f"{self.language} {self.date} {self.promoter}"
 
     class Meta:
         verbose_name = 'A seriya'
@@ -146,6 +141,10 @@ class AclassModel(models.Model):
 
     def get_absolute_url(self):
         return reverse('post:detail', args=[str(self.id)])
+    
+post_delete.connect(
+    file_cleanup, sender=AclassModel, dispatch_uid="gallery.image.file_cleanup"
+)
 
 
 class BclassModel(models.Model):
@@ -175,23 +174,17 @@ class BclassModel(models.Model):
     literature = models.TextField(blank=True, verbose_name=_("Adabiyotlar"))
     promoter = models.ForeignKey(PropagandistModel, on_delete=models.RESTRICT,
                                  verbose_name=_("Targ'ibotchi"))
-    writer_document = models.ImageField(upload_to='images/document/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
-    greeting_card = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
-    greeting_card2 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
-    greeting_card3 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
-    greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
-    handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
-    certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
+    writer_document = models.ImageField(upload_to='guvohnoma/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
+    greeting_card = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
+    greeting_card2 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
+    greeting_card3 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
+    greeting_card4 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
+    handbook = models.ImageField(upload_to='malumotnoma/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
+    certificate = models.ImageField(upload_to='certificate', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
     author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
     author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
     author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
     author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
-
-    # def __str__(self):
-    #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
-    #            f"{self.article_name_uz} {self.article_name_en} {self.article_name_ru}... " \
-    #            f"{self.field} " \
-    #            f"{self.language} {self.date} {self.promoter}"
 
     class Meta:
         verbose_name = 'B seriya'
@@ -241,23 +234,17 @@ class CclassModel(models.Model):
     literature = models.TextField(blank=True, verbose_name=_("Adabiyotlar"))
     promoter = models.ForeignKey(PropagandistModel, on_delete=models.RESTRICT,
                                  verbose_name=_("Targ'ibotchi"))
-    writer_document = models.ImageField(upload_to='images/document/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
-    greeting_card = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
-    greeting_card2 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
-    greeting_card3 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
-    greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
-    handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
-    certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
+    writer_document = models.ImageField(upload_to='guvohnoma/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
+    greeting_card = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
+    greeting_card2 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
+    greeting_card3 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
+    greeting_card4 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
+    handbook = models.ImageField(upload_to='malumotnoma/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
+    certificate = models.ImageField(upload_to='certificate', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
     author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
     author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
     author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
     author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
-
-    # def __str__(self):
-    #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
-    #            f"{self.article_name_uz} {self.article_name_en} {self.article_name_ru}... " \
-    #            f"{self.field} " \
-    #            f"{self.language} {self.date} {self.promoter}"
 
     class Meta:
         verbose_name = 'C seriya'
@@ -306,23 +293,17 @@ class DclassModel(models.Model):
     literature = models.TextField(blank=True, verbose_name=_("Adabiyotlar"))
     promoter = models.ForeignKey(PropagandistModel, on_delete=models.RESTRICT,
                                  verbose_name=_("Targ'ibotchi"))
-    writer_document = models.ImageField(upload_to='images/document/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
-    greeting_card = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
-    greeting_card2 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
-    greeting_card3 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
-    greeting_card4 = models.ImageField(upload_to='images/greeting_card/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
-    handbook = models.ImageField(upload_to='images/handbook/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
-    certificate = models.ImageField(upload_to='images/certificate/', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
+    writer_document = models.ImageField(upload_to='guvohnoma/', verbose_name=_("Mualliflik Guvohnomasi"), null=True, blank=True, max_length=255)
+    greeting_card = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom"), null=True, blank=True, max_length=255)
+    greeting_card2 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom2"), null=True, blank=True, max_length=255)
+    greeting_card3 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom3"), null=True, blank=True, max_length=255)
+    greeting_card4 = models.ImageField(upload_to='diplom/', verbose_name=_("Diplom4"), null=True, blank=True, max_length=255)
+    handbook = models.ImageField(upload_to='malumotnoma/', verbose_name=_("Ma'lumotnoma"), null=True, blank=True, max_length=255)
+    certificate = models.ImageField(upload_to='certificate', verbose_name=_("Sertifikat"), null=True, blank=True, max_length=255)
     author1 = models.CharField(verbose_name = _("Muallif(1)"), max_length = 60, null=False, blank=False)
     author2 = models.CharField(verbose_name = _("Muallif(2)"), max_length = 60, null=True, blank=True)
     author3 = models.CharField(verbose_name = _("Muallif(3)"), max_length = 60, null=True, blank=True)
     author4 = models.CharField(verbose_name = _("Muallif(4)"), max_length = 60, null=True, blank=True)
-
-    # def __str__(self):
-    #     return f"{self.article_pdf} ({self.volume}/{self.issue}) {self.pages} {self.writer} " \
-    #            f"{self.article_name_uz} {self.article_name_en} {self.article_name_ru}... " \
-    #            f"{self.field} " \
-    #            f"{self.language} {self.date} {self.promoter}"
 
     class Meta:
         verbose_name = 'D seriya'
