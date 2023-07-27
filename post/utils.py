@@ -15,4 +15,5 @@ def file_cleanup(sender, **kwargs):
                     except:
                         pass
             except Exception as e:
+                print(e)
                 pass
