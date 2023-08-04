@@ -1,19 +1,20 @@
 import os
+from django.conf import settings
 from django.core.files.storage import default_storage
-from django.db.models import FileField
+from django.db.models import FileField, ImageField
 
 def file_cleanup(sender, **kwargs):
     for field in sender._meta.get_fields():
-        if isinstance(field, FileField):
+        if isinstance(field, FileField) or isinstance(field, ImageField):
             inst = kwargs["instance"]
             f = getattr(inst, field.name)
-            m = inst.__class__._default_manager
             try:
-                if hasattr(f, "path") and os.path.exists(f.path) and not m.filter(**{field.name: f}).exclude(pk=inst._get_pk_val()):
-                    try:
-                        default_storage.delete(f.path)
-                    except:
-                        pass
+                default_storage.delete(f.path)
+                print(f.path,"fpath")
             except Exception as e:
-                print(e)
-                pass
+                try:
+                    filepath = settings.MEDIA_ROOT+"/"+str(f)
+                    default_storage.delete(filepath)
+                    print(str(filepath), "f")
+                except Exception as e:
+                    print(e, " e")
