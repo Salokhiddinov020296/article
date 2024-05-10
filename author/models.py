@@ -28,7 +28,8 @@ class ArchiveModel(models.Model):
     volume = models.PositiveIntegerField()
     issue = models.PositiveIntegerField()
     image = models.ImageField(upload_to='media/archive')
+    file = models.FileField(upload_to='media/archives')
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.volume + self.issue
+        return str(self.volume) + str(self.issue)+" Arxiv"

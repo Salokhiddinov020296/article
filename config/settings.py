@@ -87,7 +87,7 @@ else:
             'NAME': 'article_db',
             'USER': 'articleadmin',
             'PASSWORD': 'new_db@123',
-            'HOST': 'localhost',
+            'HOST': '127.0.0.1',
             'PORT': '5432',
         }
     }

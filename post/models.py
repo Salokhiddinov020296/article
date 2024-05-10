@@ -83,7 +83,7 @@ class PropagandistModel(models.Model):
 class AclassModel(models.Model):
     volume = models.PositiveSmallIntegerField()
     issue = models.PositiveSmallIntegerField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField()
     field = models.ForeignKey(AFieldModel, on_delete=models.RESTRICT, verbose_name=_("Yo'nalishi"))
     language = models.CharField(choices=LANGUAGE_CHOICES,verbose_name=_('Qaysi tilda yozilgan'), max_length = 10)
     pages = models.CharField(max_length=255, verbose_name=_("Sahifalar"))
